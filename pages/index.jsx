@@ -23,7 +23,7 @@ const Index = () => (
         <hr />
         <p>
           <span className="icon">
-            <a href="https://discordapp.com/invite/vnUP5d">
+            <a href="https://discordapp.com/invite/hURGKHJ">
               <Discord />
             </a>
           </span>
