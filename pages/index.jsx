@@ -20,6 +20,11 @@ const Index = () => (
           An upcoming multiplayer mod for <em>Grand Theft Auto: San Andreas</em> that will be fully backwards compatible
           with the existing multiplayer mod <em>San Andreas Multiplayer.</em>
         </p>
+        <br />
+        <p>
+          This means <strong>all existing SA:MP scripts will work with open.mp</strong> and, in addition to this, many
+          bugs will also be fixed within the server software without the need for hacks and workarounds.
+        </p>
         <hr />
         <p>
           <span className="icon">
