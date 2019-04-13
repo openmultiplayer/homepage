@@ -1,0 +1,78 @@
+body,
+html,
+#__next {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+  background-color: #161f2b;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 640px auto;
+  grid-template-rows: 1fr 400px 2fr;
+  padding: 0 10px 0 10px;
+}
+
+@media all and (max-width: 730px) {
+  .container {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+main {
+  height: 100%;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  font-family: english-grotesque, sans-serif;
+  font-style: normal;
+  color: #d1cec8;
+}
+
+.header {
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 0.5em 0;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+p {
+  margin: 0 0 0 0;
+  line-height: 1.8;
+}
+
+p strong {
+  background-color: #d1cec8;
+  color: #161f2b;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+hr {
+  margin: 40px;
+  border-style: solid;
+  opacity: 0.2;
+}
+
+.icon {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.icon a {
+  color: currentColor;
+}
+
+.icon :hover {
+  color: #fff;
+}
