@@ -22,8 +22,9 @@ const Index = () => (
         </p>
         <br />
         <p>
-          This means <strong>all existing SA:MP scripts will work with open.mp</strong> and, in addition to this, many
-          bugs will also be fixed within the server software without the need for hacks and workarounds.
+          This means <strong>the existing SA:MP client and all existing SA:MP scripts will work with open.mp</strong>{" "}
+          and, in addition to this, many bugs will also be fixed within the server software without the need for hacks
+          and workarounds.
         </p>
         <hr />
         <p>
