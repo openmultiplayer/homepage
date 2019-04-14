@@ -51,6 +51,14 @@ p {
   line-height: 1.8;
 }
 
+a {
+  color: #d1cec8;
+}
+
+a:hover {
+  color: #ff3200;
+}
+
 hr {
   margin: 40px;
   border-style: solid;
