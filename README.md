@@ -12,3 +12,11 @@ then you can edit the source with hot reloading.
 
 Run `npm build` to build a production distribution and `npm run favicon` to generate the favicon if ever the logo
 changes.
+
+## Translating
+
+To add a translation, fork the repo and create a new branch. Copy `./language/English.jsx` and rename it to the English
+name of the language you are translating to. Finally, add an entry to the map in `./components/languages.js`.
+
+Now you can translate the English text, remember to maintain all structure (HTML elements) and only translate the actual
+text nodes.
