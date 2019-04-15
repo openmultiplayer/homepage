@@ -3,7 +3,8 @@ export const LANGUAGES = {
   "🇳🇱": "Dutch",
   "🇪🇸": "Spanish",
   "🇩🇪": "German",
-  "🇷🇺": "Russian"
+  "🇷🇺": "Russian",
+  "PT": "Portuguese"
 };
 
 export const loadLanguages = () => {
