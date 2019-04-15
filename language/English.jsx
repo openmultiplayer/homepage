@@ -24,7 +24,7 @@ export const FAQ = () => (
     <h1>FAQ</h1>
     <hr />
     <h2>What is open.mp?</h2>
-    <p>open.mp (Open Multiplayer, OMP) is a substitute multiplayer mod for San Andreas, initiated in response to the unfortunate increase in problems with updates and management of SA:MP. It is fully backwards-compatible, designed as a drop-in replacement allowing existing SA:MP clients to play on OMP servers alongside new OMP clients, while providing the updates and new features that have stalled elsewhere.</p>
+    <p>open.mp (Open Multiplayer, OMP) is a substitute multiplayer mod for San Andreas, initiated in response to the unfortunate increase in problems with updates and management of SA:MP. The initial release will be a drop-in replacement for the server only. Existing SA:MP clients will be able to connect to this server. In the future, a new open.mp client will become available, allowing more interesting updates to be released.</p>
     <hr />
     <h2>Is it a fork?</h2>
     <p>No. This is a complete rewrite, taking advantage of decades of knowledge and experience. There have been attempts to fork SA:MP before, but we believe these had two major problems:</p>
