@@ -105,6 +105,6 @@ export const FAQ = () => (
     </p>
     <hr />
     <h2>Was ist mit OpenMP?</h2>
-    <p>Dies ist das "Open Multi-Processing (OpenMP)", aber wir sind "open.mp". Großer Unterschied!</p>
+    <p>Dies ist das "Open Multi-Processing (OpenMP)" Projekt, aber wir sind "open.mp". Großer Unterschied!</p>
   </div>
 );
