@@ -4,7 +4,7 @@ export const BODY = () => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
-      Грядущая мультиплеерная модификация для <em>Grand Theft Auto: San Andreas</em>, которая будет полностью обратно совместимой с текущей мультиплеерной модификацией, известной как San Andreas Multiplayer</em>
+      Грядущая мультиплеерная модификация для <em>Grand Theft Auto: San Andreas</em>, которая будет полностью обратно совместимой с текущей мультиплеерной модификацией, известной как <em>San Andreas Multiplayer</em>
     </p>
     <br />
     <p>
