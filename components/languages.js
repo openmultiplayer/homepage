@@ -1,5 +1,6 @@
 export const LANGUAGES = {
   "🇬🇧": "English",
+  "🇳🇱": "Dutch",
   "🇪🇸": "Spanish",
   "🇩🇪": "German"
 
