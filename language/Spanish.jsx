@@ -27,7 +27,7 @@ export const FAQ = () => (
   <div>
     <h1>FAQ (Preguntas frecuentes)</h1>
     <hr />
-    <h2>Que es open.mp?</h2>
+    <h2>¿Que es open.mp?</h2>
     <p>
       open.mp (Open Multiplayer, OMP) es un mod multijugador sustituto para San Andreas, iniciado como respuesta a el
       desafortunado aumento en problemas con actualizaciones y administración de SA:MP. Es totalmente compatible con él,
@@ -35,15 +35,15 @@ export const FAQ = () => (
       clientes nuevos OMP, proveyendo actualizaciones y nuevas características que antes se han estancado.
     </p>
     <hr />
-    <h2>Es un fork/una bifurcación?</h2>
+    <h2>¿Es un fork/una bifurcación?</h2>
     <p>
-      No. Esta es una reescritura completa, tomando ventaga de decadas de conocimiento y experiencia. Han habido
+      No. Esta es una reescritura completa, tomando ventaja de decadas de conocimiento y experiencia. Han habido
       intentos de bifurcarse de SA:MP antes, pero creemos que estos tenian dos problemas mayores:
     </p>
     <ol>
       <li>
         Estaban basados en código filtrado de SA:MP. Los autores de estos mods no tenían derechos legales para poder
-        usar este código, y por eso siempre estuvieron en líos, tanto moral como legalmente. Nos rehusamos directamente
+        usar este código, y por eso siempre tuvieron una desventaja, tanto moral como legal. Nos rehusamos directamente
         a usar este código. Esto desacelera un poco la velocidad de desarollo, pero es un movimiento clave a la larga.
       </li>
       <li>
@@ -56,10 +56,10 @@ export const FAQ = () => (
       </li>
     </ol>
     <hr />
-    <h2>Por que hacen esto?</h2>
+    <h2>¿Por que hacen esto?</h2>
     <p>
       A pesar de numerosos intentos de empujar el desarollo de SA:MP hacia adelante oficialmente, en la forma de
-      sugerencias, repetidamente pidiendo, y ofertas de ayuda del equipo beta; junto a una comunidad gritando por algo
+      sugerencias, muchos pedidos, y ofertas de ayuda del equipo de beta-testing; junto a una comunidad gritando por algo
       nuevo; no se vio nada de progreso. Esto siempre se percibió simplemente como una falta de interés de parte del
       líder del mod, lo cual no es un problema en si, pero no había ninguna señal de continuación. En vez de entregar
       el desarollo del mod a alguno que estuviera interesado a trabajar en el, el fundador simplemente quería traerse
@@ -71,7 +71,7 @@ export const FAQ = () => (
     <br />
     <p>No estamos de acuerdo.</p>
     <hr />
-    <h2>Ya que es "Open" (abierto) Multiplayer, será open-soruce (código abierto)?</h2>
+    <h2>Ya que es "Open" (abierto) Multiplayer, ¿será open-soruce (código abierto)?</h2>
     <p>
       Eventualmente ese es el plan, sí. Por ahora estamos intentando hacer el desarollo abierto de manera comunicativa y
       transparente (que en sí mismo ya es una mejora), y se movera hacia abrir el código cuando podamos, una vez las
@@ -87,7 +87,7 @@ export const FAQ = () => (
     </p>
     <br />
     <a href="https://www.burgershot.gg/showthread.php?tid=99">
-      <u>Tema "How to help" (como ayudar) (burgershot.gg)</u>
+      <u>Tema "How to help" (como ayudar) (burgershot.gg) (en inglés)</u>
     </a>
     <hr />
     <h2>¿Que es burgershot.gg?</h2>
@@ -98,9 +98,9 @@ export const FAQ = () => (
       ser separados (tal cual como SA:MP una vez era hosteado por GTAForums antes de que tuvieran su propio sitio).
     </p>
     <hr />
-    <h2>Que hay de OpenMP?</h2>
+    <h2>¿Que hay de OpenMP?</h2>
     <p>
-      El projecto "Open Multi-Processing" (Multiprocesamiento abiert) es "OpenMP", nosotros somos "open.mp". Muy
+      El projecto "Open Multi-Processing" (Multiprocesamiento abierto) es "OpenMP", nosotros somos "open.mp". Muy
       diferente.
     </p>
   </div>
