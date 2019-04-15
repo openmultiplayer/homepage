@@ -38,6 +38,11 @@ export default () => (
           We disagree.
         </p>
         <hr />
+        <h2>Since it is "Open" Multiplayer, will this be open-source?</h2>
+        <p>
+          Eventually that is the plan, yes.  For now we are trying to make the development open in terms of communication and transparency (which in itself is an improvement), and will move towards open-sourcing as and when we can, once things are all sorted and settled down.
+        </p>
+        <hr />
         <h2>How can I help?</h2>
         <p>
           Keep your eyes on the forums.  We have a topic for exactly this, and will keep it updated as more work becomes available.  While the project was revealed a little earlier than intended, we are already well on the way to an initial release, but that doesn't mean more help is not always massively appreciated.  Thank you in advance for taking an interest, and believing in the project:
@@ -48,6 +53,11 @@ export default () => (
         <h2>What is burgershot.gg?</h2>
         <p>
           burgershot.gg is a gaming forum, nothing more.  A lot of the people are involved in both, and some OMP development and updates are posted there, but they are two independent projects.  They are not the OMP forums, nor is OMP a burgershot property.  Once a full OMP site is up and running, the two can be extricated from each other (much as SA:MP was once hosted by GTAForums before it's own site was up).
+        </p>
+        <hr />
+        <h2>What about OpenMP?</h2>
+        <p>
+          The Open Multi-Processing project is "OpenMP", we are "open.mp".  Totally different.
         </p>
         <hr />
       </section>
