@@ -54,6 +54,6 @@ export const FAQ = () => (
     <p>burgershot.gg ist hauptsächlich ein Gaming-Forum. Einige der dort angemeldeten Leute sind sowohl Gamer als auch in der OMP Entwicklung involvierte Personen. Zudem werden dort die relevanten Neuigkeiten bezüglich OMP veröffentlicht, jedoch sind burgershot.gg und OMP nicht ein und dasselbe Projekt. Auch ist OMP nicht das Eigentum von burgershot.gg. Sobald OMP seinen eigenen Webspace bekommt, können die OMP Inhalte von burgershot.gg wegmigriert werden. Dies ist vergleichbar mit SA:MP, welches damals noch kein eigenes Forum hatte, sondern die GTAForums nutzte.</p>
     <hr />
     <h2>Was ist mit OpenMP?</h2>
-    <p>Dies ist das "Open Multi-Processing (OpenMP)", aber wir sind "open.mp". Großer Unterschied!</p>
+    <p>Dies ist das "Open Multi-Processing (OpenMP)" Projekt, aber wir sind "open.mp". Großer Unterschied!</p>
   </div>
 );
