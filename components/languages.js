@@ -1,8 +1,8 @@
 export const LANGUAGES = {
-  "🇬🇧": "English"
+  "🇬🇧": "English",
+  "🇪🇸": "Spanish",
 
   // TODO!
-  //   "🇪🇸": "Spanish"
   //   "🇷🇺": "Russian",
   //   "🇵🇹": "Portuguese"
 };
