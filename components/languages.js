@@ -3,6 +3,7 @@ export const LANGUAGES = {
   "🇪🇸": "Spanish",
   "🇩🇪": "German"
 
+  "🇷🇺": "Russian",
   // TODO!
   //   "🇷🇺": "Russian",
   //   "🇵🇹": "Portuguese"
