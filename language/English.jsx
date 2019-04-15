@@ -29,7 +29,7 @@ export const FAQ = () => (
     <h2>Is it a fork?</h2>
     <p>No. This is a complete rewrite, taking advantage of decades of knowledge and experience. There have been attempts to fork SA:MP before, but we believe these had two major problems:</p>
     <ol>
-      <li>They were based on leaked SA:MP source code. The authors of these mods had no legal right to this code, and were thus always on the back foot, both morally and legally. We outright refuse to use this code. This slighly hampers development speed, but is the right move in the long-run.</li>
+      <li>They were based on leaked SA:MP source code. The authors of these mods had no legal right to this code, and were thus always on the back foot, both morally and legally. We outright refuse to use this code. This slightly hampers development speed, but is the right move in the long-run.</li>
       <li>They tried to reinvent too much at once. Either replacing all the scripting engine, or removing features while adding new ones, or just tweaking things in incompatible ways. This prevents existing servers with huge codebases and playerbases from moving over, as they would have to rewrite some, if not all, of their code - a potentially massive undertaking. We fully intend to add features, and tweak things, over time, but we are also focussed on supporting existing servers, allowing them to use our code without changing theirs.</li>
     </ol>
     <hr />
