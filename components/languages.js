@@ -4,6 +4,7 @@ export const LANGUAGES = {
   "🇪🇸": "Spanish",
   "🇩🇪": "German",
   "🇷🇺": "Russian",
+  "🇧🇷": "Portuguese",
   "🇷🇴": "Romanian"
 };
 
