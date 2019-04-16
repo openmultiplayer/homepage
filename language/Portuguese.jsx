@@ -39,7 +39,7 @@ export const FAQ = () => (
     <p>Nós discordamos.</p>
     <hr />
     <h2>Já que isto é "Open" Multiplayer, este projeto será de código aberto?</h2>
-    <p>Eventualmente esse é o plano, sim. Por enquanto, estamos tentando tornar o desenvolvimento aberto em termos de comunicação e transparência (o que, em si mesmo, é uma melhoria), e avançaremos para o código aberto quando e quando pudermos, uma vez que tudo esteja resolvido e resolvido.</p>
+    <p>Eventualmente esse é o plano, sim. Por enquanto, estamos tentando tornar o desenvolvimento aberto em termos de comunicação e transparência (o que, em si mesmo, é uma melhoria), e avançaremos para o código aberto quando e quando pudermos, uma vez que tudo esteja resolvido.</p>
     <hr />
     <h2>Como eu posso ajudar?</h2>
     <p>Mantenha seus olhos nos fóruns. Temos um tópico exatamente para isso e vamos mantê-lo atualizado à medida que mais trabalhos se tornarem disponíveis. Embora o projeto tenha sido revelado um pouco antes do planejado, já estamos a caminho de um lançamento inicial, mas isso não significa que mais ajuda não seja apreciada. Agradeço antecipadamente por se interessar e por acreditar no projeto:</p>
@@ -49,7 +49,7 @@ export const FAQ = () => (
     </a>
     <hr />
     <h2>O que é burgershot.gg?</h2>
-    <p>O burgershot.gg é um fórum de jogos, nada mais. Muitas pessoas estão envolvidas em ambos, e algumas atualizações e desenvolvimento do OMP são postadas lá, mas são dois projetos independentes. Eles não são os fóruns do OMP, nem o OMP é uma propriedade do burgershot. Uma vez que o site completo do OMP esteja em funcionamento, os dois podem ser desconectados uns dos outros (assim como o SA:MP já foi hospedado pelo GTAForums antes de seu próprio site estar ativo).</p>
+    <p>O burgershot.gg é um fórum de jogos, nada mais. Muitas pessoas estão envolvidas em ambos, e algumas atualizações e desenvolvimento do OMP são postadas lá, mas são dois projetos independentes. Eles não são os fóruns do OMP, nem o OMP é uma propriedade do burgershot. Uma vez que o site completo do OMP esteja em funcionamento, os dois podem ser desconectados um do outro (assim como o SA:MP já foi hospedado pelo GTAForums antes de seu próprio site estar ativo).</p>
     <hr />
     <h2>E sobre o OpenMP?</h2>
     <p>O projeto Open Multi-Processing é chamado "OpenMP", nós somos "open.mp". Totalmente diferente.</p>
