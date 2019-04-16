@@ -90,7 +90,8 @@ hr {
 }
 
 .lang-flag-selected {
-  padding: 0.2em 0em 0em 0em;
+  padding: .1cm;
+  color: #161f2b;
   font-size: 1.8em;
   border-radius: 90px;
   background-color: #d1cec8;
