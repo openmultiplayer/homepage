@@ -4,7 +4,7 @@ export const BODY = () => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
-      Eine kommende Mehrspieler-Modifikation für <em>Grand Theft Auto: San Andreas</em>, die vollständig mit der bereits existierendem Modifikation <em>San Andreas Multiplayer</em> rückwärtskomaptibel ist.
+      Eine kommende Mehrspieler-Modifikation für <em>Grand Theft Auto: San Andreas</em>, die vollständig mit der bereits existierenden Modifikation <em>San Andreas Multiplayer</em> rückwärtskompatibel ist.
     </p>
     <br />
     <p>
@@ -29,7 +29,7 @@ export const FAQ = () => (
     </p>
     <hr />
     <h2>Ist es eine Abwandlung von SA:MP?</h2>
-    <p>Nein. Der Quellcode wurde komplett von Anfang an selbst geschrieben, der auf jahrzentenlangem Wissen und Erfahrung basiert. Es gab zuvor bereits Versuche eine Abwandlung vom originalen SA:MP Quellcode zu erstellen, wir glauben aber, dass diese Abwandlungen zwei grosse Probleme hatten:</p>
+    <p>Nein. Der Quellcode wurde komplett von Anfang an selbst geschrieben, der auf jahrzehntelangem Wissen und Erfahrung basiert. Es gab zuvor bereits Versuche eine Abwandlung vom originalen SA:MP Quellcode zu erstellen, wir glauben aber, dass diese Abwandlungen zwei grosse Probleme hatten:</p>
     <ol>
       <li>Sie basierten auf geleaktem SA:MP Quellcode. Die Autoren dieser Modifikationen hatten nicht die Rechte den Quellcode zu benutzen und haben somit sowohl ethisch als auch rechtlich gesehen nicht korrekt gehandelt. Wir wollen uns von solchen Praktiken fernhalten. Zwar dauert so die Entwicklung etwas länger, jedoch ist es langfristig gesehen, der richtige Schritt.</li>
       <li>Sie haben versucht zu viele Dinge zur gleichen Zeit neu zu erfinden. Es wurde entweder versucht die Skripting-Engine zu ersetzen, existierende Features zu löschen und neue hinzuzufügen oder einfach nur Dinge auf inkompatibler Art und Weise zu optimieren. Dies hindert bereits bestehende Server mit riesigen Skripts und einer grossen Spieleranzahl umzuziehen, da sie einige, wenn nicht sogar all ihre Skripts neu schreiben müssten. Auch wir wollen neue Funktionen hinzufügen und Dinge verändern, jedoch werden wir uns als Hauptziel setzen, immer rückwärtskompatibel zu bleiben, um den Serverbesitzern zu erlauben, unseren Code benutzen zu können, ohne dafür den eigenen anpassen zu müssen.</li>
@@ -44,7 +44,7 @@ export const FAQ = () => (
     <p>Irgendwann ist das der Plan, ja. Vorerst konzentrieren wir uns auf eine offene Kommunikation und Transparenz (was an sich schon eine Verbesserung ist) und arbeiten auf eine Veröffentlichung des Quellcodes hin, sobald alles geklärt und geregelt ist.</p>
     <hr />
     <h2>Wie kann ich helfen?</h2>
-    <p>Behalte das Forum im Auge. Wir haben einen Thread für dieses Thema gemacht und versuchen ihn immer aktuell zu halten und mit Neuigkeiten zu versehen, sobald mehr Arbeit zur verfügung steht. Obwohl das Projekt etwas eher an die Öffentlichkeit gelangt ist als geplant und wir bereits auf gutem Wege zu einem ersten Release sind, ist trotzdem jede Hilfe willkommen. Schon vorab danken wir dir für dein Interesse und dass du an dieses Projekt glaubst:</p>
+    <p>Behalte das Forum im Auge. Wir haben einen Thread für dieses Thema gemacht und versuchen ihn immer aktuell zu halten und mit Neuigkeiten zu versehen, sobald mehr Arbeit zur Verfügung steht. Obwohl das Projekt etwas eher an die Öffentlichkeit gelangt ist als geplant und wir bereits auf gutem Wege zu einem ersten Release sind, ist trotzdem jede Hilfe willkommen. Schon vorab danken wir dir für dein Interesse und dass du an dieses Projekt glaubst:</p>
     <br />
     <a href="https://www.burgershot.gg/showthread.php?tid=99">
       <u>"How to help" Thread (burgershot.gg)</u>
