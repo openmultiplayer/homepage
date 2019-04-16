@@ -24,7 +24,7 @@ export const FAQ = () => (
     <h1>GYIK</h1>
     <hr />
     <h2>Mi az az open.mp?</h2>
-    <p>Az open.mp (Open Multiplayer, OMP) egy többjátékos modifikáció a San Andreas számára ami a SA:MP frissítésével és kezelésével kapcsolatos problémák miatt indult. A kezdeti kiadás csak a szerverfájlok cseréje lesz, és a meglévő SA:MP klienssel rendelkezők csatlakozhatnak ehhez a szerverhez. A jövőben egy új open.mp kliens lesz elérhető, amely több érdekes frissítést tesz lehetővé.</p>
+    <p>Az open.mp (Open Multiplayer, OMP) egy többjátékos modifikáció a San Andreas számára ami a SA:MP frissítésével és kezelésével kapcsolatos problémák miatt indult. A kezdeti kiadás csak a szerverfájlok cseréje lesz, és a meglévő SA:MP klienssel rendelkezők csatlakozhatnak ezekhez a szerverekhez. A jövőben egy új open.mp kliens lesz elérhető, amely több érdekes frissítést tesz lehetővé.</p>
     <hr />
     <h2>Ez egy "fork"?</h2>
     <p>Nem. Ez teljesen nulláról írt, kihasználva az évtizedes tudást és tapasztalatot. A SA:MP-ot megpróbálták korábban újraírni, de úgy gondoljuk ezeknek két fő problémája volt:</p>
@@ -42,7 +42,7 @@ export const FAQ = () => (
     <p>Ez a terv, igen. Átmenetileg próbáljuk a fejlesztést kommunikáció és átláthatóság szempontjából nyitottnak titulálni (ami önmagában is javulás), és a jövőben próbálunk a nyílt forráskód felé haladni miután a felhajtás lecsillapult.</p>
     <hr />
     <h2>Hogy tudok segíteni?</h2>
-    <p>Tartsd szemmel a fórumot. Van egy témánk kifejezetten erre a célra ami aktívan frissül ahogy több munka lesz elérhető. Míg a projekt a tervezettnél rövidebb idün belül kiderül, már jó úton vagyunk az első kiadás felé, de ez nem azt jelenti hogy a segítséget nem értékeljük. Előre is köszönjük hogy érdeklődsz, és hiszel a projektben:</p>
+    <p>Tartsd szemmel a fórumot. Van egy témánk kifejezetten erre a célra ami aktívan frissül ahogy több segítségre lesz szükségünk. Míg a projekt a tervezettnél rövidebb idün belül kiderül, már jó úton vagyunk az első kiadás felé, de ez nem azt jelenti hogy a segítséget nem értékeljük. Előre is köszönjük hogy érdeklődsz, és hiszel a projektben:</p>
     <br />
     <a href="https://www.burgershot.gg/showthread.php?tid=99">
       <u>"Hogyan tudsz segíteni" téma(burgershot.gg)</u>
