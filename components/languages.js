@@ -1,10 +1,11 @@
 export const LANGUAGES = {
-  "🇬🇧": "English"
-
-  // TODO!
-  //   "🇪🇸": "Spanish"
-  //   "🇷🇺": "Russian",
-  //   "🇵🇹": "Portuguese"
+  "🇬🇧": "English",
+  "🇳🇱": "Dutch",
+  "🇪🇸": "Spanish",
+  "🇩🇪": "German",
+  "🇷🇺": "Russian",
+  "🇧🇷": "Portuguese",
+  "🇷🇴": "Romanian"
 };
 
 export const loadLanguages = () => {
