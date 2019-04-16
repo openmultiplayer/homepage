@@ -14,7 +14,7 @@ export const BODY = () => (
       andere alternatieven.
     </p>
     <p>
-      Als u zich afvraagt wanneer de publieke publicatie is geplant of hoe u kan helpen met het bijdragen aan dit project, bekijk dan{" "}
+      Als u zich afvraagt wanneer de publieke publicatie is gepland of hoe u kan helpen met het bijdragen aan dit project, bekijk dan{" "}
       <a href="https://www.burgershot.gg/showthread.php?tid=99">dit forum topic</a> voor meer informatie.
     </p>
     <h1>
@@ -47,8 +47,8 @@ export const FAQ = () => (
         de ontwikkelings snelheid ietsjes, maar is de juiste zet op de lange termijn.
       </li>
       <li>
-        Ze probeerden te veel in één keer opnieuw uittevinden. Ofwel het vervangen van de scripting engine, of het verwijderen van features terwijl
-        nieuwe toegevoegd werden, of gewoon dingen veranderen op een tegenstrijdige manier. Dit weerhoud bestaande servers met enorme
+        Ze probeerden te veel in één keer opnieuw uit te vinden. Ofwel het vervangen van de scripting engine, of het verwijderen van features terwijl
+        nieuwe toegevoegd werden, of gewoon dingen veranderen op een tegenstrijdige manier. Dit weerhoudt bestaande servers met enorme
         codebases en playerbases om over te stappen, omdat ze sommige delen, zo niet alles, van hun broncode moeten herschrijven - een
         potentieel grote onderneming. Wij menen het volledig om nieuwe features toe te voegen, en dingen te wijzigen, na verloop van tijd, maar wij zijn ook
         gefocust op het ondersteunen van bestaande servers, wat het mogelijk maakt voor hun om onze broncode te gebruiken zonder die van hun te veranderen.
@@ -57,14 +57,14 @@ export const FAQ = () => (
     <hr />
     <h2>Waarom doen jullie dit?</h2>
     <p>
-      Ondanks ontelbaar aantal pogingen om de ontwikkeling van SA:MP officieel vooruit te duwen, in de aard van suggesties, lastigvallen, en
+      Ondanks een ontelbaar aantal pogingen om de ontwikkeling van SA:MP officieel vooruit te duwen, in de aard van suggesties, lastigvallen, en
       voorstellen van hulp vanuit de bèta team; samen met een gemeenschap schreeuwend voor iets nieuws; was er geen progressie
       geboekt. Dit was uitgebreid geloofd om simpelweg desinteresse op het vlak van modificatie leiderschap te tonen, dat
       opzich geen groot probleem is, maar er was geen troonopvolging. Inplaats van het overhandigen van de ontwikkeling
       aan degene die geinteresseerd zijn in het vervolgen van het werk aan de modificatie, wilde de oprichter simpelweg alles met zichzelf naar beneden
       halen, terwijl hij blijkbaar zolang als mogelijk de modificatie in stand wilt houden met minimale moeite. Sommigen claimen dat dit voor
       passieve inkomen redenen is, maar daar is geen bewijs voor. Ondanks veel interesse, en een sterke en overerfbare
-      gemeenschap, geloofde hij dat er nog maar 1-2 jaar over waren voor de modificatie, en dat de gemeenschap dat zo hard gewerkt had
+      gemeenschap, geloofde hij dat er nog maar 1-2 jaar over waren voor de modificatie, en dat de gemeenschap die zo hard gewerkt had
       om SA:MP te maken wat het vandaag is, geen voortzetting verdiende.
     </p>
     <br />
@@ -73,14 +73,14 @@ export const FAQ = () => (
     <h2>Omdat het "Open" Multiplayer is genoemd, gaat het openbronsoftware worden?</h2>
     <p>
       Op den duur is dat het plan, ja. Voor nu zijn we aan het proberen om de ontwikkeling publiek te houden, wat betreft communicatie en
-      transparantie (Wat in zichzelf al een verbetering is), en stappen over op open-sourcing zoals en wanneer we kunnen, eenmaal
+      transparantie (Wat op zichzelf al een verbetering is), en stappen over op open-sourcing zoals en wanneer we kunnen, eenmaal
       wanneer alles uitgezocht is en alles een plaatsje heeft gevonden.
     </p>
     <hr />
     <h2>Hoe kan ik helpen?</h2>
     <p>
       Houd je ogen open op het forum. We hebben een topic voor exact deze vraag, en zullen het actueel houden wanneer meer werk beschikbaar
-      is. Hoewel het project iets eerder onthult werd dan bedoeld, zijn we reeds goed onderweg voor een
+      is. Hoewel het project iets eerder onthuld werd dan bedoeld, zijn we reeds goed onderweg voor een
       initiële uitgave, maar dat betekent niet dat meer help niet enorm gewaardeerd wordt. Dank bij voorbaat voor
       het interesse tonen, en geloven in het project:
     </p>
@@ -91,9 +91,9 @@ export const FAQ = () => (
     <hr />
     <h2>Wat is burgershot.gg?</h2>
     <p>
-      burgershot.gg is een gaming forum, niets meer niets minder. Veel van de mensen zijn betrokken in beiden, en sommige OMP ontwikkeling
+      burgershot.gg is een gaming forum, niets meer niets minder. Veel van de mensen zijn betrokken in beiden, en sommige OMP ontwikkelingen
       en updates worden daar gepubliceerd, maar het zijn twee onafhankelijke projecten. Ze zijn niet de OMP forums, noch is OMP een
-      burgershot eigendom. Als eenmaal een complete OMP site online is, kunnen de twee losgemaakt worden van elkaar (Net als dat
+      burgershot eigendom. Als er eenmaal een complete OMP site online is, kunnen de twee losgemaakt worden van elkaar (net als dat
       SA:MP ooit gehost was onder GTAForums voordat haar eigen site online stond).
     </p>
     <hr />
