@@ -7,11 +7,8 @@ import Wordmark from "../components/icons/Wordmark";
 
 import { loadLanguages } from "../components/languages";
 
-export default () => {
-  let [language, setLanguage] = useState("🇬🇧");
-
-  let languages = loadLanguages();
-  let currentLanguage = languages[language];
+export default ({ url: { query: { lang: initialLang } } }) => {
+  const [ currentLanguage, flags, language, setLanguage ] = loadLanguages(initialLang, useState("🇽🇽"));
 
   return (
     <div className="container">
@@ -22,10 +19,12 @@ export default () => {
           <Wordmark width={300} height={"100%"} stroke="#d1cec8" background="#161f2b" />
         </header>
         <LanguageSelect
-          flags={Object.keys(languages)}
+          flags={flags}
           selected={language}
-          callback={l => {
+          callback={(e, l) => {
+            e.preventDefault();
             setLanguage(l);
+            return false;
           }}
         />
         <section className="content">
@@ -36,3 +35,4 @@ export default () => {
     </div>
   );
 };
+
