@@ -30,6 +30,15 @@ export const loadLanguages = (initial, [ language, setLanguage ]) => {
     }
   }
 
-  return [ languages[language], Object.keys(languages), language, setLanguage ];
+  return [
+    languages[language],
+    Object.keys(languages),
+    language,
+    (e, l) => {
+      e.preventDefault();
+      setLanguage(l);
+      return false;
+    }
+  ];
 };
 
