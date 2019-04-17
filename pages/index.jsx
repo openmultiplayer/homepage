@@ -11,7 +11,7 @@ import Forum from "../components/icons/Forum";
 import { loadLanguages } from "../components/languages";
 
 export default ({ url: { query: { lang: initialLang } } }) => {
-  const [ currentLanguage, flags, language, setLanguage ] = loadLanguages(initialLang, useState("🇽🇽"));
+  const [ currentLanguage, flags, selected, callback ] = loadLanguages(initialLang, useState("🇽🇽"));
 
   return (
     <div className="container">
@@ -22,15 +22,11 @@ export default ({ url: { query: { lang: initialLang } } }) => {
         </header>
         <LanguageSelect
           flags={flags}
-          selected={language}
-          callback={(e, l) => {
-            e.preventDefault();
-            setLanguage(l);
-            return false;
-          }}
+          selected={selected}
+          callback={callback}
         />
         <section className="content">
-          {currentLanguage.body(`/faq?lang=${language}`)}
+          {currentLanguage.body(`/faq?lang=${selected}`)}
           <hr />
           <p>
             <span className="icon">
