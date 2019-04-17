@@ -4,11 +4,11 @@ export const BODY = () => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
-      Ein in Arbeit stehender Mehrspieler-Mod für <em>Grand Theft Auto: San Andreas</em>, der vollständig mit dem bereits existierendem Mod <em>SA:MP (San Andreas Multiplayer) komaptibel ist</em>.
+      Ein in Arbeit stehender Mehrspieler-Mod für <em>Grand Theft Auto: San Andreas</em>, der vollständig mit dem bereits existierendem Mod <em>SA:MP (San Andreas Multiplayer) kompatibel ist</em>.
     </p>
     <br />
     <p>
-      Somit <strong>funktionieren sowohl der originale SA:MP Client, als auch die existierenden SA:MP Scripts mit open.mp</strong>. Zusätzlich werden viele der im SA:MP Server existierenden Bugs behoben werden, ohne das Scriptseitig verrückte Workarounds nötig sind.
+      Somit <strong>funktionieren sowohl der originale SA:MP Client, als auch die existierenden SA:MP Scripts mit open.mp</strong>. Zusätzlich werden viele der im SA:MP Server existierenden Bugs behoben werden, ohne das scriptseitige Workarounds nötig sind.
     </p>
     <p>
       Falls du dich fragst, zu wann das erste öffentliche Release geplant ist oder wie du zum Projekt beitragen kannst, dann <a href="https://www.burgershot.gg/showthread.php?tid=99">schaue für mehr Informationen ins Forum</a>.
