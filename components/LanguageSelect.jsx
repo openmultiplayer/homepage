@@ -1,6 +1,6 @@
 import React from "react";
 
-export const LanguageSelect = props => {
+export const LanguageSelect = (props) => {
   // no-op for single-language
   if (props.flags.length === 1) {
     return <div />;
@@ -14,11 +14,12 @@ export const LanguageSelect = props => {
           className += " lang-flag-selected";
         }
         return (
-          <span key={index} className={className} onClick={() => props.callback(value)}>
+          <a href={`?lang=${value}`} key={index} className={className} onClick={(e) => props.callback(e, value)}>
             {value}
-          </span>
+          </a>
         );
       })}
     </div>
   );
 };
+

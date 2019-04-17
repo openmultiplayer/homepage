@@ -80,18 +80,38 @@ hr {
 
 .lang-list {
   text-align: center;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 20px;
 }
 
 .lang-flag {
+  display: none;
   font-size: 1.5em;
   margin: 0em 0.6em 0em 0.6em;
   user-select: none;
   cursor: pointer;
 }
 
+.lang-list:hover .lang-flag,
+.lang-list .lang-flag-selected {
+  display: block;
+}
+
 .lang-flag-selected {
-  padding: 0.2em 0em 0em 0em;
+  padding: .1em;
+  color: #161f2b;
   font-size: 1.8em;
   border-radius: 90px;
   background-color: #d1cec8;
 }
+
+#home-link:hover .cls-1,
+#home-link:hover .cls-2,
+#home-link:hover .cls-3,
+#home-link:hover .cls-5,
+#home-link:hover .cls-7 {
+  stroke: #ff3200;
+}
+

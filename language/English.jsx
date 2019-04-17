@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = () => (
+export const BODY = (faq) => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -14,7 +14,7 @@ export const BODY = () => (
       If you're wondering when the public release is planned or how you can help contribute to the project, please see <a href="https://www.burgershot.gg/showthread.php?tid=99">this forum thread</a> for more information.
     </p>
     <h1>
-      <a href="/faq">FAQ</a>
+      <a href={faq}>FAQ</a>
     </h1>
   </div>
 );
@@ -38,8 +38,17 @@ export const FAQ = () => (
     <br />
     <p>We disagree.</p>
     <hr />
+    <h2>What are your opinions on Kalcor/SA:MP/whatever?</h2>
+    <p>We love SA:MP, that's why we're here in the first place - and we owe creating that to Kalcor.  He has done a huge amount for the mod over the years, and that contribution should not be forgotten or ignored.  The actions leading to open.mp were taken because we disagreed with several recent decisions, and despite repeated attempts to guide the mod in a different direction, no solution was seen to be forthcoming.  Thus we were forced to make the unfortunate decision to try and continue SA:MP in spirit without Kalcor.  This is not an action taken against him personally, and should not be seen as an attack on him personally.  We will not tollerate any personal insults against anyone - regardless of where they stand on the open.mp issue; we should be able to have a reasonable debate without resorting to ad-hominem attacks.</p>
+    <hr />
+    <h2>Isn't this just splitting the community?</h2>
+    <p>That is not our intention.  Ideally no split would be required at all, but splitting off some and saving that part is better than watching the whole thing wither away.  In fact, since this mod was announced a large number of non-English communities have re-engaged with the English community.  These communities were slowly pushed out and side-lined previously, so their re-inclusion is actually bringing a split community back together.  A large number of people have been banned from the official SA:MP forums (and in some cases, their entire post history purged), but Kalcor himself has pointed out that the official forums are not SA:MP, merely a part of SA:MP.  Many players and server owners have never posted on, or even joined those forums; so talking to these people again is unifying yet more parts of the community.</p>
+    <hr />
     <h2>Since it is "Open" Multiplayer, will this be open-source?</h2>
     <p>Eventually that is the plan, yes. For now we are trying to make the development open in terms of communication and transparency (which in itself is an improvement), and will move towards open-sourcing as and when we can, once things are all sorted and settled down.</p>
+    <hr />
+    <h2>When will it be released?</h2>
+    <p>This is the age-old question, unfortunately it has the age-old answer: when it's done.  There is simply no way to know how long a project like this will take.  It has been quietly running for a while now, and has already seen a few fluctuations in activity level, depending on how busy people are.  But rest-assured it is well on the way, and progressing fast thanks to some fundamental design decisions (we'll say more about the architecture later).</p>
     <hr />
     <h2>How can I help?</h2>
     <p>Keep your eyes on the forums. We have a topic for exactly this, and will keep it updated as more work becomes available. While the project was revealed a little earlier than intended, we are already well on the way to an initial release, but that doesn't mean more help is not always massively appreciated. Thank you in advance for taking an interest, and believing in the project:</p>

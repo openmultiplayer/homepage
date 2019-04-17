@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = () => (
+export const BODY = (faq) => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -14,7 +14,7 @@ export const BODY = () => (
       Falls du dich fragst, wann der erste öffentliche Release geplant ist oder wie du zum Projekt beitragen kannst, dann <a href="https://www.burgershot.gg/showthread.php?tid=99">lese diesen Forum-Thread</a> für weitere Informationen.
     </p>
     <h1>
-      <a href="/faq">FAQ</a>
+      <a href={faq}>FAQ</a>
     </h1>
   </div>
 );
@@ -28,8 +28,8 @@ export const FAQ = () => (
       open.mp (Open Multiplayer, OMP) ist eine Mehrspieler-Modifikation für <em>San Andreas</em>, der durch die aufkommenden Probleme aufgrund von fehlenden Updates und schlechtem Management von SA:MP initiiert wurde. Die erste Version wird nur ein Ersatz für die bereits existierende SA:MP Serversoftware sein, somit können bereits existierende SA:MP Clients sich mit diesem Server verbinden. In Zukunft wird ein neuer open.mp Client verfügbar sein, der es ermöglicht, mehrere interessante Updates zu erhalten.
     </p>
     <hr />
-    <h2>Ist es eine Abwandlung von SA:MP?</h2>
-    <p>Nein. Der Quellcode wurde komplett von Anfang an selbst geschrieben, der auf jahrzehntelangem Wissen und Erfahrung basiert. Es gab zuvor bereits Versuche eine Abwandlung vom originalen SA:MP Quellcode zu erstellen, wir glauben aber, dass diese Abwandlungen zwei grosse Probleme hatten:</p>
+    <h2>Ist es eine Abzweigung von SA:MP?</h2>
+    <p>Nein. Der Quellcode wurde komplett von Anfang an selbst geschrieben, der auf jahrzehntelangem Wissen und Erfahrung basiert. Es gab zuvor bereits Versuche eine Abzweigung vom originalen SA:MP Quellcode zu erstellen, wir glauben aber, dass diese Abzweigungen zwei grosse Probleme hatten:</p>
     <ol>
       <li>Sie basierten auf geleaktem SA:MP Quellcode. Die Autoren dieser Modifikationen hatten nicht die Rechte den Quellcode zu benutzen und haben somit sowohl ethisch als auch rechtlich gesehen nicht korrekt gehandelt. Wir wollen uns von solchen Praktiken fernhalten. Zwar dauert so die Entwicklung etwas länger, jedoch ist es langfristig gesehen, der richtige Schritt.</li>
       <li>Sie haben versucht zu viele Dinge zur gleichen Zeit neu zu erfinden. Es wurde entweder versucht die Skripting-Engine zu ersetzen, existierende Features zu löschen und neue hinzuzufügen oder einfach nur Dinge auf inkompatibler Art und Weise zu optimieren. Dies hindert bereits bestehende Server mit riesigen Skripts und einer grossen Spieleranzahl umzuziehen, da sie einige, wenn nicht sogar all ihre Skripts neu schreiben müssten. Auch wir wollen neue Funktionen hinzufügen und Dinge verändern, jedoch werden wir uns als Hauptziel setzen, immer rückwärtskompatibel zu bleiben, um den Serverbesitzern zu erlauben, unseren Code benutzen zu können, ohne dafür den eigenen anpassen zu müssen.</li>
@@ -54,6 +54,6 @@ export const FAQ = () => (
     <p>burgershot.gg ist hauptsächlich ein Gaming-Forum. Einige der dort angemeldeten Leute sind sowohl Gamer als auch in der OMP Entwicklung beteiligt. Zudem werden dort die relevanten Neuigkeiten bezüglich OMP veröffentlicht, jedoch sind burgershot.gg und OMP nicht ein und dasselbe Projekt. Auch ist OMP nicht das Eigentum von burgershot.gg. Sobald OMP eine eigene Seite im Betrieb hat, können die OMP Inhalte von burgershot.gg wegmigriert werden (dies ist vergleichbar mit SA:MP, welches damals noch kein eigenes Forum hatte, sondern die GTAForums nutzte).</p>
     <hr />
     <h2>Was ist mit OpenMP?</h2>
-    <p>Dies ist das "Open Multi-Processing (OpenMP)" Projekt, aber wir sind "open.mp". Großer Unterschied!</p>
+    <p>Dies ist das "Open Multi-Processing (OpenMP)" Projekt, aber wir sind "open.mp". Sehr großer Unterschied!</p>
   </div>
 );

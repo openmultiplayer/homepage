@@ -10,11 +10,8 @@ import Forum from "../components/icons/Forum";
 
 import { loadLanguages } from "../components/languages";
 
-const Index = () => {
-  let [language, setLanguage] = useState("🇬🇧");
-
-  let languages = loadLanguages();
-  let currentLanguage = languages[language];
+export default ({ url: { query: { lang: initialLang } } }) => {
+  const [ currentLanguage, flags, selected, callback ] = loadLanguages(initialLang, useState("🇽🇽"));
 
   return (
     <div className="container">
@@ -24,14 +21,12 @@ const Index = () => {
           <Wordmark width={300} height={"100%"} stroke="#d1cec8" background="#161f2b" />
         </header>
         <LanguageSelect
-          flags={Object.keys(languages)}
-          selected={language}
-          callback={l => {
-            setLanguage(l);
-          }}
+          flags={flags}
+          selected={selected}
+          callback={callback}
         />
         <section className="content">
-          {currentLanguage.body()}
+          {currentLanguage.body(`/faq?lang=${selected}`)}
           <hr />
           <p>
             <span className="icon">
@@ -51,4 +46,3 @@ const Index = () => {
   );
 };
 
-export default Index;
