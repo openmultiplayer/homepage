@@ -13,31 +13,25 @@ export const LANGUAGES = {
 };
 
 export const loadLanguages = (initial, [ language, setLanguage ]) => {
-  let languages = {};
-  for (var flag in LANGUAGES) {
-    let { BODY, FAQ } = require("../language/" + LANGUAGES[flag]);
-    languages[flag] = {
-      body: BODY,
-      faq: FAQ
-    };
-  }
-
   if (language === "🇽🇽") {
-    if (initial in languages) {
+    if (LANGUAGES.hasOwnProperty(initial)) {
       language = initial;
     } else {
       language = "🇬🇧";
     }
   }
 
-  return [
-    languages[language],
-    Object.keys(languages),
+  const { BODY, FAQ } = require("../language/" + LANGUAGES[language]);
+
+  return [{
+      body: BODY,
+      faq: FAQ,
+    },
+    Object.keys(LANGUAGES),
     language,
     (e, l) => {
       e.preventDefault();
       setLanguage(l);
-      return false;
     }
   ];
 };
