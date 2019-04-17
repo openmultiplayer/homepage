@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = () => (
+export const BODY = (faq) => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -18,7 +18,7 @@ export const BODY = () => (
       <a href="https://www.burgershot.gg/showthread.php?tid=99">este tema en el foro</a> (en inglés) para mas información.
     </p>
     <h1>
-      <a href="/faq">FAQ (Preguntas frecuentes)</a>
+      <a href={faq}>FAQ (Preguntas frecuentes)</a>
     </h1>
   </div>
 );
