@@ -95,3 +95,12 @@ hr {
   border-radius: 90px;
   background-color: #d1cec8;
 }
+
+#home-link:hover .cls-1,
+#home-link:hover .cls-2,
+#home-link:hover .cls-3,
+#home-link:hover .cls-5,
+#home-link:hover .cls-7 {
+  stroke: #ff3200;
+}
+
