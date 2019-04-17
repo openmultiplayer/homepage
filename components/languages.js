@@ -9,7 +9,7 @@ export const LANGUAGES = {
   "🇷🇴": "Romanian",
   "🇭🇷": "Croatian",
   "🇭🇺": "Hungarian",
-  "🇸🇦": "Arabic"
+  "🇸🇦": "Arabic",
 };
 
 export const loadLanguages = (initial, [ language, setLanguage ]) => {
@@ -19,6 +19,9 @@ export const loadLanguages = (initial, [ language, setLanguage ]) => {
     } else {
       language = "🇬🇧";
     }
+
+    // Store the newly derived initial language.
+    setLanguage(language);
   }
 
   const { BODY, FAQ } = require("../language/" + LANGUAGES[language]);
