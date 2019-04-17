@@ -30,7 +30,7 @@ export default ({ url: { query: { lang: initialLang } } }) => {
           }}
         />
         <section className="content">
-          {currentLanguage.body()}
+          {currentLanguage.body(`/faq?lang=${language}`)}
           <hr />
           <p>
             <span className="icon">
