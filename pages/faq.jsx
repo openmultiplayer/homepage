@@ -16,7 +16,9 @@ export default ({ url: { query: { lang: initialLang } } }) => {
 
       <main>
         <header className="header">
-          <Wordmark width={300} height={"100%"} stroke="#d1cec8" background="#161f2b" />
+          <a href={`/?lang=${language}`} id="home-link">
+            <Wordmark width={300} height={"100%"} stroke="#d1cec8" background="#161f2b" />
+          </a>
         </header>
         <LanguageSelect
           flags={flags}
