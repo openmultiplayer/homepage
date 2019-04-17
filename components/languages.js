@@ -8,14 +8,24 @@ export const LANGUAGES = {
   "🇷🇴": "Romanian"
 };
 
-export const loadLanguages = () => {
-  let result = {};
+export const loadLanguages = (initial, [ language, setLanguage ]) => {
+  let languages = {};
   for (var flag in LANGUAGES) {
     let { BODY, FAQ } = require("../language/" + LANGUAGES[flag]);
-    result[flag] = {
+    languages[flag] = {
       body: BODY,
       faq: FAQ
     };
   }
-  return result;
+
+  if (language === "🇽🇽") {
+    if (initial in languages) {
+      language = initial;
+    } else {
+      language = "🇬🇧";
+    }
+  }
+
+  return [ languages[language], Object.keys(languages), language, setLanguage ];
 };
+
