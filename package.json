@@ -10,11 +10,13 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "express": "^4.14.0",
+    "flag-icon-css": "^3.3.0",
     "next": "8.0.4",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "cross-env": "^5.2.0",
+    "next-images": "github:twopluszero/next-images"
   }
 }

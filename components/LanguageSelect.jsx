@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import 'flag-icon-css/css/flag-icon.css';
 
 export const LanguageSelect = (props) => {
   // no-op for single-language
@@ -15,7 +16,7 @@ export const LanguageSelect = (props) => {
         }
         return (
           <a href={`?lang=${value}`} key={index} className={className} onClick={(e) => props.callback(e, value)}>
-            {value}
+            <span className={`flag-icon flag-icon-${value}`}></span>
           </a>
         );
       })}
