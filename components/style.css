@@ -95,7 +95,6 @@ hr {
   width: 55px;
   height: 35px;
   border-radius: 20px;
-  color: #161f2b;
 }
 
 .lang-flag span {
@@ -108,9 +107,7 @@ hr {
   display: block;
 }
 
-.lang-flag-selected {
-  color: #161f2b;
-  border-radius: 20px;
+.lang-list:hover .lang-flag-selected {
   background-color: #d1cec8;
 }
 
