@@ -8,7 +8,7 @@ export const BODY = (faq) => (
     </p>
     <br />
     <p>
-      Oznacza to, <strong>że aktualny klient SA:MP i wszystkie skrypty SA:MP będą działały na open.mp</strong>, a dodatkowo wiele błędów zostanie naprawionych bez konieczności stosowania wspomagaczy (hacks) i obejść.
+      Oznacza to, <strong>że aktualny klient SA:MP i wszystkie skrypty SA:MP będą działały na open.mp</strong>, a dodatkowo wiele błędów zostanie naprawionych bez konieczności stosowania dodatkowego oprogramowania i obejść.
     </p>
     <p>
       Jeżeli zastanawiasz się kiedy zostanie wydana oficjalna wersja projektu bądź w jaki sposób możesz się do niego przyczynić, zapoznaj się z <a href="https://www.burgershot.gg/showthread.php?tid=99">tym tematem na forum</a>, aby uzyskać niezbędne informacje.
