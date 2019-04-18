@@ -5,6 +5,7 @@ export const LANGUAGES = {
   "🇪🇸": "Spanish",
   "🇩🇪": "German",
   "🇷🇺": "Russian",
+  "PL": "Polish",
   "🇧🇷": "Portuguese",
   "🇷🇴": "Romanian",
   "🇭🇷": "Croatian",
