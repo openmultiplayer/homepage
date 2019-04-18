@@ -1,31 +1,36 @@
+// These should be in alphabetical order by English name.
 export const LANGUAGES = {
-  "🇬🇧": "English",
-  "🇫🇷": "French",
-  "🇳🇱": "Dutch",
-  "🇪🇸": "Spanish",
-  "🇩🇪": "German",
-  "🇷🇺": "Russian",
-  "🇧🇷": "Portuguese",
-  "🇷🇴": "Romanian",
-  "🇭🇷": "Croatian",
-  "🇭🇺": "Hungarian",
-  "🇸🇦": "Arabic",
-  "🇳🇴": "Norwegian"
+  'sa': 'Arabic',
+  'hr': 'Croatian',
+  'nl': 'Dutch',
+  'gb': 'English',
+  'fr': 'French',
+  'de': 'German',
+  'hu': 'Hungarian',
+  'it': 'Italian',
+  'lt': 'Lithuanian',
+  'no': 'Norwegian',
+  'br': 'Portuguese',
+  'ro': 'Romanian',
+  'ru': 'Russian',
+  'es': 'Spanish',
+  'pl': 'Polish',
+  'ee': 'Estonian',
 };
 
 export const loadLanguages = (initial, [ language, setLanguage ]) => {
-  if (language === "🇽🇽") {
+  if (language === 'xx') {
     if (LANGUAGES.hasOwnProperty(initial)) {
       language = initial;
     } else {
-      language = "🇬🇧";
+      language = 'gb';
     }
 
     // Store the newly derived initial language.
     setLanguage(language);
   }
 
-  const { BODY, FAQ } = require("../language/" + LANGUAGES[language]);
+  const { BODY, FAQ } = require(`../language/${LANGUAGES[language]}`);
 
   return [{
       body: BODY,
@@ -39,4 +44,3 @@ export const loadLanguages = (initial, [ language, setLanguage ]) => {
     }
   ];
 };
-
