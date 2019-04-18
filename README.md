@@ -6,6 +6,8 @@ The official landing page for the open.mp project.
 
 ## Contributing
 
+To get started, first [sign the Contributor License Agreement](https://www.clahub.com/agreements/openmultiplayer/homepage).  This basically just means you agree to let us use your work, and put it under an open-source license.
+
 This website is built with [Next.js](https://nextjs.org/) with no special configuration or surprises. Simply clone the
 repo, run `npm install` to grab dependencies and `npm run dev` to start the development server on http://localhost:3000
 then you can edit the source with hot reloading.
