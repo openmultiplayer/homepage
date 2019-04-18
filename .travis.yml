@@ -1,7 +1,9 @@
 sudo: required
 services:
   - docker
-language: node
+language: node_js
+node_js:
+  - "11"
 install:
   - curl -sL https://taskfile.dev/install.sh | sh
 before_script:
