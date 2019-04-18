@@ -4,6 +4,8 @@ services:
 language: node
 install:
   - curl -sL https://taskfile.dev/install.sh | sh
+before_script:
+  - npm install
 script:
   - npm test
   - |
