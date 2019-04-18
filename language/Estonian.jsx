@@ -11,7 +11,7 @@ export const BODY = (faq) => (
       See tähendab, et <strong>olemasolev SA:MP klient ja kõik SA:MP skriptid töötavad open.mp'ga</strong>, ainsaks erinevuseks on, et serveripoolselt on parandatud paljud vead, mida seni tuli parandada skriptist.
     </p>
     <p>
-      Küsimuste, näiteks millal modifikatsiooni alla laadida saab või kuidas meid aidata saab, korral soovitame lugeda <a href="https://www.burgershot.gg/showthread.php?tid=99">seda foorumiteemat</a>.
+      Kui soovid teada millal modifikatsiooni alla laadida saab või kuidas meid aidata saab, siis soovitame lugeda <a href="https://www.burgershot.gg/showthread.php?tid=99">seda foorumiteemat</a>.
     </p>
     <h1>
       <a href={faq}>KKK</a>
