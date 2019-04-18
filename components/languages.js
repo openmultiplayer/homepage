@@ -10,7 +10,8 @@ export const LANGUAGES = {
   "🇭🇷": "Croatian",
   "🇭🇺": "Hungarian",
   "🇸🇦": "Arabic",
-  "🇳🇴": "Norwegian"
+  "🇳🇴": "Norwegian",
+  "PL": "Polish"
 };
 
 export const loadLanguages = (initial, [ language, setLanguage ]) => {
