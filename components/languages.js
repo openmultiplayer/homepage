@@ -1,33 +1,33 @@
 export const LANGUAGES = {
-  "🇬🇧": "English",
-  "🇫🇷": "French",
-  "🇳🇱": "Dutch",
-  "🇪🇸": "Spanish",
-  "🇩🇪": "German",
-  "🇷🇺": "Russian",
-  "🇧🇷": "Portuguese",
-  "🇷🇴": "Romanian",
-  "🇭🇷": "Croatian",
-  "🇭🇺": "Hungarian",
-  "🇸🇦": "Arabic",
-  "🇱🇹": "Lithuanian",
-  "🇳🇴": "Norwegian",
-  "🇮🇹": "Italian",
+  'gb': 'English',
+  'fr': 'French',
+  'nl': 'Dutch',
+  'es': 'Spanish',
+  'de': 'German',
+  'ru': 'Russian',
+  'br': 'Portuguese',
+  'ro': 'Romanian',
+  'hr': 'Croatian',
+  'hu': 'Hungarian',
+  'sa': 'Arabic',
+  'no': 'Norwegian',
+  'lt': 'Lithuanian',
+  'it': 'Italian',
 };
 
 export const loadLanguages = (initial, [ language, setLanguage ]) => {
-  if (language === "🇽🇽") {
+  if (language === 'xx') {
     if (LANGUAGES.hasOwnProperty(initial)) {
       language = initial;
     } else {
-      language = "🇬🇧";
+      language = 'gb';
     }
 
     // Store the newly derived initial language.
     setLanguage(language);
   }
 
-  const { BODY, FAQ } = require("../language/" + LANGUAGES[language]);
+  const { BODY, FAQ } = require(`../language/${LANGUAGES[language]}`);
 
   return [{
       body: BODY,
