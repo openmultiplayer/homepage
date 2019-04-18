@@ -1,10 +1,10 @@
 import React from "react";
 
-export const BODY = () => (
+export const BODY = (faq) => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
-      En kommende flerspiller-klient for <em>Grand Theft Auto: San Andreas</em> som blr å være fullt kompatibel med den eksisterende <em>San Andreas Multiplayer.</em>
+      En kommende flerspiller-klient for <em>Grand Theft Auto: San Andreas</em> som vil være fullt bakoverkompatibel med den eksisterende <em>San Andreas Multiplayer.</em>
     </p>
     <br />
     <p>
@@ -14,14 +14,14 @@ export const BODY = () => (
       Om du lurer på hvordan du kan være med å hjelpe, eller hvordan DU kan hjelpe til med prosjektet, ta en titt på <a href="https://www.burgershot.gg/showthread.php?tid=99">denne forum-posten</a> for mer info.
     </p>
     <h1>
-      <a href="/faq">FAQ</a>
+      <a href={faq}>Ofte stilte spørsmål</a>
     </h1>
   </div>
 );
 
 export const FAQ = () => (
   <div>
-    <h1>FAQ</h1>
+    <h1>Ofte stilte spørsmål</h1>
     <hr />
     <h2>Hva er open.mp?</h2>
     <p>open.mp (Open Multiplayer, OMP) er en erstatning til SA:MP, igangsatt som en respons til den uønskede mengden problemer med oppdateringer og styring av SA:MP. Den første utgivelsen vil være en ren erstatning bare til serveren. Eksisterende SA:MP-klienter vil fortsatt kunne koble til serverene. På lengre sikt så vil en ny open.mp klient bli tilgjengelig, som vil bidra til at flere og bedre oppdateringer er velkomne.</p>
@@ -48,14 +48,14 @@ export const FAQ = () => (
     <p>Ja, dette er planen. Nå først så vil vi fokusere på å være synlige i form av at vi faktisk jobber med koden (som allerede vil være en forbedring) og vi vil etterhvert åpne opp kildekoden, så snart ting er satt i stein.</p>
     <hr />
     <h2>Hvordan kan jeg hjelpe?</h2>
-    <p>Hold utkikk på forumet vårt. Vi har en tråd om akkurat dette, og vi vil holde den oppdatert så snart det kommer mer. Siden prosjektet var avslørt litt snarere enn planlagt, så er vi kommet langt på veien mot en første-release, men det betyr ikke at mer hjelp er satt stor pris på. Takk på forhånd for at du bidrar og tror på prosjektet:</p>
+    <p>Hold utkikk på forumet vårt. Vi har en tråd om akkurat dette, og vi vil holde den oppdatert så snart det kommer mer. Siden prosjektet var avslørt litt snarere enn planlagt, så har vi kommet langt på vei mot en første-utgivelse, men det betyr ikke at mer hjelp er satt stor pris på. Takk på forhånd for at du bidrar og tror på prosjektet:</p>
     <br />
     <a href="https://www.burgershot.gg/showthread.php?tid=99">
       <u>"Hvordan hjelpe"-tråden (burgershot.gg)</u>
     </a>
     <hr />
     <h2>Hva er burgershot.gg?</h2>
-    <p>burgershot.gg er et spilleforum, og ikke mer. En stor del folk er medlem av begge deler, og noe OMP oppdateringer og utviklingsdetaljer er postet der, men burgershot og OMP er to individuelle prosjekter. Burgershot er ikke OMP forumet, og OMP er ikke en del av burgershot. Så snart en full open.mp side er oppe, så kan de ansees som individuelle fora (Akkurat som da SA:MP var hostet på GTAforums, helt til SA:MP fikk sin egen side).</p>
+    <p>burgershot.gg er et spilleforum, og ikke mer. En stor del folk er medlem av begge deler, og noen OMP oppdateringer og utviklingsdetaljer er postet der, men burgershot og OMP er to individuelle prosjekter. Burgershot er ikke OMP forumet, og OMP er ikke en del av burgershot. Så snart en full open.mp side er oppe, så kan de ansees som individuelle fora (Akkurat som da SA:MP var hostet på GTAforums, helt til SA:MP fikk sin egen side).</p>
     <hr />
     <h2>Hva er OpenMP?</h2>
     <p>Det er et "Open Multi-Processing" prosjekt som heter "OpenMP", vi er "open.mp". To totalt forskjellige ting.</p>
