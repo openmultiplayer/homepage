@@ -10,6 +10,7 @@ export const LANGUAGES = {
   "🇭🇷": "Croatian",
   "🇭🇺": "Hungarian",
   "🇸🇦": "Arabic",
+  "🇱🇹": "Lithuanian",
   "🇳🇴": "Norwegian"
 };
 
