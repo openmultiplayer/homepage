@@ -11,6 +11,8 @@ export const LANGUAGES = {
   'hu': 'Hungarian',
   'sa': 'Arabic',
   'no': 'Norwegian',
+  'lt': 'Lithuanian',
+  'it': 'Italian',
 };
 
 export const loadLanguages = (initial, [ language, setLanguage ]) => {
