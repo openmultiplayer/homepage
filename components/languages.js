@@ -1,18 +1,19 @@
+// These should be in alphabetical order by English name.
 export const LANGUAGES = {
+  'sa': 'Arabic',
+  'hr': 'Croatian',
+  'nl': 'Dutch',
   'gb': 'English',
   'fr': 'French',
-  'nl': 'Dutch',
-  'es': 'Spanish',
   'de': 'German',
-  'ru': 'Russian',
+  'hu': 'Hungarian',
+  'it': 'Italian',
+  'lt': 'Lithuanian',
+  'no': 'Norwegian',
   'br': 'Portuguese',
   'ro': 'Romanian',
-  'hr': 'Croatian',
-  'hu': 'Hungarian',
-  'sa': 'Arabic',
-  'no': 'Norwegian',
-  'lt': 'Lithuanian',
-  'it': 'Italian',
+  'ru': 'Russian',
+  'es': 'Spanish',
 };
 
 export const loadLanguages = (initial, [ language, setLanguage ]) => {
