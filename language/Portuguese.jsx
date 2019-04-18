@@ -38,8 +38,17 @@ export const FAQ = () => (
     <br />
     <p>Nós discordamos.</p>
     <hr />
+    <h2>Quais as suas opiniões sobre Kalcor/SA:MP/Tanto faz?</h2>
+    <p>Nós amamos SA:MP, é por isso que estamos aqui em primeiro lugar - graças ao Kalcor. Ele fez muito pelo mod ao longo dos anos, e essa contribuição não deve ser esquecida ou ignorada. As ações que levaram ao open.mp foram tomadas porque discordamos de várias decisões recentes, e apesar de repetidas tentativas de guiar o mod em uma direção diferente, nenhuma solução nova foi vista. Portanto, fomos forçados a tomar a infeliz decisão de tentar continuar SA:MP em espírito sem o Kalcor. Esta não é uma ação tomada contra ele pessoalmente, e não deve ser vista como um ataque a ele. Não vamos tolerar insultos pessoais contra ninguém - independentemente de onde eles estejam na questão open.mp; devemos ser capazes de ter um debate razoável sem recorrer a ataques.</p>
+    <hr />
+    <h2>Não estaria isso apenas dividindo a comunidade?</h2>
+    <p>Essa não é a nossa intenção. Idealmente, nenhuma divisão seria necessária, mas dividir alguns e salvar essa parte é melhor do que assistir a coisa toda desaparecer. De fato, desde que esse mod foi anunciado, um grande número de comunidades não inglesas se engajaram novamente com a comunidade inglesa. Essas comunidades foram lentamente deixadas de fora anteriormente, então a reinclusão delas está na verdade juntando uma comunidade anteriormente dividida. Um grande número de pessoas foi banida dos fóruns oficiais de SA:MP (e em alguns casos, todo o histórico de postagens foi removido), mas o próprio Kalcor apontou que os fóruns oficiais não são SA:MP, apenas uma parte de SA:MP. Muitos jogadores e donos de servidores nunca postaram ou participaram desses fóruns; então falar novamente com essas pessoas é unir ainda mais partes da comunidade.</p>
+    <hr />
     <h2>Já que isto é "Open" Multiplayer, este projeto será de código aberto?</h2>
     <p>Eventualmente esse é o plano, sim. Por enquanto, estamos tentando tornar o desenvolvimento aberto em termos de comunicação e transparência (o que, em si mesmo, é uma melhoria), e avançaremos para o código aberto quando pudermos, uma vez que tudo esteja resolvido.</p>
+    <hr />
+    <h2>Quando será lançado?</h2>
+    <p>Esta é a questão antiga, infelizmente, tem a velha resposta: quando estiver pronto. Simplesmente não há como saber quanto tempo levará um projeto como esse. Ele esteve funcionando silenciosamente há algum tempo e já viu algumas flutuações no nível de atividade, dependendo de como as pessoas estão ocupadas. Mas a certeza está bem encaminhada, e progredindo rapidamente graças a algumas decisões fundamentais de design (mais adiante falaremos sobre a arquitetura).</p>
     <hr />
     <h2>Como eu posso ajudar?</h2>
     <p>Fique de olho nos fóruns. Temos um tópico exatamente para isso e vamos mantê-lo atualizado à medida que mais trabalhos se tornarem disponíveis. Embora o projeto tenha sido revelado um pouco antes do planejado, já estamos a caminho de um lançamento inicial, mas isso não significa que mais ajuda não seja apreciada. Agradeço antecipadamente por se interessar e por acreditar no projeto:</p>
