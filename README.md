@@ -27,3 +27,26 @@ name of the language you are translating to. Finally, add an entry to the map in
 
 Now you can translate the English text, remember to maintain all structure (HTML elements) and only translate the actual
 text nodes.
+
+The table below tracks which questions have been translated to which languages.  If you see one missing `[ ]` (because it is
+new), or outdated `[-]` (because it was changed) in your language, please submit a new pull request adding it, and update the
+table below in the pull request as well.  Thank you.
+
+* `[ ]` - not translated.
+* `[x]` - translated.
+* `[-]` - outdated.
+
+Question                                                  | Arabic      | Croatian    | Dutch       | English     | French      | German      | Hungarian   | Italian     | Lithuanian  | Norwegian   | Portuguese  | Romanian    | Russian     | Spanish     |
+----------------------------------------------------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|
+**Homepage**                                              |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+What is open.mp?                                          |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+Is it a fork?                                             |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+Why are you doing this?                                   |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+What are your opinions on Kalcor/SA:MP/whatever?          |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [x]     |     [ ]     |     [x]     |     [ ]     |     [x]     |     [ ]     |
+Isn't this just splitting the community?                  |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [x]     |     [ ]     |     [x]     |     [ ]     |     [x]     |     [ ]     |
+Since it is "Open" Multiplayer, will this be open-source? |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+When will it be released?                                 |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [x]     |     [ ]     |     [x]     |     [ ]     |     [x]     |     [ ]     |
+How can I help?                                           |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+What is burgershot.gg?                                    |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+What about OpenMP?                                        |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+
