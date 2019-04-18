@@ -29,18 +29,17 @@ table below in the pull request as well.  Thank you.
 * `[x]` - translated.
 * `[-]` - outdated.
 
-Question                                                  | English     | French      | Dutch       | Spanish     | German      | Russian     | Portuguese  | Romanian    | Croatian    | Hungarian   | Arabic      |
-----------------------------------------------------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|
-**Homepage**                                              |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
-What is open.mp?                                          |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
-Is it a fork?                                             |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
-Why are you doing this?                                   |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
-What are your opinions on Kalcor/SA:MP/whatever?          |     [x]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |
-Isn't this just splitting the community?                  |     [x]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |
-Since it is "Open" Multiplayer, will this be open-source? |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
-When will it be released?                                 |     [x]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |     [ ]     |
-How can I help?                                           |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
-What is burgershot.gg?                                    |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
-What about OpenMP?                                        |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
-
+Question                                                  | Arabic      | Croatian    | Dutch       | English     | French      | German      | Hungarian   | Italian     | Lithuanian  | Norwegian   | Portuguese  | Romanian    | Russian     | Spanish     |
+----------------------------------------------------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|
+**Homepage**                                              |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+What is open.mp?                                          |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+Is it a fork?                                             |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+Why are you doing this?                                   |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+What are your opinions on Kalcor/SA:MP/whatever?          |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [x]     |     [ ]     |     [x]     |     [ ]     |     [x]     |     [ ]     |
+Isn't this just splitting the community?                  |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [x]     |     [ ]     |     [x]     |     [ ]     |     [x]     |     [ ]     |
+Since it is "Open" Multiplayer, will this be open-source? |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+When will it be released?                                 |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [ ]     |     [ ]     |     [ ]     |     [x]     |     [x]     |     [ ]     |     [x]     |     [ ]     |     [x]     |     [ ]     |
+How can I help?                                           |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+What is burgershot.gg?                                    |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
+What about OpenMP?                                        |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |     [x]     |
 
