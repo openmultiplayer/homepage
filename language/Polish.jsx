@@ -38,7 +38,7 @@ export const FAQ = () => (
     <br />
     <p>Nie zgadzamy się.</p>
     <hr />
-    <h2>Jakie są wasze opinie na temat Kalcor/SA:MP/czegokolwiek?</h2>
+    <h2>Jakie są wasze opinie na temat Kalcor/SA:MP/ogólnie?</h2>
     <p>Kochamy SA:MP i dlatego tutaj jesteśmy zawdzięczając to Kalcorowi. Zrobił bardzo dużo dla tego projektu przez lata i ten wkład nie powinien być zapomniany ani ignorowany. Działania prowadzące do rozpoczęcia prac nad open.mp zostały podjęte, ponieważ nie zgodziliśmy się z kilkoma ostatnimi decyzjami i pomimo wielokrotnych prób nakierowania projektu na właściwy tor nie przyniosło to żadnych efektów. W związku z tym byliśmy zmuszeni podjąć niefortunną decyzję, aby spróbować kontynuować SA:MP bez Kalcora. Nie jest to działanie podjęte przeciwko niemu osobiście i nie powinno być postrzegane jako atak na jego osobę. Nie będziemy tolerować żadnych obelg względem innych - niezależnie od tego jakie jest ich podejście do open.mp; powinniśmy mieć możliwość przeprowadzenia rozsądnej debaty bez uciekania się do ataków ad-hominem.</p>
     <hr />
     <h2>Czy nie jest to czasem podział społeczności?</h2>
