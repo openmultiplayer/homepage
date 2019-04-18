@@ -41,4 +41,3 @@ export const loadLanguages = (initial, [ language, setLanguage ]) => {
     }
   ];
 };
-
