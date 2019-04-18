@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = (faq) => (
+export const BODY = (FAQLink) => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -14,7 +14,7 @@ export const BODY = (faq) => (
       Ha kíváncsi vagy mikor lesz elérhető a projekt, vagy szeretnél közreműködni, kérlek látogasd meg <a href="https://www.burgershot.gg/showthread.php?tid=99">ezt a fórum témát</a> további információért.
     </p>
     <h1>
-      <a href={faq}>GYIK</a>
+      <FAQLink>GYIK</FAQLink>
     </h1>
   </div>
 );

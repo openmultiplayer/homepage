@@ -1,11 +1,12 @@
 import React from "react";
 import Head from "next/head";
+import { LanguageSelect } from './LanguageSelect';
 
 import "./style.css";
 
 const DESC = 'Open Multiplayer - An upcoming multiplayer mod for Grand Theft Auto: San Andreas that is a fully backwards compatible substitute for SA:MP.';
 
-export const HeadContent = ({ title }) => (
+export const HeadContent = ({ title, ...rest }) => (
   <Head>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -47,6 +48,7 @@ export const HeadContent = ({ title }) => (
     <meta name="hostname" content="burgershot.gg" />
     <meta name="expected-hostname" content="burgershot.gg" />
     <meta name="google-site-verification" content="-1qA4kEDqC2i3_jqGD-UYCCqH7jDWZdgEejT7-4QqkE" />
+    <LanguageSelect {...rest} />
   </Head>
 );
 

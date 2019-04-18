@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = (faq) => (
+export const BODY = (FAQLink) => (
   <div>
     <h1>اوبن ملتي بلاير</h1>
     <p>
@@ -14,7 +14,7 @@ export const BODY = (faq) => (
     اذا تريد ان تعرف موعد الاصدار او تريد المساعده فعليك الذهاب الي <a href="https://www.burgershot.gg/showthread.php?tid=99">هذا الرابط</a> لمعرفة معلومات اكثر. 
     </p>
     <h1>
-      <a href={faq}>اسئله و اجوبه</a>
+      <FAQLink>اسئله و اجوبه</FAQLink>
     </h1>
   </div>
 );

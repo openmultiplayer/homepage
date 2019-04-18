@@ -115,11 +115,15 @@ hr {
   background-color: #ff3200;
 }
 
-#home-link:hover .cls-1,
-#home-link:hover .cls-2,
-#home-link:hover .cls-3,
-#home-link:hover .cls-5,
-#home-link:hover .cls-7 {
+.faq #main:hover {
+  cursor: pointer;
+}
+
+.faq #main:hover .cls-1,
+.faq #main:hover .cls-2,
+.faq #main:hover .cls-3,
+.faq #main:hover .cls-5,
+.faq #main:hover .cls-7 {
   stroke: #ff3200;
 }
 
