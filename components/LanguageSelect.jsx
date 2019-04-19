@@ -1,11 +1,12 @@
 /* eslint-disable react/no-array-index-key */
 import React from "react";
+import Link from "next/link";
 import "flag-icon-css/css/flag-icon.css";
 
-export const LanguageSelect = ({ flags, selected, callback }) => {
+const LanguageSelect = ({ flags, selected }) => {
   // no-op for single-language
   if (flags.length === 1) {
-    return <div />;
+    return <div className="lang-list" />;
   }
 
   return (
@@ -16,16 +17,15 @@ export const LanguageSelect = ({ flags, selected, callback }) => {
           className += " lang-flag-selected";
         }
         return (
-          <a
-            href={`?lang=${value}`}
-            key={index}
-            className={className}
-            onClick={e => callback(e, value)}
-          >
-            <span className={`flag-icon flag-icon-${value}`} />
-          </a>
+          <Link href={`?lang=${value}`}>
+            <a key={index} className={className} role="link">
+              <span className={`flag-icon flag-icon-${value}`} />
+            </a>
+          </Link>
         );
       })}
     </div>
   );
 };
+
+export { LanguageSelect };

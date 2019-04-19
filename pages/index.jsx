@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { withRouter } from "next/router";
 
@@ -9,20 +9,16 @@ import Forum from "../components/icons/Forum";
 
 import { loadLanguages } from "../components/languages";
 
-const Index = ({ router: { query: initialLang } }) => {
-  const [currentLanguage, flags, selected, callback] = loadLanguages(
-    initialLang,
-    useState("xx")
-  );
+const Index = ({
+  router: {
+    query: { lang: language }
+  }
+}) => {
+  const [currentLanguage, flags] = loadLanguages(language);
 
   return (
     <div className="container">
-      <HeadContent
-        flags={flags}
-        selected={selected}
-        callback={callback}
-        title="FAQ"
-      />
+      <HeadContent flags={flags} selected={currentLanguage.name} title="FAQ" />
 
       <main>
         <header className="header">
@@ -35,7 +31,9 @@ const Index = ({ router: { query: initialLang } }) => {
         </header>
         <section className="content">
           {currentLanguage.body(({ children }) => (
-            <Link href={`/faq?lang=${selected}`}>{children}</Link>
+            <Link href={`/faq?lang=${currentLanguage.name}`}>
+              <a>{children}</a>
+            </Link>
           ))}
           <hr />
           <p>

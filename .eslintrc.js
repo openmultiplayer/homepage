@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "react/prop-types": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off" // disabled for next.js <Link> usage
   }
 };
