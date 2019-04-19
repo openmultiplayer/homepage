@@ -27,10 +27,10 @@ export const FAQ = () => (
     <p>Az open.mp (Open Multiplayer, OMP) egy többjátékos modifikáció a San Andreas számára ami a SA:MP frissítésével és kezelésével kapcsolatos problémák miatt indult. A kezdeti kiadás csak a szerverfájlok cseréje lesz, és a meglévő SA:MP klienssel rendelkezők csatlakozhatnak ezekhez a szerverekhez. A jövőben egy új open.mp kliens lesz elérhető, amely több érdekes frissítést tesz lehetővé.</p>
     <hr />
     <h2>Ez egy "fork"?</h2>
-    <p>Nem. Ez teljesen nulláról írt, kihasználva az évtizedes tudást és tapasztalatot. A SA:MP-ot megpróbálták korábban újraírni, de úgy gondoljuk ezeknek két fő problémája volt:</p>
+    <p>Nem. Ez a mód teljesen nulláról írt, kihasználva az évtizedes tudást és tapasztalatot. A SA:MP-ot többször is megpróbálták korábban újraírni, de úgy gondoljuk ezeknek két fő problémájuk volt:</p>
     <ol>
       <li>Legtöbbjük a kiszivárgott SA:MP forráskódon alapultak. Ezeknek a modifikációknak a fejlesztői nem rendelkeztek törvényes joggal a kód felhasználásához, és így mindig hátrányos helyzetben voltak, mind morálisan, mind pedig jogilag.</li>
-      <li>Túl sok mindent próbáltak egyszerre elkészíteni. Vagy ki szerették volna cserélni a fejlesztési motort, vagy eltávolítani funkciókat miközben újakat hoznak létre, vagy csak kissebb dolgokat csinálni rossz módon. Ez megakadályozza, hogy a meglévő szerverek hatalmas kódbázisokkal és játékosbázisokkal előre haladjanak, mivel át kell írniuk egy részét, ha nem az egészét a forráskódnak- ami borzasztóan nagy feladat. Az idő múlásával szeretnénk új funkciókat, és további dolgokat is készíteni de legfőképp arra összpontosítunk hogy támogassuk a meglévő szervereket, lehetővé téve számukra hogy saját forráskódjukat ne kelljen megváltoztatniuk.</li>
+      <li>Túl sok mindent próbáltak egyszerre elkészíteni. Vagy ki szerették volna cserélni a fejlesztési motort, vagy eltávolítani funkciókat miközben újakat hoznak létre, vagy csak kissebb dolgokat csinálni nem a helyes úton. Ez megakadályozza, hogy a meglévő szerverek hatalmas kódbázisokkal és játékosbázisokkal előre haladjanak, mivel át kell írniuk egy részét, ha nem az egészét a forráskódnak- ami borzasztóan nagy feladat. Az idő múlásával szeretnénk új funkciókat, és további dolgokat is készíteni de legfőképp arra összpontosítunk hogy támogassuk a meglévő szervereket, lehetővé téve számukra hogy saját forráskódjukat ne kelljen gyökeresen megváltoztatniuk.</li>
     </ol>
     <hr />
     <h2>Miért készül ez az egész?</h2>
@@ -42,7 +42,7 @@ export const FAQ = () => (
     <p>Ez a terv, igen. Átmenetileg próbáljuk a fejlesztést kommunikáció és átláthatóság szempontjából nyitottnak titulálni (ami önmagában is javulás), és a jövőben próbálunk a nyílt forráskód felé haladni miután a felhajtás lecsillapult.</p>
     <hr />
     <h2>Hogy tudok segíteni?</h2>
-    <p>Tartsd szemmel a fórumot. Van egy témánk kifejezetten erre a célra ami aktívan frissül ahogy több segítségre lesz szükségünk. Míg a projekt a tervezettnél rövidebb idün belül kiderül, már jó úton vagyunk az első kiadás felé, de ez nem azt jelenti hogy a segítséget nem értékeljük. Előre is köszönjük hogy érdeklődsz, és hiszel a projektben:</p>
+    <p>Tartsd szemmel a fórumot. Van egy témánk kifejezetten erre a célra ami aktívan frissül ahogy több segítségre lesz szükségünk. Míg a projekt a tervezettnél rövidebb idün belül kiderült, már jó úton vagyunk az első kiadás felé, de ez nem azt jelenti hogy a segítséget nem értékeljük. Előre is köszönjük hogy érdeklődsz, és hiszel a projektben:</p>
     <br />
     <a href="https://www.burgershot.gg/showthread.php?tid=99">
       <u>"Hogyan tudsz segíteni" téma(burgershot.gg)</u>
