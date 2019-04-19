@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = (FAQLink) => (
+export const BODY = FAQLink => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>

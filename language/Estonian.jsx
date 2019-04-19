@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = (faq) => (
+export const BODY = faq => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -24,7 +24,9 @@ export const FAQ = () => (
     <h1>KKK</h1>
     <hr />
     <h2>Mis on open.mp?</h2>
-    <p>open.mp (Open Multiplayer, OMP) on mitmikmängu modifikatsioon mängule <em>Grand Theft Auto: San Andreas</em>, mis on mõeldud asendamaks modifikatsiooni <em>San Andreas Multiplayer</em> vastusena suurele hulgale probleemidele seoses SA:MPi uuenduste ning juhtimisega. Esialgne versioon modifikatsioonist on asendus SA-MP serveritarkvarale ning sellega saab ühenduda kasutades eksisteerivat SA-MP klienti. Kaugemas tulevikus lisandub sellele ka open.mp klient, mis avab ukse paljudele uutele ja huvitavatele uuendustele.</p>
+    <p>
+      open.mp (Open Multiplayer, OMP) on mitmikmängu modifikatsioon mängule <em>Grand Theft Auto: San Andreas</em>, mis on mõeldud asendamaks modifikatsiooni <em>San Andreas Multiplayer</em> vastusena suurele hulgale probleemidele seoses SA:MPi uuenduste ning juhtimisega. Esialgne versioon modifikatsioonist on asendus SA-MP serveritarkvarale ning sellega saab ühenduda kasutades eksisteerivat SA-MP klienti. Kaugemas tulevikus lisandub sellele ka open.mp klient, mis avab ukse paljudele uutele ja huvitavatele uuendustele.
+    </p>
     <hr />
     <h2>Kas see põhineb SA-MPil?</h2>
     <p>Ei. See on täiesti uus modifikatsioon, mis põhineb aastakümnete pikkustel teadmistel ja kogemustel. Varasemalt on olnud SA-MPi põhjal uute modifikatsioonide loomise katsetusi, kuid meie arvates ebaõnnestusid need kahel põhjusel:</p>
@@ -54,13 +56,21 @@ export const FAQ = () => (
     <p>Hoia foorumil silma peal. Meil on selle kohta foorumis teema ning me täiendame seda, kui lisandub midagi, millega abi vaja läheb. Kuigi projekt muutus avalikuks pisut varem kui lootsime, oleme esimesele väljalaskele lähedal, kuid see ei tähenda seda, et abi pole vägagi oodatud ning hinnatud. Täname sind, et tunned projekti vastu huvi ning usud sellesse:</p>
     <br />
     <a href="https://www.burgershot.gg/showthread.php?tid=99">
-      <u>Vastav teema <i>burgershot.gg</i> foorumis.</u>
+      <u>
+        Vastav teema <i>burgershot.gg</i> foorumis.
+      </u>
     </a>
     <hr />
-    <h2>Mis on <i>burgershot.gg</i>?</h2>
-    <p>burgershot.gg on mängukommuun, ei midagi enamat. Paljud inimesed on seotud nii selle kui open.mp'ga ning open.mp arenduse kohta saab praegu lugeda sealt, kuid tegemist on kahe eraldiseisva projektiga. Tegemist ei ole open.mp foorumiga ning üks projekt ei kuulu teisele. Kui open.mp veebisait on täielikult valmis, eraldatakse kaks saiti üksteisest. Võrdluseks võib välja tuua näiteks selle, kuidas SA-MP oli kunagi osa <i>GTAForums</i> kommuunist, kuni selle õige veebileht valmis sai.</p>
+    <h2>
+      Mis on <i>burgershot.gg</i>?
+    </h2>
+    <p>
+      burgershot.gg on mängukommuun, ei midagi enamat. Paljud inimesed on seotud nii selle kui open.mp'ga ning open.mp arenduse kohta saab praegu lugeda sealt, kuid tegemist on kahe eraldiseisva projektiga. Tegemist ei ole open.mp foorumiga ning üks projekt ei kuulu teisele. Kui open.mp veebisait on täielikult valmis, eraldatakse kaks saiti üksteisest. Võrdluseks võib välja tuua näiteks selle, kuidas SA-MP oli kunagi osa <i>GTAForums</i> kommuunist, kuni selle õige veebileht valmis sai.
+    </p>
     <hr />
-    <h2>Aga mis on <i>OpenMP</i>?</h2>
+    <h2>
+      Aga mis on <i>OpenMP</i>?
+    </h2>
     <p>"OpenMP" on mitmiktöötlusprojekt, meie oleme "open.mp". Need on täiesti erinevad asjad.</p>
   </div>
 );
