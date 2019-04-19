@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { withRouter } from "next/router";
 
 import { HeadContent } from "../components/HeadContent";
 import Wordmark from "../components/icons/Wordmark";
@@ -8,11 +9,7 @@ import Forum from "../components/icons/Forum";
 
 import { loadLanguages } from "../components/languages";
 
-export default ({
-  url: {
-    query: { lang: initialLang }
-  }
-}) => {
+const Index = ({ router: { query: initialLang } }) => {
   const [currentLanguage, flags, selected, callback] = loadLanguages(
     initialLang,
     useState("xx")
@@ -58,3 +55,5 @@ export default ({
     </div>
   );
 };
+
+export default withRouter(Index);

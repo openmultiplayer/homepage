@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { withRouter } from "next/router";
 
 import { HeadContent } from "../components/HeadContent";
 import { LanguageSelect } from "../components/LanguageSelect";
 import { loadLanguages } from "../components/languages";
 import Wordmark from "../components/icons/Wordmark";
 
-export default ({
-  url: {
-    query: { lang: initialLang }
-  }
-}) => {
+const Faq = ({ router: { query: initialLang } }) => {
   const [currentLanguage, flags, selected, callback] = loadLanguages(
     initialLang,
     useState("xx")
@@ -45,3 +42,5 @@ export default ({
     </div>
   );
 };
+
+export default withRouter(Faq);
