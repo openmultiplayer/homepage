@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = (faq) => (
+export const BODY = FAQLink => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -14,7 +14,7 @@ export const BODY = (faq) => (
       Om du lurer på hvordan du kan være med å hjelpe, eller hvordan DU kan hjelpe til med prosjektet, ta en titt på <a href="https://www.burgershot.gg/showthread.php?tid=99">denne forum-posten</a> for mer info.
     </p>
     <h1>
-      <a href={faq}>Ofte stilte spørsmål</a>
+      <FAQLink>Ofte stilte spørsmål</FAQLink>
     </h1>
   </div>
 );
@@ -34,13 +34,7 @@ export const FAQ = () => (
     </ol>
     <hr />
     <h2>Hvorfor gjør dere dette?</h2>
-    <p>Uten hell så har det vært prøvd flere ganger å få utviklingen til å gå fremover på SA:MP. Det i form av nye ideèr, masing og 
-        tilbud om å hjelpe til fra Beta-laget; støttet av et stort samfunn som har bedt om noe nytt; så har det ikke vært noen som helts fremgang.
-        Det tenkes at dette er på grunn av at eier ikke har sett intresse av å ta hand om modden lengre, som forøvrig ikke er problemet, 
-        men det har ikke vært noe forsøk på å la andre ta over. Istedet for å la modden leve videre så har eier åpenbart tenkt å la alt dø
-        sammen med han. Noen sier de tror det er fordi eier tjener gode penger på siden, men det er ingen bevis på at dette stemmer.
-        Selv om det har vært svært stor interesse og et sammensveiset samfunn, han trodde det bare var et par år igjen for SA-MP,
-        og medlemmene i samfunnet som hadde jobbet så enormt hardt for alt sammen, ikke fortjene en fortsettelse.</p>
+    <p>Uten hell så har det vært prøvd flere ganger å få utviklingen til å gå fremover på SA:MP. Det i form av nye ideèr, masing og tilbud om å hjelpe til fra Beta-laget; støttet av et stort samfunn som har bedt om noe nytt; så har det ikke vært noen som helts fremgang. Det tenkes at dette er på grunn av at eier ikke har sett intresse av å ta hand om modden lengre, som forøvrig ikke er problemet, men det har ikke vært noe forsøk på å la andre ta over. Istedet for å la modden leve videre så har eier åpenbart tenkt å la alt dø sammen med han. Noen sier de tror det er fordi eier tjener gode penger på siden, men det er ingen bevis på at dette stemmer. Selv om det har vært svært stor interesse og et sammensveiset samfunn, han trodde det bare var et par år igjen for SA-MP, og medlemmene i samfunnet som hadde jobbet så enormt hardt for alt sammen, ikke fortjene en fortsettelse.</p>
     <br />
     <p>Vi er ikke enige.</p>
     <hr />
