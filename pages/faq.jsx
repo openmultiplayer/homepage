@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 import { HeadContent } from "../components/HeadContent";
-import { LanguageSelect } from "../components/LanguageSelect";
 import { loadLanguages } from "../components/languages";
 import Wordmark from "../components/icons/Wordmark";
 
@@ -36,7 +35,6 @@ export default ({
             />
           </Link>
         </header>
-        <LanguageSelect flags={flags} selected={selected} callback={callback} />
         <section className="content">
           {currentLanguage.faq()}
           <hr />
