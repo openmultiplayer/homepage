@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = (FAQLink) => (
+export const BODY = FAQLink => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -36,7 +36,10 @@ export const FAQ = () => (
     </ol>
     <hr />
     <h2>Wieso macht ihr euch diese Arbeit?</h2>
-    <p>Obwohl die Community bereits mehrmals durch Vorschläge, Kritik und dem Anbieten von Hilfe versucht hat, die offizielle SA:MP-Entwicklung wieder in Gang zu bringen, gab es keine Besserungen. Dies ist wahrscheinlich auf ein fehlendes Interesse der SA:MP Entwickler zurückzuführen. An sich ist dieses fehlende Interesse nicht verwerflich, jedoch gab es leider keinen Nachfolger und somit keine Weiterentwicklung. Anstatt die Entwicklung, an die die daran interessiert sind, weiterzugeben, entschied der Gründer alles mit ins Grab zu nehmen und dabei solange wie nur irgendwie möglich alles mit minimal nötigem Aufwand am Leben zu halten. Einige behaupten, dies sei aus passiven Einkommensgründen, aber es gibt keinen Beweis dafür. Trotz des großen Interesse der starken und sehr familiären Community, glaubte der Gründer, dass die Modifikation nur 1 oder 2 weitere Jahre überleben würde und die Community, die so hart gearbeitet hatte, um SA:MP zu dem zu machen, was es heute ist, keine Fortführung der Entwicklung verdiene.</p>
+    <p>
+      Obwohl die Community bereits mehrmals durch Vorschläge, Kritik und dem Anbieten von Hilfe versucht hat, die offizielle SA:MP-Entwicklung wieder in Gang zu bringen, gab es keine Besserungen. Dies ist wahrscheinlich auf ein fehlendes Interesse der SA:MP Entwickler zurückzuführen. An sich ist dieses fehlende Interesse nicht verwerflich, jedoch gab es leider keinen Nachfolger und somit keine Weiterentwicklung. Anstatt die Entwicklung, an die die daran interessiert sind, weiterzugeben, entschied der Gründer alles mit ins Grab zu nehmen und dabei solange wie nur irgendwie möglich alles mit minimal nötigem Aufwand am Leben zu halten. Einige behaupten, dies sei aus passiven Einkommensgründen, aber es gibt keinen Beweis dafür. Trotz des großen Interesse der starken und sehr familiären Community, glaubte der Gründer, dass die Modifikation nur 1 oder 2 weitere Jahre überleben würde und die Community, die so hart gearbeitet hatte, um SA:MP zu dem zu machen, was es heute ist, keine
+      Fortführung der Entwicklung verdiene.
+    </p>
     <br />
     <p>Wir sind anderer Meinung.</p>
     <hr />
@@ -44,7 +47,10 @@ export const FAQ = () => (
     <p>Wir lieben SA:MP, deshalb sind wir überhaupt hier - und das verdanken wir Kalcor. Er hat im Laufe der Jahre viel für die Modifikation getan und diese Beiträge sollen nicht vergessen oder ignoriert werden. Die Massnahmen, die zu open.mp führten, wurden ergriffen da wir mit mehreren aktuellen Entscheidungen nicht einverstanden waren und trotz wiederholter Versuche, die Modifikation in einer anderen Richtung zu lenken, keine Lösung in Sicht war. So waren wir gezwungen, die unglückliche Entscheidung zu treffen, SA:MP im Geiste weiterzuführen, ohne Kalcor. Das war keine Entscheidung gegen ihn persönlich und sollte nicht als Angriff aufgegriffen werden. Wir werden keine persönlichen Beleidigungen gegen niemanden tolerieren - egal wo sie in der open.mp Problematik stehen; wir sollten in der Lage sein, eine vernünftige Debatte zu führen, ohne, dass auf Ad-Hominem-Angriffe zurückgegriffen werden muss.</p>
     <hr />
     <h2>Spaltet das nicht die Community?</h2>
-    <p>Das ist nicht unsere Absicht. Im Idealfall wäre überhaupt keine Spaltung nötig gewesen, aber sich von etwas zu trennen und dieses zu behalten, anstatt das ganze Ding welken zu sehen, ist wesentlich besser. Tatsächlich haben sich seit der Ankündigung dieser Modifikation eine grosse Anzahl nicht-englischer Communities, mit der englischen Community wiederverbunden. Diese Communities wurden zuvor langsam herausgedrängt und ausgegrenzt, sodass ihre Wiedereingliederung sogar eine gespaltene Gemeinschaft wieder zusammenführt. Eine grosse Anzahl an Mitgliedern des offiziellen SA:MP-Forums wurde gebannt (und in einigen Fällen sogar all deren Posts gelöscht), aber Kalcor selbst hat darauf hingewiesen, dass das offizielle SA:MP Forum nicht SA:MP ist, sondern nur ein Teil von SA:MP. Viele Spieler und Serverbesitzer haben noch nie in diesem Forum gepostet oder sich sogar registriert; also ist es umso wichtiger, mit diesen Leuten zu kommunizieren und so, noch mehr Teile der Community zu vereinen.</p>
+    <p>
+      Das ist nicht unsere Absicht. Im Idealfall wäre überhaupt keine Spaltung nötig gewesen, aber sich von etwas zu trennen und dieses zu behalten, anstatt das ganze Ding welken zu sehen, ist wesentlich besser. Tatsächlich haben sich seit der Ankündigung dieser Modifikation eine grosse Anzahl nicht-englischer Communities, mit der englischen Community wiederverbunden. Diese Communities wurden zuvor langsam herausgedrängt und ausgegrenzt, sodass ihre Wiedereingliederung sogar eine gespaltene Gemeinschaft wieder zusammenführt. Eine grosse Anzahl an Mitgliedern des offiziellen SA:MP-Forums wurde gebannt (und in einigen Fällen sogar all deren Posts gelöscht), aber Kalcor selbst hat darauf hingewiesen, dass das offizielle SA:MP Forum nicht SA:MP ist, sondern nur ein Teil von SA:MP. Viele Spieler und Serverbesitzer haben noch nie in diesem Forum gepostet oder sich sogar registriert; also ist es umso wichtiger, mit diesen Leuten zu kommunizieren und so, noch mehr Teile der Community zu
+      vereinen.
+    </p>
     <hr />
     <h2>Da es "Open" Multiplayer heißt, wird es auch quelloffen sein?</h2>
     <p>Irgendwann ist das der Plan, ja. Vorerst konzentrieren wir uns auf eine offene Kommunikation und Transparenz (was an sich schon eine Verbesserung ist) und arbeiten auf eine Veröffentlichung des Quellcodes hin, sobald alles geklärt und geregelt ist.</p>

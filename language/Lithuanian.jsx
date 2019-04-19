@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = (FAQLink) => (
+export const BODY = FAQLink => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -34,7 +34,9 @@ export const FAQ = () => (
     </ol>
     <hr />
     <h2>Kodėl jūs tai darote?</h2>
-    <p>Nepaisant daugelio bandymų atnaujinti SA:MP per idėjas, zirzimą, testuotojų komandos siūlymus padėti ir visa tai kartu su bendruomene, kuri garsiai prašė bet kokių atnaujinimų, nepasirodė jokių progreso apraiškų. Tai buvo paprasčiausiai nurašyta ant susidomėjimo trūkumo iš modo kūrėjo, kas savaime nėra problema, tačiau nebuvo numatyta jokia modo perdavimo kitiems kūrėjams galimybė. Vietoje to, kad modo kūrimo valdžia būtų perduota tiems, kas buvo susidomėję darbų tęstinumu, kūrėjas tiesiog nusprendė, kad jis nori nuskęsti su modu kaip kapitonas su savo laivu, įdedant tik pačias mažiausias pastangas, kad laikas būtų pratemptas kiek įmanoma ilgiau. Vieni teigia, kad tai vyko dėl generuojamo pelno, tačiau nėra jokio pagrindo taip manyti. Nepaisant didelio susidomėjimo ir stiprios bei artimos kaip didelė šeima bendruomenės, jis tikėjo, kad modo gyvavimui beliko 1-2 metai ir bendruomenė, kuri taip sunkiai dirbo kad paverstų SA:MP tuo, koks šis modas yra šiandien, nenusipelnė tęsinio.</p>
+    <p>
+      Nepaisant daugelio bandymų atnaujinti SA:MP per idėjas, zirzimą, testuotojų komandos siūlymus padėti ir visa tai kartu su bendruomene, kuri garsiai prašė bet kokių atnaujinimų, nepasirodė jokių progreso apraiškų. Tai buvo paprasčiausiai nurašyta ant susidomėjimo trūkumo iš modo kūrėjo, kas savaime nėra problema, tačiau nebuvo numatyta jokia modo perdavimo kitiems kūrėjams galimybė. Vietoje to, kad modo kūrimo valdžia būtų perduota tiems, kas buvo susidomėję darbų tęstinumu, kūrėjas tiesiog nusprendė, kad jis nori nuskęsti su modu kaip kapitonas su savo laivu, įdedant tik pačias mažiausias pastangas, kad laikas būtų pratemptas kiek įmanoma ilgiau. Vieni teigia, kad tai vyko dėl generuojamo pelno, tačiau nėra jokio pagrindo taip manyti. Nepaisant didelio susidomėjimo ir stiprios bei artimos kaip didelė šeima bendruomenės, jis tikėjo, kad modo gyvavimui beliko 1-2 metai ir bendruomenė, kuri taip sunkiai dirbo kad paverstų SA:MP tuo, koks šis modas yra šiandien, nenusipelnė tęsinio.
+    </p>
     <br />
     <p>Mes nesutinkame.</p>
     <hr />
