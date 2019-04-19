@@ -2,32 +2,32 @@
 
 // These should be in alphabetical order by English name.
 export const LANGUAGES = {
-  sa: "Arabic",
-  hr: "Croatian",
-  nl: "Dutch",
-  gb: "English",
-  fr: "French",
-  de: "German",
-  hu: "Hungarian",
-  it: "Italian",
-  lt: "Lithuanian",
-  no: "Norwegian",
-  br: "Portuguese",
-  ro: "Romanian",
-  ru: "Russian",
-  es: "Spanish",
-  pl: "Polish",
-  ee: "Estonian",
-  vn: "Vietnamese"
+  sa: 'Arabic',
+  hr: 'Croatian',
+  nl: 'Dutch',
+  gb: 'English',
+  fr: 'French',
+  de: 'German',
+  hu: 'Hungarian',
+  it: 'Italian',
+  lt: 'Lithuanian',
+  no: 'Norwegian',
+  br: 'Portuguese',
+  ro: 'Romanian',
+  ru: 'Russian',
+  es: 'Spanish',
+  pl: 'Polish',
+  ee: 'Estonian',
+  vn: 'Vietnamese'
 };
 
-export const loadLanguages = initial => {
+export const loadLanguages = (initial) => {
   let currentLanguage = initial;
   if (initial === undefined) {
     if (Object.prototype.hasOwnProperty.call(LANGUAGES, initial)) {
       currentLanguage = initial;
     } else {
-      currentLanguage = "gb";
+      currentLanguage = 'gb';
     }
   }
 

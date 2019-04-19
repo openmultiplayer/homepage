@@ -1,4 +1,7 @@
 {
+    "printWidth": 999,
     "proseWrap": "never",
-    "printWidth": 999
+    "arrowParens": "always",
+    "singleQuote": true
+
 }

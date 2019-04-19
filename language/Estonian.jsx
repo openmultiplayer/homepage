@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export const BODY = faq => (
+export const BODY = (faq) => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
