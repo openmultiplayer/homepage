@@ -1,37 +1,31 @@
-import React from "react";
-import { useState } from "react";
-import Head from "next/head";
+import React, { useState } from 'react';
+import Head from 'next/head';
 
-import { HeadContent } from "../components/HeadContent";
-import { LanguageSelect } from "../components/LanguageSelect";
-import Wordmark from "../components/icons/Wordmark";
-import Discord from "../components/icons/Discord";
-import Forum from "../components/icons/Forum";
+import { HeadContent } from '../components/HeadContent';
+import { LanguageSelect } from '../components/LanguageSelect';
+import Wordmark from '../components/icons/Wordmark';
+import Discord from '../components/icons/Discord';
+import Forum from '../components/icons/Forum';
 
-import { loadLanguages } from "../components/languages";
+import { loadLanguages } from '../components/languages';
 
-const Index = () => {
-  let [language, setLanguage] = useState("🇬🇧");
-
-  let languages = loadLanguages();
-  let currentLanguage = languages[language];
+export default ({ url: { query: { lang: initialLang } } }) => {
+  const [ currentLanguage, flags, selected, callback ] = loadLanguages(initialLang, useState('xx'));
 
   return (
     <div className="container">
       <HeadContent />
       <main>
         <header className="header">
-          <Wordmark width={300} height={"100%"} stroke="#d1cec8" background="#161f2b" />
+          <Wordmark width={300} height="100%" stroke="#d1cec8" background="#161f2b" />
         </header>
         <LanguageSelect
-          flags={Object.keys(languages)}
-          selected={language}
-          callback={l => {
-            setLanguage(l);
-          }}
+          flags={flags}
+          selected={selected}
+          callback={callback}
         />
         <section className="content">
-          {currentLanguage.body()}
+          {currentLanguage.body(`/faq?lang=${selected}`)}
           <hr />
           <p>
             <span className="icon">
@@ -51,4 +45,3 @@ const Index = () => {
   );
 };
 
-export default Index;

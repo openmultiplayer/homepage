@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
+import 'flag-icon-css/css/flag-icon.css';
 
-export const LanguageSelect = props => {
+export const LanguageSelect = (props) => {
   // no-op for single-language
   if (props.flags.length === 1) {
     return <div />;
@@ -14,11 +15,12 @@ export const LanguageSelect = props => {
           className += " lang-flag-selected";
         }
         return (
-          <span key={index} className={className} onClick={() => props.callback(value)}>
-            {value}
-          </span>
+          <a href={`?lang=${value}`} key={index} className={className} onClick={(e) => props.callback(e, value)}>
+            <span className={`flag-icon flag-icon-${value}`}></span>
+          </a>
         );
       })}
     </div>
   );
 };
+
