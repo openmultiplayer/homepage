@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = (FAQLink) => (
+export const BODY = FAQLink => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -38,7 +38,7 @@ export const FAQ = () => (
     <br />
     <p>Điều này thật vô lý!</p>
     <hr />
-    <h2>Ý kiến ​​của bạn về Kalcor/SA:MP/hay cái gì đó?</h2>
+    <h2>Ý kiến của bạn về Kalcor/SA:MP/hay cái gì đó?</h2>
     <p>Chúng tôi yêu SA:MP, đó là lý do tại sao chúng ta ở đây ngay từ đầu - và chúng tôi nợ việc tạo ra điều đó cho Kalcor. Anh ấy đã cống hiến một nguồn vốn rất lớn trong những năm qua, những đóng góp đó sẽ không bị lãng quên hoặc bỏ qua. Các hành động dẫn đến open.mp được xây dựng vì chúng tôi không đồng ý với một số quyết định gần đây, mặc dù đã nhiều lần cố gắng phát triễn mod theo một hướng tốt hơn, nhưng tất cả đều bị bác bỏ. Do đó, chúng tôi buộc phải đưa ra quyết định là cố gắng tiếp tục SA: MP trong tinh thần mà không có Kalcor. Đây không phải là một hành động chống đối cá nhân với anh ta, avà không nên được coi là một cuộc tấn công vào cá nhân anh ta. Chúng tôi sẽ không đồng ý bất kỳ lời lăng mạ cá nhân chống lại bất cứ ai - bất kể họ đứng ở đâu trong dự án open.mp; chúng ta sẽ có thể có một cuộc tranh luận hợp lý mà không cần dùng đến các cuộc tấn công quảng cáo.</p>
     <hr />
     <h2>Đây có phải là hành động chia tách cộng đồng?</h2>
