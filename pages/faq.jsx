@@ -3,7 +3,6 @@ import Link from "next/link";
 import { withRouter } from "next/router";
 
 import { HeadContent } from "../components/HeadContent";
-import { LanguageSelect } from "../components/LanguageSelect";
 import { loadLanguages } from "../components/languages";
 import Wordmark from "../components/icons/Wordmark";
 
@@ -33,7 +32,6 @@ const Faq = ({ router: { query: initialLang } }) => {
             />
           </Link>
         </header>
-        <LanguageSelect flags={flags} selected={selected} callback={callback} />
         <section className="content">
           {currentLanguage.faq()}
           <hr />
