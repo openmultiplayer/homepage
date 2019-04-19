@@ -1,26 +1,31 @@
-import React from 'react';
-import 'flag-icon-css/css/flag-icon.css';
+/* eslint-disable react/no-array-index-key */
+import React from "react";
+import Link from "next/link";
+import "flag-icon-css/css/flag-icon.css";
 
-export const LanguageSelect = (props) => {
+const LanguageSelect = ({ flags, selected }) => {
   // no-op for single-language
-  if (props.flags.length === 1) {
-    return <div />;
+  if (flags.length === 1) {
+    return <div className="lang-list" />;
   }
 
   return (
     <div className="lang-list">
-      {props.flags.map((value, index, array) => {
+      {flags.map((value, index) => {
         let className = "lang-flag";
-        if (value == props.selected) {
+        if (value === selected) {
           className += " lang-flag-selected";
         }
         return (
-          <a href={`?lang=${value}`} key={index} className={className} onClick={(e) => props.callback(e, value)}>
-            <span className={`flag-icon flag-icon-${value}`}></span>
-          </a>
+          <Link href={`?lang=${value}`}>
+            <a key={index} className={className} role="link">
+              <span className={`flag-icon flag-icon-${value}`} />
+            </a>
+          </Link>
         );
       })}
     </div>
   );
 };
 
+export { LanguageSelect };

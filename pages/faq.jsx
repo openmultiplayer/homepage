@@ -1,32 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
+import { withRouter } from "next/router";
 
 import { HeadContent } from "../components/HeadContent";
 import { loadLanguages } from "../components/languages";
 import Wordmark from "../components/icons/Wordmark";
 
-export default ({
-  url: {
-    query: { lang: initialLang }
+const Faq = ({
+  router: {
+    query: { lang: language }
   }
 }) => {
-  const [currentLanguage, flags, selected, callback] = loadLanguages(
-    initialLang,
-    useState("xx")
-  );
+  const [currentLanguage, flags] = loadLanguages(language);
 
   return (
     <div className="container">
-      <HeadContent
-        flags={flags}
-        selected={selected}
-        callback={callback}
-        title="FAQ"
-      />
+      <HeadContent flags={flags} selected={currentLanguage.name} title="FAQ" />
 
       <main>
         <header className="header faq">
-          <Link href={`/index?lang=${selected}`}>
+          <Link href={`/index?lang=${currentLanguage.name}`}>
             <Wordmark
               width={300}
               height="100%"
@@ -43,3 +36,5 @@ export default ({
     </div>
   );
 };
+
+export default withRouter(Faq);

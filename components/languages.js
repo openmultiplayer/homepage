@@ -21,17 +21,14 @@ export const LANGUAGES = {
   vn: "Vietnamese"
 };
 
-export const loadLanguages = (initial, [language, setLanguage]) => {
-  let currentLanguage = language;
-  if (language === "xx") {
+export const loadLanguages = initial => {
+  let currentLanguage = initial;
+  if (initial === undefined) {
     if (Object.prototype.hasOwnProperty.call(LANGUAGES, initial)) {
       currentLanguage = initial;
     } else {
       currentLanguage = "gb";
     }
-
-    // Store the newly derived initial language.
-    setLanguage(currentLanguage);
   }
 
   // eslint-disable-next-line import/no-dynamic-require
@@ -39,14 +36,10 @@ export const loadLanguages = (initial, [language, setLanguage]) => {
 
   return [
     {
+      name: currentLanguage,
       body: BODY,
       faq: FAQ
     },
-    Object.keys(LANGUAGES),
-    language,
-    (e, l) => {
-      e.preventDefault();
-      setLanguage(l);
-    }
+    Object.keys(LANGUAGES)
   ];
 };
