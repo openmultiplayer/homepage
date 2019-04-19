@@ -5,6 +5,7 @@ language: minimal
 install:
   - curl -sL https://taskfile.dev/install.sh | sh
 script:
+  - npm test
   - |
     if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ];
       then
