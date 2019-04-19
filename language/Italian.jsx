@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = (faq) => (
+export const BODY = FAQLink => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -14,7 +14,7 @@ export const BODY = (faq) => (
       Se ti stai chiedendo quando verrà rilasciato pubblicamente o come puoi contribuire al progetto, per favore leggi <a href="https://www.burgershot.gg/showthread.php?tid=99">questo thread sul forum</a> per maggiori informazioni.
     </p>
     <h1>
-      <a href={faq}>FAQ</a>
+      <FAQLink>FAQ</FAQLink>
     </h1>
   </div>
 );
@@ -34,15 +34,18 @@ export const FAQ = () => (
     </ol>
     <hr />
     <h2>Perché lo state facendo?</h2>
-    <p>Nonostante i numerosi tentativi di incentivare lo sviluppo di SA:MP ufficialmente, sotto forma di suggerimenti, insistenti solleciti, e offerte di aiuto da parte del team beta; accanto a una community implorando per qualunque novità; nessun progresso è stato raggiunto. Ciò è stato ampiamente percepito come una mancanza di interesse da parte della leadership della mod, che di per sé non è un problema, ma non vi era alcuna linea di successione. Piuttosto che passare lo sviluppo a coloro che erano interessati a continuare il lavoro sulla mod, il fondatore voleva semplicemente portare tutto giù con sé, mentre allo stesso tempo rallentava le cose il più possibile per compiere il minimo sforzo. Alcuni affermano che ciò sia per motivi di reddito passivo, ma non ci sono prove a sostegno. Nonstante l'enorme interesse e una community forte e familiare, egli credeva che alla mod restassero solo 1 o 2 anni, e che la community che ha lavorato così tanto per rendere SA:MP ciò che è oggi non meritava un proseguimento.</p>
+    <p>
+      Nonostante i numerosi tentativi di incentivare lo sviluppo di SA:MP ufficialmente, sotto forma di suggerimenti, insistenti solleciti, e offerte di aiuto da parte del team beta; accanto a una community implorando per qualunque novità; nessun progresso è stato raggiunto. Ciò è stato ampiamente percepito come una mancanza di interesse da parte della leadership della mod, che di per sé non è un problema, ma non vi era alcuna linea di successione. Piuttosto che passare lo sviluppo a coloro che erano interessati a continuare il lavoro sulla mod, il fondatore voleva semplicemente portare tutto giù con sé, mentre allo stesso tempo rallentava le cose il più possibile per compiere il minimo sforzo. Alcuni affermano che ciò sia per motivi di reddito passivo, ma non ci sono prove a sostegno. Nonstante l'enorme interesse e una community forte e familiare, egli credeva che alla mod restassero solo 1 o 2 anni, e che la community che ha lavorato così tanto per rendere SA:MP ciò che è oggi non
+      meritava un proseguimento.
+    </p>
     <br />
     <p>Noi non siamo d'accordo .</p>
     <hr />
     <h2>Quali sono le vostre opinioni su Kalcor/SA:MP/quello che è?</h2>
-    <p>Amiamo SA:MP, è per questo che siamo qui in primo luogo - e dobbiamo a Kalcor il merito di averlo creato.  Ha fatto davvero molto per la mod durante gli anni, e tale contribuzione non deve essere dimenticata o ignorata. Le misure che hanno portato a open.mp sono state prese perché non ci siamo trovati d'accordo con varie decisioni recenti, e nonostante i vari tentativi di guidare la mod in un'altra direzione, nessuna soluzione imminente è stata vista. Quindi siamo stati forzati a prendere la sfortunata decisione di provare a continuare SA:MP con spirito senza Kalcor. Questa non è un'azione contro di lui, e non deve essere vista come un attacco personale. Noi non tollereremo insulti personali contro nessuno - indipendentemente dalla loro posizione sulla faccenda di open.mp; dovremmo essere in grado di sostenere un dibattito ragionevole, senza fare ricorso ad attacchi ad-hominem.</p>
+    <p>Amiamo SA:MP, è per questo che siamo qui in primo luogo - e dobbiamo a Kalcor il merito di averlo creato. Ha fatto davvero molto per la mod durante gli anni, e tale contribuzione non deve essere dimenticata o ignorata. Le misure che hanno portato a open.mp sono state prese perché non ci siamo trovati d'accordo con varie decisioni recenti, e nonostante i vari tentativi di guidare la mod in un'altra direzione, nessuna soluzione imminente è stata vista. Quindi siamo stati forzati a prendere la sfortunata decisione di provare a continuare SA:MP con spirito senza Kalcor. Questa non è un'azione contro di lui, e non deve essere vista come un attacco personale. Noi non tollereremo insulti personali contro nessuno - indipendentemente dalla loro posizione sulla faccenda di open.mp; dovremmo essere in grado di sostenere un dibattito ragionevole, senza fare ricorso ad attacchi ad-hominem.</p>
     <hr />
     <h2>Così facendo, non state dividendo la community?</h2>
-    <p>Ciò non è nostra intenzione. Idealmente nessuna divisione sarebbe richiesta, ma dividere e salvare una parte è meglio che stare a guardare la totalità appassire. Infatti, da quando questa mod è stata annunciata, un gran numero di community non-anglofone si sono di nuovo coinvolte con la community anglofona.  In precedenza, queste community erano state lentamente messe da parte, quindi la loro re-inclusione in realtà sta riunendo una community divisa. Un gran numero di persone erano state bannate dal forum ufficiale di SA:MP (e in alcuni casi, l'intero storico dei loro post purgato), ma Kalcor stesso ha evidenziato che il forum ufficiale non è SA:MP, ma semplicemente una parte di SA:MP. Molti giocatori e proprietari di server non hanno mai postato, o addirittura non si sono mai iscritti a quel forum; quindi comunicare con queste persone sta unificando ancora più parti della community.</p>
+    <p>Ciò non è nostra intenzione. Idealmente nessuna divisione sarebbe richiesta, ma dividere e salvare una parte è meglio che stare a guardare la totalità appassire. Infatti, da quando questa mod è stata annunciata, un gran numero di community non-anglofone si sono di nuovo coinvolte con la community anglofona. In precedenza, queste community erano state lentamente messe da parte, quindi la loro re-inclusione in realtà sta riunendo una community divisa. Un gran numero di persone erano state bannate dal forum ufficiale di SA:MP (e in alcuni casi, l'intero storico dei loro post purgato), ma Kalcor stesso ha evidenziato che il forum ufficiale non è SA:MP, ma semplicemente una parte di SA:MP. Molti giocatori e proprietari di server non hanno mai postato, o addirittura non si sono mai iscritti a quel forum; quindi comunicare con queste persone sta unificando ancora più parti della community.</p>
     <hr />
     <h2>Visto che è "Open" Multiplayer, sarà open-source?</h2>
     <p>Alla fine il piano è quello, sì. Per il momento stiamo tentando di rendere lo sviluppo aperto in termini di comunicazione e trasparenza (che in sé è già un miglioramento), e appena potremo la renderemo open-source, una volta che tutte le cose sono sistemate e in ordine.</p>

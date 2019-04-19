@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BODY = (faq) => (
+export const BODY = FAQLink => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -14,7 +14,7 @@ export const BODY = (faq) => (
       Se você está curioso para saber quando será o lançamento ou como você pode contribuir para o projeto, por favor veja <a href="https://www.burgershot.gg/showthread.php?tid=99"> este tópico no fórum</a> para mais informações.
     </p>
     <h1>
-      <a href={faq}>FAQ</a>
+      <FAQLink>FAQ</FAQLink>
     </h1>
   </div>
 );
@@ -43,7 +43,7 @@ export const FAQ = () => (
     <hr />
     <h2>Isto não está apenas dividindo a comunidade?</h2>
     <p>Essa não é a nossa intenção. Idealmente, isso não é necessário, mas dividir uma parte e salvar ela é melhor do que ver a coisa toda desaparecer. De fato, desde que esse mod foi anunciado, um grande número de comunidades de fora se juntaram novamente com a comunidade inglesa. Essas comunidades foram lentamente empurradas para fora, então a reinclusão delas está trazendo de volta uma comunidade que antes foi dividida. Um grande número de pessoas foram banidas do fórum oficial do SA:MP (e em alguns casos, tiveram todas as suas postagens removidas), mas o próprio Kalcor apontou que o fórum oficial não é o SA:MP em si, mas, apenas uma parte dele. Muitos jogadores e donos de servidores nunca postaram ou participaram do fórum; então falar com essas pessoas irá unir a comunidade ainda mais.</p>
-    <hr /> 
+    <hr />
     <h2>Já que isto é "Open" Multiplayer, este projeto será de código aberto?</h2>
     <p>Eventualmente esse é o plano, sim. Por enquanto, estamos tentando tornar o desenvolvimento aberto em termos de comunicação e transparência (o que, em si mesmo, é uma melhoria), e avançaremos para o código aberto quando pudermos, uma vez que tudo esteja resolvido.</p>
     <hr />
