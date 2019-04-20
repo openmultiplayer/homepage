@@ -1,10 +1,11 @@
-import React from "react";
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 import { LanguageSelect } from './LanguageSelect';
 
-import "./style.css";
+import './style.css';
 
-const DESC = 'Open Multiplayer - An upcoming multiplayer mod for Grand Theft Auto: San Andreas that is a fully backwards compatible substitute for SA:MP.';
+const DESC =
+  'Open Multiplayer - An upcoming multiplayer mod for Grand Theft Auto: San Andreas that is a fully backwards compatible substitute for SA:MP.';
 
 export const HeadContent = ({ title, ...rest }) => (
   <div>
@@ -30,19 +31,13 @@ export const HeadContent = ({ title, ...rest }) => (
       <link rel="stylesheet" href="https://use.typekit.net/abp2gwt.css" />
 
       <title>Open Multiplayer{title ? ` - ${title}` : ''}</title>
-      <meta
-        name="description"
-        content={DESC}
-      />
+      <meta name="description" content={DESC} />
       <meta property="og:image" content="/static/logo.png" />
       <meta property="og:site_name" content="Open Multiplayer" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="open.mp" />
       <meta property="og:url" content="https://www.burgershot.gg" />
-      <meta
-        property="og:description"
-        content={DESC}
-      />
+      <meta property="og:description" content={DESC} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@Southclaws" />
       <meta name="twitter:creator" content="@Southclaws" />
@@ -53,4 +48,3 @@ export const HeadContent = ({ title, ...rest }) => (
     <LanguageSelect {...rest} />
   </div>
 );
-

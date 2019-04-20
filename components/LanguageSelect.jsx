@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
-import React from "react";
-import Link from "next/link";
-import "flag-icon-css/css/flag-icon.css";
+import React from 'react';
+import Link from 'next/link';
+import 'flag-icon-css/css/flag-icon.css';
 
 const LanguageSelect = ({ flags, selected }) => {
   // no-op for single-language
@@ -12,9 +12,9 @@ const LanguageSelect = ({ flags, selected }) => {
   return (
     <div className="lang-list">
       {flags.map((value, index) => {
-        let className = "lang-flag";
+        let className = 'lang-flag';
         if (value === selected) {
-          className += " lang-flag-selected";
+          className += ' lang-flag-selected';
         }
         return (
           <Link href={`?lang=${value}`}>

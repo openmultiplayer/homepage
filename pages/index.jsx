@@ -1,13 +1,13 @@
-import React from "react";
-import Link from "next/link";
-import { withRouter } from "next/router";
+import React from 'react';
+import Link from 'next/link';
+import { withRouter } from 'next/router';
 
-import { HeadContent } from "../components/HeadContent";
-import Wordmark from "../components/icons/Wordmark";
-import Discord from "../components/icons/Discord";
-import Forum from "../components/icons/Forum";
+import { HeadContent } from '../components/HeadContent';
+import Wordmark from '../components/icons/Wordmark';
+import Discord from '../components/icons/Discord';
+import Forum from '../components/icons/Forum';
 
-import { loadLanguages } from "../components/languages";
+import { loadLanguages } from '../components/languages';
 
 const Index = ({
   router: {
@@ -22,12 +22,7 @@ const Index = ({
 
       <main>
         <header className="header">
-          <Wordmark
-            width={300}
-            height="100%"
-            stroke="#d1cec8"
-            background="#161f2b"
-          />
+          <Wordmark width={300} height="100%" stroke="#d1cec8" background="#161f2b" />
         </header>
         <section className="content">
           {currentLanguage.body(({ children }) => (
