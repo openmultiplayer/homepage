@@ -12,7 +12,7 @@ html,
   height: 100%;
   display: grid;
   grid-template-columns: auto 640px auto;
-  grid-template-rows: 1fr 400px 2fr;
+  grid-template-rows: 60px 400px 2fr;
   padding: 0 10px 0 10px;
 }
 
@@ -78,11 +78,16 @@ hr {
   color: #fff;
 }
 
+.menu-content {
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+  align-self: start;
+  justify-self: right;
+  z-index: 2;
+}
+
 .lang-list {
   text-align: center;
-  position: absolute;
-  top: 30px;
-  right: 30px;
   padding: 20px;
 }
 
@@ -92,14 +97,11 @@ hr {
   font-size: 35px;
   user-select: none;
   cursor: pointer;
-  width: 55px;
-  height: 35px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .lang-flag span {
   position: relative;
-  top: -5.5px;
 }
 
 .lang-list:hover .lang-flag,
