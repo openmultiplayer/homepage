@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const BODY = (faq) => (
+export const BODY = (FAQLink) => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -14,7 +14,7 @@ export const BODY = (faq) => (
       Kui soovid teada millal modifikatsiooni alla laadida saab või kuidas meid aidata saab, siis soovitame lugeda <a href="https://www.burgershot.gg/showthread.php?tid=99">seda foorumiteemat</a>.
     </p>
     <h1>
-      <a href={faq}>KKK</a>
+      <FAQLink>KKK</FAQLink>
     </h1>
   </div>
 );
