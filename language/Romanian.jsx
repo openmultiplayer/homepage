@@ -38,8 +38,18 @@ export const FAQ = () => (
     <br />
     <p>Noi suntem de alta parere.</p>
     <hr />
+    <h2>Ce parere ai de Kalcor/SA:MP/Orice altceva?</h2>
+    <p>In primul rand, noi ne aflam aici deoarece iubim SA:MP-ul - si pe această cale ii datoram multumiri lui Kalcor pentru crearea sa. El a facut o multime de lucruri pentru mod de-a lungul anilor si toata aceasta contributie nu ar trebui uitata sau ignorata. Deciziile care au dus la crearea open.mp au fost luate datorita dezacordului nostru cu anumite decizii recente, si in ciuda repetatelor noastre tentative de a ghida mod-ul intr-o directie diferita, nu s-a putut vedea nicio rezolvare in acest sens. Astfel, am fost fortati sa luam nefericita decizie de a incerca sa continuam dezvoltarea SA:MP-ului in acelasi spirit, doar ca fara Kalcor. Nu este o decizie luata impotriva lui, personal, si nici nu ar trebui vazuta ca un atac la persoana lui. Nu vom tolera nicio jignire la adresa altor persoane, chiar daca acestea ar tine partea cauzei open.mp; Ar trebui sa putem avea o dezbatere rezonabila, fara a recurge la atacuri ad-hominem.</p>
+    <hr />
+    <h2>Nu duce aceasta decizie la dezbinarea comunitatii?</h2>
+    <p>Nu aceasta este intentia noastra. Ideal ar fi fost sa nu se produca nicio separare, dar despartirea unora si salvarea lor, este mai buna decat prabusirea intregii comunitati. Ba din contra, inca de la anuntarea lansarii acestui mod, un numar mare de comunitati non-engleze s-au reunit cu comunitatea engleza. Aceste comunitati au fost din ce in ce mai marginalizate in trecut, fiind cu totul date la o parte, asa ca prin reincluderea lor s-a produs reunificarea comunitatilor. Multor oameni le-a fost interzis accesul pe forumul oficial al SA:MP-ului (si in unele cazuri, le-a fost sters tot istoricul postarilor), chiar daca insusi Kalcor a precizat faptul ca forumul oficial nu inseamna SA:MP, fiind doar o parte a sa. Multi jucatori sau detinatori de servere nu au postat vreodata acolo, sau nici macar nu au cont; asa ca, posibilitatea recomunicarii cu acesti oameni unifica si mai multe parti ale comunitatii.</p>
+    <hr />
     <h2>Avand in vedere ca se numeste "Open" Multiplayer, codul va fi open-source?</h2>
     <p>In mod normal acesta ar fi planul. Deocamdata incercam sa facem productia "open" sub forma de comunicare si transparenta (care prin definitie duce spre progres), si vom avansa catre a face codul open-source cand vom avea posibilitatea, odata ce lucrurile se linistesc si totul este stabil.</p>
+    <hr />
+    <h2>Cand va fi lansarea?</h2>
+    <p>Este o intrebare veche de ani de zile, pusa dintotdeauna. Din pacate, are un raspuns la fel de vechi: Cand este gata. Pur si simplu, nu exista nicio cale de a afla de cat de mult timp are nevoie un astfel de proiect. S-a lucrat in liniste la el de ceva vreme si a avut parte deja de cateva fluctuatii la nivelul de activitate, depinzand in mod direct de disponibilitatea dezvoltatorilor. Va asiguram ca este pe directia cea buna si progreseaza rapid, datorita unor decizii fundamentale de proiectare (Vom vorbi mai multe despre arhitectura ceva mai tarziu). 
+    </p>
     <hr />
     <h2>Cum pot ajuta?</h2>
     <p>Stai cu ochii pe forum. Avem un topic exact pentru asta, si il vom actualiza odata ce vom avea nevoie de ajutor. Desi proiectul a fost dezvaluit mai devreme decat ar fi trebuit, suntem deja in drum spre a face lansarea initiala, dar asta nu inseamna ca si mai mult ajutor nu ar fi apreciat. Multumim anticipat pentru interes, si incredere in acest proiect:</p>
