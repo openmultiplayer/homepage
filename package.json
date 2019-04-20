@@ -2,7 +2,7 @@
   "name": "custom-server-express",
   "version": "1.0.0",
   "scripts": {
-    "test": "eslint pages/*.jsx components/**/*.js language/*.jsx",
+    "test": "eslint pages/*.jsx components/**/*.js",
     "dev": "node server.js",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server.js",
