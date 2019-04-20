@@ -1,10 +1,10 @@
-import React from "react";
-import Link from "next/link";
-import { withRouter } from "next/router";
+import React from 'react';
+import Link from 'next/link';
+import { withRouter } from 'next/router';
 
-import { HeadContent } from "../components/HeadContent";
-import { loadLanguages } from "../components/languages";
-import Wordmark from "../components/icons/Wordmark";
+import { HeadContent } from '../components/HeadContent';
+import { loadLanguages } from '../components/languages';
+import Wordmark from '../components/icons/Wordmark';
 
 const Faq = ({
   router: {
@@ -20,12 +20,7 @@ const Faq = ({
       <main>
         <header className="header faq">
           <Link href={`/index?lang=${currentLanguage.name}`}>
-            <Wordmark
-              width={300}
-              height="100%"
-              stroke="#d1cec8"
-              background="#161f2b"
-            />
+            <Wordmark width={300} height="100%" stroke="#d1cec8" background="#161f2b" />
           </Link>
         </header>
         <section className="content">
