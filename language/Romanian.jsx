@@ -38,7 +38,7 @@ export const FAQ = () => (
     <br />
     <p>Noi suntem de alta parere.</p>
     <hr />
-    <h2>Ce parere ai de Kalcor/SA:MP/Orice altceva?</h2>
+    <h2>Ce parere aveti de Kalcor/SA:MP/Altceva?</h2>
     <p>In primul rand, noi ne aflam aici deoarece iubim SA:MP-ul - si pe această cale ii datoram multumiri lui Kalcor pentru crearea sa. El a facut o multime de lucruri pentru mod de-a lungul anilor si toata aceasta contributie nu ar trebui uitata sau ignorata. Deciziile care au dus la crearea open.mp au fost luate datorita dezacordului nostru cu anumite decizii recente, si in ciuda repetatelor noastre tentative de a ghida mod-ul intr-o directie diferita, nu s-a putut vedea nicio rezolvare in acest sens. Astfel, am fost fortati sa luam nefericita decizie de a incerca sa continuam dezvoltarea SA:MP-ului in acelasi spirit, doar ca fara Kalcor. Nu este o decizie luata impotriva lui, personal, si nici nu ar trebui vazuta ca un atac la persoana lui. Nu vom tolera nicio jignire la adresa altor persoane, chiar daca acestea ar tine partea cauzei open.mp; Ar trebui sa putem avea o dezbatere rezonabila, fara a recurge la atacuri ad-hominem.</p>
     <hr />
     <h2>Nu se ajunge la dezbinarea comunitatii?</h2>
