@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
-export const BODY = (faq) => (
+export const BODY = (FAQLink) => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
-        Un nouveau mode pour <em>Grand Theft Auto: San Andreas</em> qui va etre full compatible avec le mode multijoueur de San Andreas existant
+      Un nouveau mode pour <em>Grand Theft Auto: San Andreas</em> qui va etre full compatible avec le mode multijoueur de San Andreas existant
     </p>
     <br />
     <p>
-        Cela veut dire <strong>le clien SA:MP existant et tout les scripts de SA:MP existant vont marcher avec open.mp</strong> et en addition a cela, plusieurs bugs vont etre réparer dans le logiciel du serveur sans l'utilisation des hacks et workarrounds
+      Cela veut dire <strong>le clien SA:MP existant et tout les scripts de SA:MP existant vont marcher avec open.mp</strong> et en addition a cela, plusieurs bugs vont etre réparer dans le logiciel du serveur sans l'utilisation des hacks et workarrounds
     </p>
     <p>
-        Si vous demendez pour quand la sortie public ou comment pouvez vous contribuez au projet, visit <a href="https://www.burgershot.gg/showthread.php?tid=99">ce forum thread</a> pour plus d'informations.
+      Si vous demendez pour quand la sortie public ou comment pouvez vous contribuez au projet, visit <a href="https://www.burgershot.gg/showthread.php?tid=99">ce forum thread</a> pour plus d'informations.
     </p>
     <h1>
-      <a href={faq}>FAQ</a>
+      <FAQLink>FAQ</FAQLink>
     </h1>
   </div>
 );
@@ -34,7 +34,10 @@ export const FAQ = () => (
     </ol>
     <hr />
     <h2>Pourquoi fais-tu ça?</h2>
-    <p>Malgré de nombreuses tentatives visant à faire progresser officiellement le développement du programme SA: MP, sous forme de suggestions, de commentaires animés et d'offres d'aide de la part de l'équipe bêta; aux côtés d'une communauté qui réclame quelque chose de nouveau; aucun progrès n'a été vu du tout. On pensait généralement que c'était simplement dû à un manque d'intérêt de la part de la direction du mod, ce qui n'est pas un problème en soi, mais il n'y avait pas de ligne de succession. Plutôt que de laisser le développement incomber à ceux qui sont intéressés à continuer à travailler sur le mod, le fondateur a simplement voulu tout maîtriser, tout en faisant apparemment avancer les choses le plus longtemps possible pour un effort minimal. Certains prétendent que c'est pour des raisons de revenu passif, mais il n'y a aucune preuve de cela. Malgré un intérêt énorme et une communauté forte et familiale, il pensait qu'il ne restait plus qu'un ou deux ans dans le mod et que la communauté qui avait travaillé si dur pour faire de SA: MP ce qu'elle est aujourd'hui ne méritait pas de continuation.</p>
+    <p>
+      Malgré de nombreuses tentatives visant à faire progresser officiellement le développement du programme SA: MP, sous forme de suggestions, de commentaires animés et d'offres d'aide de la part de l'équipe bêta; aux côtés d'une communauté qui réclame quelque chose de nouveau; aucun progrès n'a été vu du tout. On pensait généralement que c'était simplement dû à un manque d'intérêt de la part de la direction du mod, ce qui n'est pas un problème en soi, mais il n'y avait pas de ligne de succession. Plutôt que de laisser le développement incomber à ceux qui sont intéressés à continuer à travailler sur le mod, le fondateur a simplement voulu tout maîtriser, tout en faisant apparemment avancer les choses le plus longtemps possible pour un effort minimal. Certains prétendent que c'est pour des raisons de revenu passif, mais il n'y a aucune preuve de cela. Malgré un intérêt énorme et une communauté forte et familiale, il pensait qu'il ne restait plus qu'un ou deux ans dans le mod et que la
+      communauté qui avait travaillé si dur pour faire de SA: MP ce qu'elle est aujourd'hui ne méritait pas de continuation.
+    </p>
     <br />
     <p>Nous désaccordons.</p>
     <hr />

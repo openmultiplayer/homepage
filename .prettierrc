@@ -1,6 +1,6 @@
 {
-    "printWidth": 999,
-    "proseWrap": "never",
+    "printWidth": 100,
+    "proseWrap": "always",
     "arrowParens": "always",
     "singleQuote": true
 }

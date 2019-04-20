@@ -2,6 +2,7 @@
   "name": "custom-server-express",
   "version": "1.0.0",
   "scripts": {
+    "test": "eslint pages/*.jsx components/**/*.js",
     "dev": "node server.js",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server.js",
@@ -10,11 +11,21 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "express": "^4.14.0",
+    "flag-icon-css": "^3.3.0",
     "next": "8.0.4",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.17.0",
+    "next-images": "github:twopluszero/next-images"
   }
 }

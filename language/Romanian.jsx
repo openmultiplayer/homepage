@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export const BODY = (faq) => (
+export const BODY = (FAQLink) => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
@@ -14,7 +14,7 @@ export const BODY = (faq) => (
       Daca te intrebi cand va fi lansarea oficiala sau cum poti contribui la proiect, te rugam sa verifici <a href="https://www.burgershot.gg/showthread.php?tid=99">acest topic</a> pentru informatii aditionale.
     </p>
     <h1>
-      <a href={faq}>FAQ</a>
+      <FAQLink>FAQ</FAQLink>
     </h1>
   </div>
 );

@@ -1,42 +1,45 @@
+/* eslint-disable global-require */
+
+// These should be in alphabetical order by English name.
 export const LANGUAGES = {
-  "🇬🇧": "English",
-  "🇫🇷": "French",
-  "🇳🇱": "Dutch",
-  "🇪🇸": "Spanish",
-  "🇩🇪": "German",
-  "🇷🇺": "Russian",
-  "🇧🇷": "Portuguese",
-  "🇷🇴": "Romanian",
-  "🇭🇷": "Croatian",
-  "🇭🇺": "Hungarian",
-  "🇸🇦": "Arabic",
-  "🇳🇴": "Norwegian"
+  sa: 'Arabic',
+  hr: 'Croatian',
+  nl: 'Dutch',
+  gb: 'English',
+  fr: 'French',
+  de: 'German',
+  hu: 'Hungarian',
+  it: 'Italian',
+  lt: 'Lithuanian',
+  no: 'Norwegian',
+  br: 'Portuguese',
+  ro: 'Romanian',
+  ru: 'Russian',
+  es: 'Spanish',
+  pl: 'Polish',
+  ee: 'Estonian',
+  vn: 'Vietnamese'
 };
 
-export const loadLanguages = (initial, [ language, setLanguage ]) => {
-  if (language === "🇽🇽") {
-    if (LANGUAGES.hasOwnProperty(initial)) {
-      language = initial;
+export const loadLanguages = (initial) => {
+  let currentLanguage = initial;
+  if (initial === undefined) {
+    if (Object.prototype.hasOwnProperty.call(LANGUAGES, initial)) {
+      currentLanguage = initial;
     } else {
-      language = "🇬🇧";
+      currentLanguage = 'gb';
     }
-
-    // Store the newly derived initial language.
-    setLanguage(language);
   }
 
-  const { BODY, FAQ } = require("../language/" + LANGUAGES[language]);
+  // eslint-disable-next-line import/no-dynamic-require
+  const { BODY, FAQ } = require(`../language/${LANGUAGES[currentLanguage]}`);
 
-  return [{
+  return [
+    {
+      name: currentLanguage,
       body: BODY,
-      faq: FAQ,
+      faq: FAQ
     },
-    Object.keys(LANGUAGES),
-    language,
-    (e, l) => {
-      e.preventDefault();
-      setLanguage(l);
-    }
+    Object.keys(LANGUAGES)
   ];
 };
-

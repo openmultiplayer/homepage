@@ -1,30 +1,28 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react';
+import Link from 'next/link';
+import { withRouter } from 'next/router';
 
-import { HeadContent } from "../components/HeadContent";
-import { LanguageSelect } from "../components/LanguageSelect";
-import Wordmark from "../components/icons/Wordmark";
+import { HeadContent } from '../components/HeadContent';
+import { loadLanguages } from '../components/languages';
+import Wordmark from '../components/icons/Wordmark';
 
-import { loadLanguages } from "../components/languages";
-
-export default ({ url: { query: { lang: initialLang } } }) => {
-  const [ currentLanguage, flags, selected, callback ] = loadLanguages(initialLang, useState("🇽🇽"));
+const Faq = ({
+  router: {
+    query: { lang: language }
+  }
+}) => {
+  const [currentLanguage, flags] = loadLanguages(language);
 
   return (
     <div className="container">
-      <HeadContent title="FAQ" />
+      <HeadContent flags={flags} selected={currentLanguage.name} title="FAQ" />
 
       <main>
-        <header className="header">
-          <a href={`/index?lang=${selected}`} id="home-link">
-            <Wordmark width={300} height={"100%"} stroke="#d1cec8" background="#161f2b" />
-          </a>
+        <header className="header faq">
+          <Link href={`/index?lang=${currentLanguage.name}`}>
+            <Wordmark width={300} height="100%" stroke="#d1cec8" background="#161f2b" />
+          </Link>
         </header>
-        <LanguageSelect
-          flags={flags}
-          selected={selected}
-          callback={callback}
-        />
         <section className="content">
           {currentLanguage.faq()}
           <hr />
@@ -34,3 +32,4 @@ export default ({ url: { query: { lang: initialLang } } }) => {
   );
 };
 
+export default withRouter(Faq);

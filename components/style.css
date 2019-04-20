@@ -87,11 +87,19 @@ hr {
 }
 
 .lang-flag {
+  padding: 10px;
   display: none;
-  font-size: 1.5em;
-  margin: 0em 0.6em 0em 0.6em;
+  font-size: 35px;
   user-select: none;
   cursor: pointer;
+  width: 55px;
+  height: 35px;
+  border-radius: 20px;
+}
+
+.lang-flag span {
+  position: relative;
+  top: -5.5px;
 }
 
 .lang-list:hover .lang-flag,
@@ -99,19 +107,22 @@ hr {
   display: block;
 }
 
-.lang-flag-selected {
-  padding: .1em;
-  color: #161f2b;
-  font-size: 1.8em;
-  border-radius: 90px;
+.lang-list:hover .lang-flag-selected {
   background-color: #d1cec8;
 }
 
-#home-link:hover .cls-1,
-#home-link:hover .cls-2,
-#home-link:hover .cls-3,
-#home-link:hover .cls-5,
-#home-link:hover .cls-7 {
-  stroke: #ff3200;
+.lang-flag:hover {
+  background-color: #ff3200;
 }
 
+.faq #main:hover {
+  cursor: pointer;
+}
+
+.faq #main:hover .cls-1,
+.faq #main:hover .cls-2,
+.faq #main:hover .cls-3,
+.faq #main:hover .cls-5,
+.faq #main:hover .cls-7 {
+  stroke: #ff3200;
+}
