@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
+import moment from 'moment';
 
 import { HeadContent } from '../components/HeadContent';
 import Wordmark from '../components/icons/Wordmark';
@@ -17,25 +18,36 @@ const ProgressRowItem = (props) => {
     state,
     reviews: { users },
     author: { name: author },
-    mergedBy
+    mergedBy,
+    updatedAt
   } = props;
 
   return (
     <div className="progress-item">
       <h2 className="progress-item-header">{title}</h2>
-      <p className="progress-item-state">
-        <span>{state}</span>
-        {state !== 'MERGED' ? null : <span> by: {mergedBy.name}</span>}
-      </p>
-      <p className="progress-item-author">Opened by: {author}</p>
-      {users.length === 0 ? null : (
-        <p>
-          Reviewed by:{' '}
-          {users.map((v) => {
-            return <span>{v.user.name}</span>;
-          })}
-        </p>
-      )}
+      <p className="progress-item-date">Updated {moment(updatedAt).fromNow()}</p>
+      <hr className="progress-item-separator" />
+
+      <div className="progress-item-body">
+        <div className="progress-item-body-detail">
+          <p className="progress-item-author">Opened by: {author}</p>
+          {users.length === 0 ? null : (
+            <p className="progress-item-reviewer">
+              Reviewed by:{' '}
+              {users.map((v) => {
+                return <span className="progress-item-reviewer-name">{v.user.name}</span>;
+              })}
+            </p>
+          )}
+        </div>
+
+        <div className="progress-item-body-state">
+          <p className={`progress-item-state progress-item-state-${state.toLowerCase()}`}>
+            <span>{state}</span>
+          </p>
+          {state !== 'MERGED' ? null : <p>(by {mergedBy.name})</p>}
+        </div>
+      </div>
     </div>
   );
 };
@@ -59,9 +71,12 @@ const Progress = ({
           </Link>
         </header>
         <section className="content">
-          {progress.map((value) => {
-            return <ProgressRowItem {...value} />;
-          })}
+          <p>Below is a progress report of the most recent 10 pull requests</p>
+          <div className="progress-items">
+            {progress.map((value) => {
+              return <ProgressRowItem {...value} />;
+            })}
+          </div>
           <hr />
         </section>
       </main>

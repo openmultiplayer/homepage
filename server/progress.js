@@ -4,8 +4,9 @@ const { GITHUB_TOKEN } = process.env;
 
 const QUERY = `{ 
   repository(owner: "Y-Less", name: "open.mp") {
-    pullRequests(first: 100) {
+    pullRequests(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}) {
       nodes {
+        updatedAt
         title
           reviews(first: 1) {
            users: nodes {

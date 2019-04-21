@@ -126,3 +126,52 @@ hr {
 .faq #main:hover .cls-7 {
   stroke: #ff3200;
 }
+
+.progress-item {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: hsla(0deg, 100%, 100%, 10%);
+  margin: 10px 0px 10px 0px;
+  text-align: left;
+}
+
+.progress-item-header {
+  line-height: 1;
+  padding: 10px 20px 1px 20px;
+  margin: 2px 0px 0px 0px;
+}
+.progress-item-separator {
+  margin: 0px;
+  width: 100%;
+}
+
+.progress-item-body {
+  padding: 10px 40px 10px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.progress-item-date {
+  color: hsla(0deg, 100%, 100%, 50%);
+  font-size: 80%;
+  padding: 0px 20px 10px 20px;
+  margin: 0px 0px 2px 0px;
+}
+.progress-item-body-state {
+  text-align: right;
+}
+.progress-item-state {
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  display: inline;
+  padding: 2px 4px 2px 4px;
+}
+.progress-item-state-merged {
+  background-color: green;
+  color: white;
+}
+.progress-item-state-closed {
+  background-color: red;
+  color: white;
+}
