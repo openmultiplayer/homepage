@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { withRouter } from 'next/router';
 
 import { HeadContent } from '../components/HeadContent';
+import { FooterContent } from '../components/FooterContent';
 import Wordmark from '../components/icons/Wordmark';
 import Discord from '../components/icons/Discord';
 import Forum from '../components/icons/Forum';
@@ -51,6 +52,8 @@ const Index = ({
           </p>
         </section>
       </main>
+
+      <FooterContent />
     </div>
   );
 };
