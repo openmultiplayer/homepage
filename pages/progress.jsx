@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { withRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import moment from 'moment';
+import momentDurationFormatSetup from 'moment-duration-format';
 
 import { HeadContent } from '../components/HeadContent';
 import Wordmark from '../components/icons/Wordmark';
@@ -10,6 +11,8 @@ import Pull from '../components/icons/Pull';
 import Issue from '../components/icons/Issue';
 
 import { loadLanguages } from '../components/languages';
+
+momentDurationFormatSetup(moment);
 
 const DEV = process.env.NODE_ENV !== 'production';
 const ADDRESS = DEV ? 'http://localhost:3000' : 'https://open.mp';
@@ -27,7 +30,10 @@ const ProgressRowPull = ({
       <h2 className="progress-item-header">
         <Pull className="progress-item-icon" /> {title}
       </h2>
-      <p className="progress-item-date">Updated {moment(updatedAt).fromNow()}</p>
+
+      <p className="progress-item-date" title={moment(updatedAt).format()}>
+        Updated {moment(updatedAt).fromNow()}
+      </p>
       <hr className="progress-item-separator" />
 
       <div className="progress-item-body">
@@ -60,7 +66,9 @@ const ProgressRowIssue = ({ title, state, author: { name: author }, updatedAt })
       <h2 className="progress-item-header">
         <Issue className="progress-item-icon" /> {title}
       </h2>
-      <p className="progress-item-date">Updated {moment(updatedAt).fromNow()}</p>
+      <p className="progress-item-date" title={moment(updatedAt).format()}>
+        Updated {moment(updatedAt).fromNow()}
+      </p>
       <hr className="progress-item-separator" />
 
       <div className="progress-item-body">
@@ -78,17 +86,29 @@ const ProgressRowIssue = ({ title, state, author: { name: author }, updatedAt })
   );
 };
 
+const ProgressRowPeriod = ({ length }) => {
+  return (
+    <div className="progress-item-period">
+      <div className="progress-item-period-timeline" />
+      <div className="progress-item-period-time">
+        {moment.duration(length, 'milliseconds').format()}
+      </div>
+      <div className="progress-item-period-timeline" />
+    </div>
+  );
+};
+
 const ProgressRowItem = (props) => {
   switch (props.type) {
     case 'pull':
       return <ProgressRowPull {...props} />;
 
     case 'issue':
-      return (
-        <div>
-          <ProgressRowIssue {...props} />
-        </div>
-      );
+      return <ProgressRowIssue {...props} />;
+
+    case 'period':
+      return <ProgressRowPeriod {...props} />;
+
     default:
       return null;
   }
@@ -105,10 +125,27 @@ const Progress = ({
 }) => {
   const [currentLanguage, flags] = loadLanguages(language);
 
-  const items = [
+  let items = [
     ...issues.map((v) => ({ ...v, type: 'issue' })),
     ...pullRequests.map((v) => ({ ...v, type: 'pull' }))
-  ];
+  ].sort((a, b) => a.updatedAt < b.updatedAt);
+
+  const { length } = items;
+  for (let index = 0; index < length - 1; index += 1) {
+    const earlier = moment(items[index].updatedAt);
+    const later = moment(items[index + 1].updatedAt);
+    const diff = earlier.diff(later);
+
+    // insert a period object when the time between is over a day
+    if (diff > 86400000) {
+      items.push({
+        type: 'period',
+        updatedAt: earlier.subtract(diff / 2).toISOString(),
+        length: diff
+      });
+    }
+  }
+  items = items.sort((a, b) => a.updatedAt < b.updatedAt);
 
   return (
     <div className="container">

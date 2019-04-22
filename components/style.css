@@ -180,3 +180,15 @@ hr {
   background-color: red;
   color: white;
 }
+
+.progress-item-period-timeline {
+  border-left-style: dashed;
+  border-left-width: 1px;
+  display: inline;
+  color: hsla(0deg, 100%, 100%, 8%);
+}
+.progress-item-period-time {
+  padding: 5px;
+  color: hsla(0deg, 100%, 100%, 50%);
+  font-size: 10pt;
+}

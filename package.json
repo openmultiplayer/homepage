@@ -16,6 +16,7 @@
     "flag-icon-css": "^3.3.0",
     "isomorphic-unfetch": "^3.0.0",
     "moment": "^2.24.0",
+    "moment-duration-format": "^2.2.2",
     "next": "8.0.4",
     "nodemon": "^1.18.11",
     "react": "16.8.6",
