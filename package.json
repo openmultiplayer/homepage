@@ -3,16 +3,22 @@
   "version": "1.0.0",
   "scripts": {
     "test": "eslint pages/*.jsx components/**/*.js",
-    "dev": "node server.js",
+    "dev": "nodemon server.js",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server.js",
     "favicon": "real-favicon generate faviconDescription.json faviconData.json static"
   },
   "dependencies": {
+    "@octokit/graphql": "^2.1.1",
     "@zeit/next-css": "^1.0.1",
+    "dotenv": "^7.0.0",
     "express": "^4.14.0",
     "flag-icon-css": "^3.3.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.2.2",
     "next": "8.0.4",
+    "nodemon": "^1.18.11",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
