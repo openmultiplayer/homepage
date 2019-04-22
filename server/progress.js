@@ -2,26 +2,40 @@ const graphql = require('@octokit/graphql');
 
 const { GITHUB_TOKEN } = process.env;
 
-const QUERY = `{ 
+const QUERY = `{
   repository(owner: "Y-Less", name: "open.mp") {
-    pullRequests(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}) {
+    labels(first: 10, query: "Public") {
       nodes {
-        updatedAt
-        title
-          reviews(first: 1) {
-           users: nodes {
-            user: author {
+        issues(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}) {
+          nodes {
+            updatedAt
+            title
+            author {
               name: login
             }
+            state
           }
         }
-        author {
-          name: login
+        pullRequests(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}) {
+          nodes {
+            updatedAt
+            title
+            reviews(first: 1) {
+              users: nodes {
+                user: author {
+                  name: login
+                }
+              }
+            }
+            author {
+              name: login
+            }
+            mergedBy {
+              name: login
+            }
+            state
+          }
         }
-        mergedBy {
-          name: login
-        }
-        state
       }
     }
   }

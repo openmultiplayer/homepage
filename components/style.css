@@ -136,6 +136,11 @@ hr {
   text-align: left;
 }
 
+.progress-item-icon {
+  fill: hsla(0deg, 100%, 100%, 80%);
+  display: inline;
+  padding-right: 0.2em;
+}
 .progress-item-header {
   line-height: 1;
   padding: 10px 20px 1px 20px;
