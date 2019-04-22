@@ -6,6 +6,7 @@ import { HeadContent } from '../components/HeadContent';
 import Wordmark from '../components/icons/Wordmark';
 import Discord from '../components/icons/Discord';
 import Forum from '../components/icons/Forum';
+import GitHub from '../components/icons/GitHub';
 
 import { loadLanguages } from '../components/languages';
 
@@ -40,6 +41,11 @@ const Index = ({
             <span className="icon">
               <a href="https://www.burgershot.gg">
                 <Forum />
+              </a>
+            </span>
+            <span className="icon">
+              <a href="https://www.github.com/openmultiplayer">
+                <GitHub />
               </a>
             </span>
           </p>
