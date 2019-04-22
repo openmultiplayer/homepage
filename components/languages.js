@@ -12,7 +12,7 @@ export const LANGUAGES = {
   it: 'Italian',
   lt: 'Lithuanian',
   no: 'Norwegian',
-  br: 'Portuguese',
+  pt: 'Portuguese',
   ro: 'Romanian',
   ru: 'Russian',
   es: 'Spanish',
