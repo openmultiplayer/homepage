@@ -158,7 +158,7 @@ const Progress = ({
           </Link>
         </header>
         <section className="content">
-          <p>Below is a progress report of the most recent 10 pull requests</p>
+          <p>Below is a progress report of the state of recent issues and pull requests.</p>
           <div className="progress-items">
             {items.map((value) => {
               return <ProgressRowItem {...value} />;
