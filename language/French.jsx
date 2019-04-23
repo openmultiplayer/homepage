@@ -8,10 +8,10 @@ export const BODY = (FAQLink) => (
     </p>
     <br />
     <p>
-      Ce qui veut dire que  <strong>le client ainsi que l'ensemble des scripts disponible pour SA:MP fonctionneront sur open.mp</strong> avec en plus, des corrections de bugs côté serveur sans avoir recours à des solutions de contournement.
+      Ce qui veut dire que <strong>le client ainsi que l'ensemble des scripts disponible pour SA:MP fonctionneront sur open.mp</strong> avec en plus, des corrections de bugs côté serveur sans avoir recours à des solutions de contournement.
     </p>
     <p>
-      Si vous voulez vous tenir informé de la date de sortie, ou si vous souhaitez contribuer au projet,  vous pouvez lire <a href="https://www.burgershot.gg/showthread.php?tid=99">ce post forum/a> pour plus d'informations.
+      Si vous voulez vous tenir informé de la date de sortie, ou si vous souhaitez contribuer au projet, vous pouvez lire <a href="https://www.burgershot.gg/showthread.php?tid=99">ce post forum</a> pour plus d'informations.
     </p>
     <h1>
       <FAQLink>FAQ</FAQLink>
@@ -35,7 +35,8 @@ export const FAQ = () => (
     <hr />
     <h2>Quelles sont les raisons qui t'ont poussé à faire ça ?</h2>
     <p>
-    Malgré de nombreuses tentatives visant à faire progresser officiellement le développement du programme SA: MP, sous forme de suggestions, de commentaires animés et d'aide de la part des membres de la phase bêta ; à côtés d'une communauté qui réclame quelque chose de nouveau ; aucun progrès n'a été vu. On pensait généralement que c'était simplement dû à un manque d'intérêt de la part de la direction du projet, ce qui n'est pas un problème en soi, mais il n'y avait pas de ligne de succession. Plutôt que de laisser le développement incomber à ceux qui sont intéressés à continuer à travailler sur le mode, le fondateur a simplement voulu tout maîtriser, tout en faisant apparemment avancer les choses le plus longtemps possible pour un effort minimal. Certains prétendent que c'est pour des raisons de revenu passif, mais il n'y a aucune preuve de cela. Malgré un intérêt énorme et une communauté forte et familiale, il pensait qu'il ne restait plus qu'un ou deux ans dans le mode et que la communauté qui avait travaillé si dur pour faire de SA: MP ce qu'elle est aujourd'hui ne méritait pas de continuation.
+      Malgré de nombreuses tentatives visant à faire progresser officiellement le développement du programme SA: MP, sous forme de suggestions, de commentaires animés et d'aide de la part des membres de la phase bêta ; à côtés d'une communauté qui réclame quelque chose de nouveau ; aucun progrès n'a été vu. On pensait généralement que c'était simplement dû à un manque d'intérêt de la part de la direction du projet, ce qui n'est pas un problème en soi, mais il n'y avait pas de ligne de succession. Plutôt que de laisser le développement incomber à ceux qui sont intéressés à continuer à travailler sur le mode, le fondateur a simplement voulu tout maîtriser, tout en faisant apparemment avancer les choses le plus longtemps possible pour un effort minimal. Certains prétendent que c'est pour des raisons de revenu passif, mais il n'y a aucune preuve de cela. Malgré un intérêt énorme et une communauté forte et familiale, il pensait qu'il ne restait plus qu'un ou deux ans dans le mode et que la
+      communauté qui avait travaillé si dur pour faire de SA: MP ce qu'elle est aujourd'hui ne méritait pas de continuation.
     </p>
     <br />
     <p>Chose que nous ne cautionnons pas.</p>
