@@ -12,7 +12,7 @@ html,
   height: 100%;
   display: grid;
   grid-template-columns: auto 640px auto;
-  grid-template-rows: 1fr 400px 2fr;
+  grid-template-rows: 60px auto 100px;
   padding: 0 10px 0 10px;
 }
 
@@ -29,6 +29,19 @@ main {
 
   font-family: english-grotesque, sans-serif;
   font-style: normal;
+  color: #d1cec8;
+}
+
+footer {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  align-self: end;
+  text-align: center;
+  padding: 10px;
+
+  bottom: 0px;
+  font-family: english-grotesque, sans-serif;
+  font-size: 10pt;
   color: #d1cec8;
 }
 
@@ -78,11 +91,16 @@ hr {
   color: #fff;
 }
 
+.menu-content {
+  grid-row: 1 / 3;
+  grid-column: 1 / 4;
+  align-self: start;
+  justify-self: right;
+  z-index: 2;
+}
+
 .lang-list {
   text-align: center;
-  position: absolute;
-  top: 30px;
-  right: 30px;
   padding: 20px;
 }
 
@@ -92,14 +110,11 @@ hr {
   font-size: 35px;
   user-select: none;
   cursor: pointer;
-  width: 55px;
-  height: 35px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .lang-flag span {
   position: relative;
-  top: -5.5px;
 }
 
 .lang-list:hover .lang-flag,
@@ -125,4 +140,70 @@ hr {
 .faq #main:hover .cls-5,
 .faq #main:hover .cls-7 {
   stroke: #ff3200;
+}
+
+.progress-item {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: hsla(0deg, 100%, 100%, 10%);
+  margin: 10px 0px 10px 0px;
+  text-align: left;
+}
+
+.progress-item-icon {
+  fill: hsla(0deg, 100%, 100%, 80%);
+  display: inline;
+  padding-right: 0.2em;
+}
+.progress-item-header {
+  line-height: 1;
+  padding: 10px 20px 1px 20px;
+  margin: 2px 0px 0px 0px;
+}
+.progress-item-separator {
+  margin: 0px;
+  width: 100%;
+}
+
+.progress-item-body {
+  padding: 10px 40px 10px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.progress-item-date {
+  color: hsla(0deg, 100%, 100%, 50%);
+  font-size: 80%;
+  padding: 0px 20px 10px 20px;
+  margin: 0px 0px 2px 0px;
+}
+.progress-item-body-state {
+  text-align: right;
+}
+.progress-item-state {
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  display: inline;
+  padding: 2px 4px 2px 4px;
+}
+.progress-item-state-merged {
+  background-color: green;
+  color: white;
+}
+.progress-item-state-closed {
+  background-color: red;
+  color: white;
+}
+
+.progress-item-period-timeline {
+  border-left-style: dashed;
+  border-left-width: 1px;
+  display: inline;
+  color: hsla(0deg, 100%, 100%, 8%);
+}
+.progress-item-period-time {
+  padding: 5px;
+  color: hsla(0deg, 100%, 100%, 50%);
+  font-size: 10pt;
 }
