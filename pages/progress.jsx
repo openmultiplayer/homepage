@@ -34,7 +34,7 @@ const ProgressRowPull = ({
       <p className="progress-item-date" title={moment(updatedAt).format()}>
         Updated {moment(updatedAt).fromNow()}
       </p>
-      <hr className="progress-item-separator" />
+      <div className="progress-item-separator" />
 
       <div className="progress-item-body">
         <div className="progress-item-body-detail">
@@ -69,7 +69,7 @@ const ProgressRowIssue = ({ title, state, author: { name: author }, updatedAt })
       <p className="progress-item-date" title={moment(updatedAt).format()}>
         Updated {moment(updatedAt).fromNow()}
       </p>
-      <hr className="progress-item-separator" />
+      <div className="progress-item-separator" />
 
       <div className="progress-item-body">
         <div className="progress-item-body-detail">

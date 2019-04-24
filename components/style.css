@@ -162,8 +162,10 @@ hr {
   margin: 2px 0px 0px 0px;
 }
 .progress-item-separator {
-  margin: 0px;
-  width: 100%;
+    border-bottom: 1px solid #d1cec8;
+    margin: 0px;
+    width: 100%;
+    opacity: 0.2;
 }
 
 .progress-item-body {
