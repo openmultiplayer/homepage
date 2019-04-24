@@ -34,7 +34,9 @@ const ProgressRowPull = ({
       <p className="progress-item-date" title={moment(updatedAt).format()}>
         Updated {moment(updatedAt).fromNow()}
       </p>
-      <div className="progress-item-separator"/>      <div className="progress-item-body">
+      <div className="progress-item-separator" />
+
+      <div className="progress-item-body">
         <div className="progress-item-body-detail">
           <p className="progress-item-author">Opened by: {author}</p>
           {users.length === 0 ? null : (
@@ -67,7 +69,9 @@ const ProgressRowIssue = ({ title, state, author: { name: author }, updatedAt })
       <p className="progress-item-date" title={moment(updatedAt).format()}>
         Updated {moment(updatedAt).fromNow()}
       </p>
-      <div className="progress-item-separator"/>      <div className="progress-item-body">
+      <div className="progress-item-separator" />
+
+      <div className="progress-item-body">
         <div className="progress-item-body-detail">
           <p className="progress-item-author">Opened by: {author}</p>
         </div>
