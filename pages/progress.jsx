@@ -149,7 +149,7 @@ const Progress = ({
 
   return (
     <div className="container">
-      <HeadContent flags={flags} selected={currentLanguage.name} title="FAQ" />
+      <HeadContent flags={flags} selected={currentLanguage.name} title="Progress" />
 
       <main>
         <header className="header faq">
