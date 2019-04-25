@@ -6,6 +6,7 @@ export const LANGUAGES = {
   hr: 'Croatian',
   nl: 'Dutch',
   gb: 'English',
+  gr: 'Greek',
   fr: 'French',
   de: 'German',
   hu: 'Hungarian',
