@@ -3,6 +3,7 @@
 // These should be in alphabetical order by English name.
 export const LANGUAGES = {
   sa: 'Arabic',
+  au: 'Australian',
   hr: 'Croatian',
   nl: 'Dutch',
   gb: 'English',
