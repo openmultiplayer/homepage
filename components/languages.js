@@ -17,6 +17,7 @@ export const LANGUAGES = {
   br: 'Portuguese',
   ro: 'Romanian',
   ru: 'Russian',
+  ua: 'Ukrainian',
   es: 'Spanish',
   pl: 'Polish',
   ee: 'Estonian',
