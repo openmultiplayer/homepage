@@ -6,7 +6,7 @@ import moment from 'moment';
 import momentDurationFormatSetup from 'moment-duration-format';
 
 import { HeadContent } from '../components/HeadContent';
-import Wordmark from '../components/icons/Wordmark';
+import { Wordmark } from '../components/icons/Brand';
 import Pull from '../components/icons/Pull';
 import Issue from '../components/icons/Issue';
 
@@ -154,7 +154,7 @@ const Progress = ({
       <main>
         <header className="header faq">
           <Link href={`/index?lang=${currentLanguage.name}`}>
-            <Wordmark width={300} height="100%" stroke="#d1cec8" background="#161f2b" />
+            <Wordmark width={300} height="100%" />
           </Link>
         </header>
         <section className="content">

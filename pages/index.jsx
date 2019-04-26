@@ -4,7 +4,7 @@ import { withRouter } from 'next/router';
 
 import { HeadContent } from '../components/HeadContent';
 import { FooterContent } from '../components/FooterContent';
-import Wordmark from '../components/icons/Wordmark';
+import { Wordmark } from '../components/icons/Brand';
 import Discord from '../components/icons/Discord';
 import Forum from '../components/icons/Forum';
 import GitHub from '../components/icons/GitHub';
@@ -24,7 +24,7 @@ const Index = ({
 
       <main>
         <header className="header">
-          <Wordmark width={300} height="100%" stroke="#d1cec8" background="#161f2b" />
+          <Wordmark width={300} height="100%" />
         </header>
         <section className="content">
           {currentLanguage.body(({ children }) => (

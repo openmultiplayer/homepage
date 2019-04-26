@@ -5,7 +5,7 @@ html,
   padding: 0 0 0 0;
   height: 100%;
   width: 100%;
-  background-color: #161f2b;
+  background-color: #2d2d2d;
 }
 
 .container {
@@ -29,7 +29,7 @@ main {
 
   font-family: english-grotesque, sans-serif;
   font-style: normal;
-  color: #d1cec8;
+  color: #e0e0e0;
 }
 
 footer {
@@ -42,7 +42,7 @@ footer {
   bottom: 0px;
   font-family: english-grotesque, sans-serif;
   font-size: 10pt;
-  color: #d1cec8;
+  color: #e0e0e0;
 }
 
 .header {
@@ -65,7 +65,7 @@ p {
 }
 
 a {
-  color: #d1cec8;
+  color: #e0e0e0;
 }
 
 a:hover {
@@ -123,23 +123,16 @@ hr {
 }
 
 .lang-list:hover .lang-flag-selected {
-  background-color: #d1cec8;
+  background-color: #e0e0e0;
 }
 
 .lang-flag:hover {
   background-color: #ff3200;
 }
 
-.faq #main:hover {
+.wordmark:hover {
   cursor: pointer;
-}
-
-.faq #main:hover .cls-1,
-.faq #main:hover .cls-2,
-.faq #main:hover .cls-3,
-.faq #main:hover .cls-5,
-.faq #main:hover .cls-7 {
-  stroke: #ff3200;
+  fill: white;
 }
 
 .progress-item {
@@ -162,10 +155,10 @@ hr {
   margin: 2px 0px 0px 0px;
 }
 .progress-item-separator {
-    border-bottom: 1px solid #d1cec8;
-    margin: 0px;
-    width: 100%;
-    opacity: 0.2;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0px;
+  width: 100%;
+  opacity: 0.2;
 }
 
 .progress-item-body {
