@@ -22,7 +22,8 @@ export const LANGUAGES = {
   pl: 'Polish',
   ee: 'Estonian',
   vn: 'Vietnamese',
-  jp: 'Japanese'
+  jp: 'Japanese',
+  tw: 'TraditionalChinese'
 };
 
 export const loadLanguages = (initial) => {
