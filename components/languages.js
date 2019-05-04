@@ -23,7 +23,8 @@ export const LANGUAGES = {
   ee: 'Estonian',
   vn: 'Vietnamese',
   jp: 'Japanese',
-  tw: 'TraditionalChinese'
+  tw: 'TraditionalChinese',
+  cn: 'SimplifiedChinese'
 };
 
 export const loadLanguages = (initial) => {
