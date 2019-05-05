@@ -1,37 +1,37 @@
-import React from "react";
-import { useState } from "react";
-import Head from "next/head";
+import React from 'react';
+import Link from 'next/link';
+import { withRouter } from 'next/router';
 
-import { HeadContent } from "../components/HeadContent";
-import { LanguageSelect } from "../components/LanguageSelect";
-import Wordmark from "../components/icons/Wordmark";
-import Discord from "../components/icons/Discord";
-import Forum from "../components/icons/Forum";
+import { HeadContent } from '../components/HeadContent';
+import { FooterContent } from '../components/FooterContent';
+import Wordmark from '../components/icons/Wordmark';
+import Discord from '../components/icons/Discord';
+import Forum from '../components/icons/Forum';
+import GitHub from '../components/icons/GitHub';
 
-import { loadLanguages } from "../components/languages";
+import { loadLanguages } from '../components/languages';
 
-const Index = () => {
-  let [language, setLanguage] = useState("🇬🇧");
-
-  let languages = loadLanguages();
-  let currentLanguage = languages[language];
+const Index = ({
+  router: {
+    query: { lang: language }
+  }
+}) => {
+  const [currentLanguage, flags] = loadLanguages(language);
 
   return (
     <div className="container">
-      <HeadContent />
+      <HeadContent flags={flags} selected={currentLanguage.name} title="FAQ" />
+
       <main>
         <header className="header">
-          <Wordmark width={300} height={"100%"} stroke="#d1cec8" background="#161f2b" />
+          <Wordmark width={300} height="100%" stroke="#d1cec8" background="#161f2b" />
         </header>
-        <LanguageSelect
-          flags={Object.keys(languages)}
-          selected={language}
-          callback={l => {
-            setLanguage(l);
-          }}
-        />
         <section className="content">
-          {currentLanguage.body()}
+          {currentLanguage.body(({ children }) => (
+            <Link href={`/faq?lang=${currentLanguage.name}`}>
+              <a>{children}</a>
+            </Link>
+          ))}
           <hr />
           <p>
             <span className="icon">
@@ -44,11 +44,18 @@ const Index = () => {
                 <Forum />
               </a>
             </span>
+            <span className="icon">
+              <a href="https://www.github.com/openmultiplayer">
+                <GitHub />
+              </a>
+            </span>
           </p>
         </section>
       </main>
+
+      <FooterContent />
     </div>
   );
 };
 
-export default Index;
+export default withRouter(Index);
