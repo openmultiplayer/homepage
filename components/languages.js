@@ -21,7 +21,10 @@ export const LANGUAGES = {
   es: 'Spanish',
   pl: 'Polish',
   ee: 'Estonian',
-  vn: 'Vietnamese'
+  vn: 'Vietnamese',
+  jp: 'Japanese',
+  tw: 'TraditionalChinese',
+  cn: 'SimplifiedChinese'
 };
 
 export const loadLanguages = (initial) => {
