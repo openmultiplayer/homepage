@@ -41,7 +41,8 @@ export const loadLanguages = (initial) => {
   }
 
   // eslint-disable-next-line import/no-dynamic-require
-  const { BODY, FAQ } = require(`../language/${LANGUAGES[currentLanguage]}`);
+  const BODY = require(`../language/${LANGUAGES[currentLanguage]}/index.mdx`);
+  const FAQ = require(`../language/${LANGUAGES[currentLanguage]}/faq.mdx`);
 
   return [
     {

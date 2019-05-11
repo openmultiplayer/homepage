@@ -25,7 +25,7 @@ const Faq = ({
           </Link>
         </header>
         <section className="content">
-          {currentLanguage.faq()}
+          <currentLanguage.faq.default />
           <hr />
         </section>
       </main>
