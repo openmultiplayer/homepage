@@ -69,7 +69,7 @@ a {
 }
 
 a:hover {
-  color: #ff3200;
+  color: hsl(40, 48%, 64%);
 }
 
 hr {
@@ -88,7 +88,7 @@ hr {
 }
 
 .icon :hover {
-  color: #fff;
+  color: hsl(100, 48%, 64%);
 }
 
 .menu-content {

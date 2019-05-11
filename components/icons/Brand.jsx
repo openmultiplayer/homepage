@@ -113,11 +113,7 @@ export const Wordmark = (props) => {
 };
 
 export const Logo = (props) => {
-  const {
-    // background = `hsl(280deg, 55%, 55%)`
-    background = `#723f8c`,
-    stroke = `#2d2d2d`
-  } = props;
+  const { background = `hsl(250, 48%, 64%)`, stroke = `#2d2d2d` } = props;
   const STYLE = `
     .cls-1,
     .cls-2,
@@ -130,7 +126,7 @@ export const Logo = (props) => {
     .cls-1,
     .cls-4,
     .cls-6 {
-      stroke: #73408d;
+      stroke: ${background};
     }
     .cls-1,
     .cls-2,
@@ -144,11 +140,11 @@ export const Logo = (props) => {
     .cls-2,
     .cls-5,
     .cls-7 {
-      stroke: #2d2d2d;
+      stroke: ${stroke};
       stroke-width: 25px;
     }
     .cls-3 {
-      fill: #73408d;
+      fill: ${background};
     }
     .cls-4,
     .cls-5 {
