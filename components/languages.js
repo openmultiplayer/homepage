@@ -3,7 +3,6 @@
 // These should be in alphabetical order by English name.
 export const LANGUAGES = {
   sa: 'Arabic',
-  au: 'Australian',
   hr: 'Croatian',
   nl: 'Dutch',
   gb: 'English',
@@ -42,6 +41,7 @@ export const loadLanguages = (initial) => {
 
   // eslint-disable-next-line import/no-dynamic-require
   const BODY = require(`../language/${LANGUAGES[currentLanguage]}/index.mdx`);
+  // eslint-disable-next-line import/no-dynamic-require
   const FAQ = require(`../language/${LANGUAGES[currentLanguage]}/faq.mdx`);
 
   return [
@@ -50,6 +50,6 @@ export const loadLanguages = (initial) => {
       body: BODY,
       faq: FAQ
     },
-    Object.keys(LANGUAGES)
+    Object.keys(LANGUAGES).sort()
   ];
 };
