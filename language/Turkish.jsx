@@ -63,7 +63,7 @@ Her ne kadar topluluk üzerinden öneri sunarak, eleştirerek ve yardım sunarak
     <hr />
     <h2> "OpenMP" hakkında nedir?</h2>
     <p>
-      <a href="https://ru.wikipedia.org/wiki/OpenMP">Open Multiprocessing</a> - olarak bilinen "OpenMP", farklı projedir, bizim projemiz - "open.mp". olarak isimlendirilir. Bunlar ikisi tamamen farklı projelerdir.
+      <a href="https://tr.wikipedia.org/wiki/OpenMP">Open Multiprocessing</a> - olarak bilinen "OpenMP", farklı projedir, bizim projemiz - "open.mp". olarak isimlendirilir. Bunlar ikisi tamamen farklı projelerdir.
     </p>
   </div>
 );
