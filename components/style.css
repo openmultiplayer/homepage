@@ -20,6 +20,10 @@ html,
   .container {
     grid-template-columns: auto 1fr auto;
   }
+
+  .lang-list:hover {
+    background-color: #d1cec8;
+  }
 }
 
 main {
@@ -100,8 +104,11 @@ hr {
 }
 
 .lang-list {
+  display: grid;
   text-align: center;
   padding: 20px;
+  grid-template-columns: 25% 25% 25% 25%;
+  border-radius: 10px;
 }
 
 .lang-flag {
