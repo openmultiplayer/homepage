@@ -24,6 +24,10 @@ html,
   .lang-list:hover {
     background-color: #d1cec8;
   }
+
+  .lang-list:hover .lang-flag-selected {
+    border: 1px solid #161f2b;
+  }
 }
 
 main {
