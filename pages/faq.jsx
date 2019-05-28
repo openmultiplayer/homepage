@@ -5,7 +5,7 @@ import { withRouter } from 'next/router';
 import { HeadContent } from '../components/HeadContent';
 import { FooterContent } from '../components/FooterContent';
 import { loadLanguages } from '../components/languages';
-import Wordmark from '../components/icons/Wordmark';
+import { Wordmark } from '../components/icons/Brand';
 
 const Faq = ({
   router: {
@@ -21,7 +21,7 @@ const Faq = ({
       <main>
         <header className="header faq">
           <Link href={`/index?lang=${currentLanguage.name}`}>
-            <Wordmark width={300} height="100%" stroke="#d1cec8" background="#161f2b" />
+            <Wordmark width={300} height="100%" />
           </Link>
         </header>
         <section className="content">
