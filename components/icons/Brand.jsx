@@ -113,7 +113,7 @@ export const Wordmark = (props) => {
 };
 
 export const Logo = (props) => {
-  const { background = `hsl(250, 48%, 64%)`, stroke = `#2d2d2d` } = props;
+  const { background = `#8577ce`, stroke = `#2d2d2d` } = props;
   const STYLE = `
     .cls-1,
     .cls-2,
