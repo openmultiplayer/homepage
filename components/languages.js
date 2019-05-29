@@ -7,24 +7,25 @@ export const LANGUAGES = {
   hr: 'Croatian',
   nl: 'Dutch',
   gb: 'English',
-  gr: 'Greek',
+  ee: 'Estonian',
   fr: 'French',
   de: 'German',
+  gr: 'Greek',
   hu: 'Hungarian',
   it: 'Italian',
+  jp: 'Japanese',
   lt: 'Lithuanian',
   no: 'Norwegian',
+  pl: 'Polish',
   br: 'Portuguese',
   ro: 'Romanian',
   ru: 'Russian',
-  ua: 'Ukrainian',
+  cn: 'SimplifiedChinese',
   es: 'Spanish',
-  pl: 'Polish',
-  ee: 'Estonian',
-  vn: 'Vietnamese',
-  jp: 'Japanese',
   tw: 'TraditionalChinese',
-  cn: 'SimplifiedChinese'
+  tr: 'Turkish',
+  ua: 'Ukrainian',
+  vn: 'Vietnamese'
 };
 
 export const loadLanguages = (initial) => {
