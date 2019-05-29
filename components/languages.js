@@ -19,6 +19,7 @@ export const LANGUAGES = {
   ru: 'Russian',
   ua: 'Ukrainian',
   es: 'Spanish',
+  tr: 'Turkish',
   pl: 'Polish',
   ee: 'Estonian',
   vn: 'Vietnamese',
