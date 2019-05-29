@@ -20,12 +20,12 @@ export const LANGUAGES = {
   br: 'Portuguese',
   ro: 'Romanian',
   ru: 'Russian',
-  cn: 'SimplifiedChinese'
+  cn: 'SimplifiedChinese',
   es: 'Spanish',
   tw: 'TraditionalChinese',
   tr: 'Turkish',
   ua: 'Ukrainian',
-  vn: 'Vietnamese',
+  vn: 'Vietnamese'
 };
 
 export const loadLanguages = (initial) => {
