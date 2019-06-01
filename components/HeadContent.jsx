@@ -36,13 +36,13 @@ export const HeadContent = ({ title, ...rest }) => (
       <meta property="og:site_name" content="Open Multiplayer" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="open.mp" />
-      <meta property="og:url" content="https://www.burgershot.gg" />
+      <meta property="og:url" content="https://www.open.mp" />
       <meta property="og:description" content={DESC} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@Southclaws" />
       <meta name="twitter:creator" content="@Southclaws" />
-      <meta name="hostname" content="burgershot.gg" />
-      <meta name="expected-hostname" content="burgershot.gg" />
+      <meta name="hostname" content="www.open.mp" />
+      <meta name="expected-hostname" content="www.open.mp" />
       <meta name="google-site-verification" content="-1qA4kEDqC2i3_jqGD-UYCCqH7jDWZdgEejT7-4QqkE" />
     </Head>
     <LanguageSelect {...rest} />
