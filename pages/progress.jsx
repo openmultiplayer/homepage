@@ -182,7 +182,7 @@ Progress.getInitialProps = async () => {
     if (diff > 86400000) {
       periods.push({
         type: 'period',
-        updatedAt: later.subtract(diff / 2).toISOString(),
+        updatedAt: later.subtract(10000).toISOString(),
         length: diff
       });
     }
