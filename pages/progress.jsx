@@ -118,34 +118,9 @@ const Progress = ({
   router: {
     query: { lang: language }
   },
-  progress: {
-    issues: { nodes: issues },
-    pullRequests: { nodes: pullRequests }
-  }
+  items
 }) => {
   const [currentLanguage, flags] = loadLanguages(language);
-
-  let items = [
-    ...issues.map((v) => ({ ...v, type: 'issue' })),
-    ...pullRequests.map((v) => ({ ...v, type: 'pull' }))
-  ].sort((a, b) => a.updatedAt < b.updatedAt);
-
-  const { length } = items;
-  for (let index = 0; index < length - 1; index += 1) {
-    const earlier = moment(items[index].updatedAt);
-    const later = moment(items[index + 1].updatedAt);
-    const diff = earlier.diff(later);
-
-    // insert a period object when the time between is over a day
-    if (diff > 86400000) {
-      items.push({
-        type: 'period',
-        updatedAt: earlier.subtract(diff / 2).toISOString(),
-        length: diff
-      });
-    }
-  }
-  items = items.sort((a, b) => a.updatedAt < b.updatedAt);
 
   return (
     <div className="container">
@@ -173,9 +148,52 @@ const Progress = ({
 Progress.getInitialProps = async () => {
   const res = await fetch(`${ADDRESS}/api/progress`);
   const data = await res.json();
+  const {
+    issues: { nodes: issues },
+    pullRequests: { nodes: pullRequests }
+  } = data.repository.labels.nodes[0];
+  const items = [
+    ...issues.map((v) => ({
+      ...v,
+      updatedAt: moment(v.updatedAt).toISOString(),
+      type: 'issue'
+    })),
+    ...pullRequests.map((v) => ({
+      ...v,
+      updatedAt: moment(v.updatedAt).toISOString(),
+      type: 'pull'
+    }))
+  ].sort((a, b) => a.updatedAt < b.updatedAt);
+  const { length } = items;
+
+  let periods = [];
+  for (let index = 0; index < length - 1; index += 1) {
+    const earlier = moment(items[index].updatedAt);
+    const later = moment(items[index + 1].updatedAt);
+    const diff = earlier.diff(later);
+
+    // insert a period object when the time between is over a day
+    if (diff > 86400000) {
+      periods.push({
+        type: 'period',
+        updatedAt: earlier.subtract(diff / 2).toISOString(),
+        length: diff
+      });
+    }
+  }
+
+  const sorted = [...items, ...periods].sort((a, b) => {
+    if (a.updatedAt < b.updatedAt) {
+      return 1;
+    }
+    if (a.updatedAt > b.updatedAt) {
+      return -1;
+    }
+    return 0;
+  });
 
   return {
-    progress: data.repository.labels.nodes[0]
+    items: sorted
   };
 };
 
