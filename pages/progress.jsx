@@ -166,7 +166,7 @@ Progress.getInitialProps = async () => {
   ].sort((a, b) => a.updatedAt < b.updatedAt);
   const { length } = items;
 
-  let periods = [];
+  const periods = [];
   for (let index = 0; index < length - 1; index += 1) {
     const earlier = moment(items[index].updatedAt);
     const later = moment(items[index + 1].updatedAt);
