@@ -42,8 +42,13 @@ const ProgressRowPull = ({
           {users.length === 0 ? null : (
             <p className="progress-item-reviewer">
               Reviewed by:{' '}
-              {users.map((v) => {
-                return <span className="progress-item-reviewer-name">{v.user.name}</span>;
+              {users.map((v, i) => {
+                return (
+                  /* eslint-disable-next-line react/no-array-index-key */
+                  <span key={i} className="progress-item-reviewer-name">
+                    {v.user.name}
+                  </span>
+                );
               })}
             </p>
           )}
@@ -135,8 +140,9 @@ const Progress = ({
         <section className="content">
           <p>Below is a progress report of the state of recent issues and pull requests.</p>
           <div className="progress-items">
-            {items.map((value) => {
-              return <ProgressRowItem {...value} />;
+            {items.map((value, index) => {
+              /* eslint-disable-next-line react/no-array-index-key */
+              return <ProgressRowItem key={index} {...value} />;
             })}
           </div>
           <hr />
@@ -176,7 +182,7 @@ Progress.getInitialProps = async () => {
     if (diff > 86400000) {
       periods.push({
         type: 'period',
-        updatedAt: earlier.subtract(diff / 2).toISOString(),
+        updatedAt: later.subtract(diff / 2).toISOString(),
         length: diff
       });
     }
