@@ -15,7 +15,7 @@ import { loadLanguages } from '../components/languages';
 momentDurationFormatSetup(moment);
 
 const DEV = process.env.NODE_ENV !== 'production';
-const ADDRESS = DEV ? 'http://localhost:3000' : 'https://open.mp';
+const ADDRESS = DEV ? 'http://localhost:3000' : 'https://www.open.mp';
 
 const ProgressRowPull = ({
   title,
