@@ -72,12 +72,44 @@ export const FAQ = () => (
     <br />
     <p>Nosotros no estamos de acuerdo.</p>
     <hr />
+    <h2>¿Cuáles son sus opiniones sobre Kalcor/SA:MP/lo que sea?</h2>
+    <p>
+      Nos encanta SA:MP, es por eso que estamos aquí en primer lugar, y se lo debemos a Kalcor. A lo largo de los años,
+      ha hecho una gran cantidad de cosas para el mod, y esa contribución no debe ser olvidada o ignorada. Las acciones que llevaron
+      a open.mp se tomaron porque no estábamos de acuerdo con varias decisiones recientes y, a pesar de los repetidos intentos
+      de guiar el mod en una dirección diferente, no se vio ninguna solución. Por lo tanto, nos vimos obligados a tomar la desafortunada
+      decisión de intentar continuar con SA:MP en espíritu sin Kalcor. Esta no es una acción que se tome contra él personalmente, y no
+      debe considerarse como un ataque personal. No cobraremos ningún tipo de insultos personales contra nadie, independientemente de su
+      posición en el tema open.mp; Deberíamos poder tener un debate razonable sin tener que recurrir a ataques ad-hominem.
+    </p>
+    <hr />
+    <h2>¿No es esto simplemente dividir a la comunidad?</h2>
+    <p>
+      Esa no es nuestra intención. Lo ideal es que no se requiera ninguna división, pero separar un poco y guardar esa parte
+      es mejor que mirar cómo se marchita todo. De hecho, desde que se anunció este mod, una gran cantidad de comunidades que no están
+      en inglés se han vuelto a comprometer con la comunidad inglesa. Estas comunidades fueron empujadas lentamente, por lo que su
+      reincorporación en realidad está uniendo a una comunidad dividida. Un gran número de personas han sido excluidas de los foros
+      oficiales de SA:MP (y en algunos casos, se ha purgado todo su historial de publicaciones), pero el mismo Kalcor ha señalado
+      que los foros oficiales no son SA:MP, solo una parte de SA:MP Muchos jugadores y propietarios de servidores nunca han publicado,
+      o incluso se han unido a esos foros; así que hablar con estas personas
+      de nuevo es unificar aún más partes de la comunidad.
+    </p>
+    <hr />
     <h2>Ya que es "Open" (abierto) Multiplayer, ¿será open-source (código abierto)?</h2>
     <p>
       Eventualmente ese es el plan, sí. Por ahora estamos intentando hacer el desarollo "abierto" en términos de comunicación y
       transparencia (que en sí, ya es una mejora), y se moverá hacia hacer el código abierto una vez las
       cosas estén bien planeadas.
     </p>
+    <hr />
+    <h2>¿Cuándo saldrá open.mp?</h2>
+    <p>
+      Esta es la pregunta histórica, desafortunadamente tiene la respuesta antigua: cuando se hace. Simplemente no hay manera de saber
+      cuánto tiempo tomará un proyecto como este. Ha estado funcionando silenciosamente por un tiempo, y ya ha visto algunas
+      fluctuaciones en el nivel de actividad, dependiendo de cuán ocupadas estén las personas que lo desarrollan. Pero tenga la
+      seguridad de que está en camino y progresando rápidamente gracias a algunas decisiones de diseño fundamentales.
+    </p>
+    <hr />
     <hr />
     <h2>¿Cómo puedo ayudar?</h2>
     <p>
