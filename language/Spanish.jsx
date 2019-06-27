@@ -110,7 +110,6 @@ export const FAQ = () => (
       seguridad de que está en camino y progresando rápidamente gracias a algunas decisiones de diseño fundamentales.
     </p>
     <hr />
-    <hr />
     <h2>¿Cómo puedo ayudar?</h2>
     <p>
       Permanece atento al foro. Tenemos un tema exactamente para esto, y tenemos la intención de mantenerlo
