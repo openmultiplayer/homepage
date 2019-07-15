@@ -41,7 +41,7 @@ const QUERY = `{
   }
 }`;
 
-module.exports = async (req, res) => {
+export default async function handle(req, res) {
   res.json(
     await graphql(QUERY, {
       headers: {
@@ -49,4 +49,4 @@ module.exports = async (req, res) => {
       }
     })
   );
-};
+}
