@@ -8,7 +8,7 @@ export const BODY = (FAQLink) => (
     </p>
     <br />
     <p>
-      Cela veut dire que <strong>le client SA:MP actuel ainsi que tous les scripts créés pour SA:MP fonctionneront avec open.mp</strong>, et qu'en plus de cela, beaucoup de bugs côté serveur seront corrigés sans avoir besoin à les contourner par d'autres moyens.
+      Cela veut dire que <strong>le client SA:MP actuel ainsi que tous les scripts créés pour SA:MP fonctionneront avec open.mp</strong>, et qu'en plus de cela, beaucoup de bugs côté serveur seront corrigés sans avoir besoin de les contourner par d'autres moyens.
     </p>
     <p>
       Si vous souhaitez savoir quand la date de sortie est prévue, ou comment vous pouvez contribuer à ce projet, veuillez visiter <a href="https://www.burgershot.gg/showthread.php?tid=99">ce topic sur notre forum</a> pour plus d'informations.
@@ -42,7 +42,7 @@ export const FAQ = () => (
     <p>Nous adorons SA:MP, c'est avant tout pour cela qu'on est là — et nous sommes reconnaissants envers Kalcor. Il a fait beaucoup pour ce mod au fil des années, et sa contribution ne devrait pas être oubliée ou ignorée. Nous avons lancé open.mp parce que nous n'étions pas d'accord avec les décisions récentes, et malgré les tentatives pour guider le mod vers une autre direction, aucune solution ne semblait fructueuse. De ce fait, nous avons pris la malheureuse décision de continuer SA:MP sans Kalcor, tout en gardant son esprit. Nous n'avons rien contre lui personnellement, et cette décision ne devrait pas être perçue comme une attaque à sa personne. Nous ne tolérerons aucune insulte envers qui que ce soit — peu importe leur position vis-à-vis de open.mp ; nous devrions pouvoir avoir une discussion raisonable sans avoir à en arriver à des attaques personnelles.</p>
     <hr />
     <h2>Cela ne va-t-il pas diviser la communauté ?</h2>
-    <p>Ce n'est pas notre intention. Dans l'idéal, aucune division ne serait nécessaire du tout, mais se séparer de quelques uns et sauver le reste est mieux que de tout voir couler. En effet, depuis que ce mod a été annoncé, beaucoup de communautés non-anglophones se sont renouées avec la communauté anglophone. Ces communautés avaient été lentement repoussées et mises de côté auparavant, de ce fait cette réintégration permet de rassembler communauté autrefois divisée. Un grand nombre de personnes ont été bannies du forum officiel de SA:MP (et dans certains cas, la totalité de leurs messages supprimés), mais Kalcor lui-même a souligné que SA:MP ne se résume pas qu'à son forum, et qu'il s'agit simplement d'une partie de SA:MP. De nombreux joueurs et propriétaires de serveurs n'ont jamais posté, ni même rejoint ces forums ; ainsi, de parler à nouveau à ces membres unifie encore plus la communauté.</p>
+    <p>Ce n'est pas notre intention. Dans l'idéal, aucune division ne serait nécessaire du tout, mais se séparer de quelques uns et sauver le reste est mieux que de tout voir couler. En effet, depuis que ce mod a été annoncé, beaucoup de communautés non-anglophones se sont renouées avec la communauté anglophone. Ces communautés avaient été lentement repoussées et mises de côté auparavant, de ce fait cette réintégration permet de rassembler une communauté autrefois divisée. Un grand nombre de personnes ont été bannies du forum officiel de SA:MP (et dans certains cas, la totalité de leurs messages supprimés), mais Kalcor lui-même a souligné que SA:MP ne se résume pas qu'à son forum, et qu'il s'agit simplement d'une partie de SA:MP. De nombreux joueurs et propriétaires de serveurs n'ont jamais posté, ni même rejoint ces forums ; ainsi, de parler à nouveau à ces membres unifie encore plus la communauté.</p>
     <hr />
     <h2>Puisque « open » fait parti du nom du mod, celui-ci sera-t-il open-source ?</h2>
     <p>Tôt ou tard, c'est notre plan, oui. Pour l'instant, nous essayons de rendre le développement ouvert en termes de communication et de transparence (ce qui est en soi une amélioration), et nous essaierons de rendre disponible le code source à mesure que nous le pourrons, une fois que tout sera réglé et stabilisé.</p>
@@ -61,6 +61,6 @@ export const FAQ = () => (
     <p>burgershot.gg est un forum de jeux vidéo, rien de plus. Beaucoup de monde est impliqué dans les deux, et quelques mises à jour de développement d'OMP sont postées sur celui-ci, mais il s'agit de deux projets indépendants. Ce n'est pas le forum officiel d'OMP, et OMP n'est pas une propriété de Burgershot. Une fois que le site d'OMP sera en ligne et opérationnel, les deux pourront être séparés (un peu comme SA:MP était jadis hébergé par GTAForums avant qu'il ait son propre site).</p>
     <hr />
     <h2>Qu'en est-il de OpenMP ?</h2>
-    <p>Le projet « Open Multi-Processing project » s'appelle OpenMP, nous sommes « open.mp ». Ce sont deux choses totalement différentes.</p>
+    <p>Le « Open Multi-Processing project » s'appelle OpenMP, nous sommes « open.mp ». Ce sont deux choses totalement différentes.</p>
   </div>
 );
