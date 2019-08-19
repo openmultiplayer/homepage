@@ -4,14 +4,14 @@ export const BODY = (FAQLink) => (
   <div>
     <h1>Open Multiplayer</h1>
     <p>
-      Est un nouveau mode multijoueur pour <em>Grand Theft Auto: San Andreas</em> qui est compatible à 100 % avec le mode multijoueur San Andreas Multiplayer (SAMP).
+      Un prochain mod multijoueur pour <em>Grand Theft Auto : San Andreas</em> qui sera entièrement rétrocompatible avec le mod actuel <em>San Andreas Multiplayer</em>.
     </p>
     <br />
     <p>
-      Ce qui veut dire que <strong>le client ainsi que l'ensemble des scripts disponible pour SA:MP fonctionneront sur open.mp</strong> avec en plus, des corrections de bugs côté serveur sans avoir recours à des solutions de contournement.
+      Cela veut dire que <strong>le client SA:MP actuel ainsi que tous les scripts créés pour SA:MP fonctionneront avec open.mp</strong>, et qu'en plus de cela, beaucoup de bugs côté serveur seront corrigés sans avoir besoin de les contourner par d'autres moyens.
     </p>
     <p>
-      Si vous voulez vous tenir informé de la date de sortie, ou si vous souhaitez contribuer au projet, vous pouvez lire <a href="https://www.burgershot.gg/showthread.php?tid=99">ce post forum</a> pour plus d'informations.
+      Si vous souhaitez savoir quand la date de sortie est prévue, ou comment vous pouvez contribuer à ce projet, veuillez visiter <a href="https://www.burgershot.gg/showthread.php?tid=99">ce topic sur notre forum</a> pour plus d'informations.
     </p>
     <h1>
       <FAQLink>FAQ</FAQLink>
@@ -23,38 +23,44 @@ export const FAQ = () => (
   <div>
     <h1>FAQ</h1>
     <hr />
-    <h2>C'est quoi open.mp?</h2>
-    <p>open.mp (Open Multiplayer, OMP) est un mode multijoueur alternatif pour le jeu Grand Theft Auto : San Andreas, initialement, crée dû à l’augmentation des problèmes lors de mise à jour et de la méthode de gestion de SA:MP, il a pour but de remplacer le côté serveur, ce qui veut dire que le client SA:MP pourra s’y connecter. Dans le futur, une nouvelle version d’open.mp sera disponible, avec la sortie de mise à jour plus intéressantes.</p>
+    <h2>Qu'est-ce que open.mp ?</h2>
+    <p>open.mp (aussi appelé Open Multiplayer ou OMP) est un mod multijoueur alternatif pour Grand Theft Auto : San Andreas, initié en réponse à la malheureuse accumulation des problèmes liés aux mises à jour et à la méthode de gestion de SA:MP. La version initiale sera un remplacement direct pour les serveurs uniquement. Les joueurs pourront se connecter à ces serveurs avec le client SA:MP. À l'avenir, une version client d'open.mp sera disponible, ce qui permettra le développement de mises à jour plus intéressantes.</p>
     <hr />
-    <h2>Est-ce que c'est une copie?</h2>
-    <p>Non, il s’agit là d’un projet « from scratch » (réécriture totale), mettant à profit des décennies de connaissances et d’expérience, il y a eu dans le passé des tentatives de reprise du code source de SA :MP, mais deux problèmes viennent s’exposer à ce cas-ci : </p>
+    <h2>S'agit-il d'un « fork » ?</h2>
+    <p>Non. Il s'agit là d'une réecriture totale, tirant parti de dizaines d'années de connaissances et d'expérience. Il y a eu plusieurs tentatives pour copier le code source de SA:MP dans le passé, mais nous pensons que ces copies avaient deux problèmes majeurs :</p>
     <ol>
-      <li>Ils étaient basés sur le code source leak de SA:MP, les auteurs de ces modes n’avaient aucun droit légal sur le code et étaient donc exposé à divers problèmes tant légaux que moraux. Nous refusons carrément d'utiliser ce code. Cela entrave légèrement la vitesse de développement, mais permet une garantie totale sur le long terme.</li>
-      <li>Ils ont fait des changements trop brusques. Soit en remplaçant le moteur de script, soit en remplaçant des fonctionnalités et en, en supprimant certaines. Cela empêchant les serveurs existants dotés d'énormes bases de code de migrer sur ces autres modes, car ils devraient tout simplement, réécrire une partie, voire la totalité de leur code. Nous avons bien l'intention d'ajouter des fonctionnalités et de peaufiner les choses au fil du temps, mais nous nous concentrons également sur la prise en charge des serveurs existants, leur permettant d'utiliser notre code sans modifier le leur.</li>
+      <li>Elles étaient basées sur un code source de SA:MP qui avait été fuité. Les auteurs de ces mods n'avaient aucun droit légal sur celui-ci, et étaient donc exposés à divers problèmes tant légaux que moraux. Nous refusons catégoriquement d'utiliser ce code. Cela entrave légèrement la vitesse de développement, mais sur le long terme, cela reste le meilleur choix.</li>
+      <li>Ces copieurs ont essayé de réinventer trop de choses d'un coup, soit en remplaçant le moteur de script, soit en ajoutant des fonctionnalités tout en supprimant certaines, ou même en faisant des retouches qui ont causé des incompatibilités. Cela empêche les serveurs existants possédant d'énormes bases de code de pouvoir migrer, car leurs développeurs auraient dû réécrire une partie, voire la totalité de leur code — une tâche potentiellement très lourde. Nous avons bien l'intention d'ajouter des fonctionnalités et de peaufiner les choses au fil du temps, mais nous nous concentrons également sur la prise en charge des serveurs existants, leur permettant d'utiliser notre code sans modifier le leur.</li>
     </ol>
     <hr />
-    <h2>Quelles sont les raisons qui t'ont poussé à faire ça ?</h2>
-    <p>
-      Malgré de nombreuses tentatives visant à faire progresser officiellement le développement du programme SA: MP, sous forme de suggestions, de commentaires animés et d'aide de la part des membres de la phase bêta ; à côtés d'une communauté qui réclame quelque chose de nouveau ; aucun progrès n'a été vu. On pensait généralement que c'était simplement dû à un manque d'intérêt de la part de la direction du projet, ce qui n'est pas un problème en soi, mais il n'y avait pas de ligne de succession. Plutôt que de laisser le développement incomber à ceux qui sont intéressés à continuer à travailler sur le mode, le fondateur a simplement voulu tout maîtriser, tout en faisant apparemment avancer les choses le plus longtemps possible pour un effort minimal. Certains prétendent que c'est pour des raisons de revenu passif, mais il n'y a aucune preuve de cela. Malgré un intérêt énorme et une communauté forte et familiale, il pensait qu'il ne restait plus qu'un ou deux ans dans le mode et que la
-      communauté qui avait travaillé si dur pour faire de SA: MP ce qu'elle est aujourd'hui ne méritait pas de continuation.
-    </p>
+    <h2>Pourquoi faites-vous cela ?</h2>
+    <p>Malgré de nombreuses tentatives pour faire progresser le développement de SA:MP, de par les suggestions, commentaires animés et l'aide des bêta testeurs ; en parallèle d'une communauté qui réclame quelque chose de nouveau ; aucun progrès n'a été constaté. L'avis général de la communauté était qu'il s'agissait simplement d'un manque d'intérêt de la part de la direction du projet, ce qui n'est pas un problème en soi, mais il n'y avait pas de ligne de succession. Plutôt que de léguer le développement à ceux qui sont intéressés à continuer de travailler sur le mod, le fondateur a simplement voulu faire tout tomber avec lui, en faisant avancer les choses le plus longtemps possible avec un minimum d'effort selon les rumeurs. Certains pensent que ce choix a été fait pour lui garantir un revenu passif, mais il n'y a aucune preuve de cela. En dépit de l'intérêt énorme et d'une communauté forte et familiale, il pensait qu'il ne restait plus qu'un ou deux ans sur ce mod et que la communauté qui avait travaillé si dur pour faire de SA:MP ce qu'il est aujourd'hui ne méritait pas une suite.</p>
     <br />
-    <p>Chose que nous ne cautionnons pas.</p>
+    <p>Nous ne sommes pas d'accord.</p>
     <hr />
-    <h2>Sera t-il Open Source</h2>
-    <p>Sur le long terme, c'est le plan, oui. Mais pour le moment, nous essayons de rendre le développement ouvert sur le plan de la communication et de la transparence (ce qui est en soi une amélioration), et nous allons passer le projet en open source à mesure que nous le pourrons, une fois que tout sera réglé.</p>
+    <h2>Que pensez-vous de Kalcor, SA:MP etc ?</h2>
+    <p>Nous adorons SA:MP, c'est avant tout pour cela qu'on est là — et nous sommes reconnaissants envers Kalcor. Il a fait beaucoup pour ce mod au fil des années, et sa contribution ne devrait pas être oubliée ou ignorée. Nous avons lancé open.mp parce que nous n'étions pas d'accord avec les décisions récentes, et malgré les tentatives pour guider le mod vers une autre direction, aucune solution ne semblait fructueuse. De ce fait, nous avons pris la malheureuse décision de continuer SA:MP sans Kalcor, tout en gardant son esprit. Nous n'avons rien contre lui personnellement, et cette décision ne devrait pas être perçue comme une attaque à sa personne. Nous ne tolérerons aucune insulte envers qui que ce soit — peu importe leur position vis-à-vis de open.mp ; nous devrions pouvoir avoir une discussion raisonable sans avoir à en arriver à des attaques personnelles.</p>
+    <hr />
+    <h2>Cela ne va-t-il pas diviser la communauté ?</h2>
+    <p>Ce n'est pas notre intention. Dans l'idéal, aucune division ne serait nécessaire du tout, mais se séparer de quelques uns et sauver le reste est mieux que de tout voir couler. En effet, depuis que ce mod a été annoncé, beaucoup de communautés non-anglophones se sont renouées avec la communauté anglophone. Ces communautés avaient été lentement repoussées et mises de côté auparavant, de ce fait cette réintégration permet de rassembler une communauté autrefois divisée. Un grand nombre de personnes ont été bannies du forum officiel de SA:MP (et dans certains cas, la totalité de leurs messages supprimés), mais Kalcor lui-même a souligné que SA:MP ne se résume pas qu'à son forum, et qu'il s'agit simplement d'une partie de SA:MP. De nombreux joueurs et propriétaires de serveurs n'ont jamais posté, ni même rejoint ces forums ; ainsi, de parler à nouveau à ces membres unifie encore plus la communauté.</p>
+    <hr />
+    <h2>Puisque « open » fait parti du nom du mod, celui-ci sera-t-il open-source ?</h2>
+    <p>Tôt ou tard, c'est notre plan, oui. Pour l'instant, nous essayons de rendre le développement ouvert en termes de communication et de transparence (ce qui est en soi une amélioration), et nous essaierons de rendre disponible le code source à mesure que nous le pourrons, une fois que tout sera réglé et stabilisé.</p>
+    <hr />
+    <h2>Quand sera-t-il disponible ?</h2>
+    <p>C'est la question qui revient tout le temps, mais malheureusement, la réponse est tout autant la même à chaque fois : quand il sera prêt. Il n'y a tout simplement aucun moyen de savoir combien de temps un tel projet prendra. Le mod fonctionne calmement depuis un moment maintenant et a déjà vu quelques fluctuations dans le niveau d'activité, en fonction des disponibilités des gens qui s'en occupent. Mais rassurez-vous, la progression est bonne et les progrès sont rapides grâce aux décisions fondamentales que nous avons prises (nous parlerons de l'architecture plus tard).</p>
     <hr />
     <h2>Comment puis-je y contribuer ?</h2>
-    <p>Toutes les informations sur le forum. Nous avons un sujet qui parle de ça. Bien que le projet ait été annoncé, il s’agit d’une première publication, qui n’est pas toujours appréciée de façon massive. Merci d'avance de votre intérêt pour le projet:</p>
+    <p>Visitez le forum de temps en temps. Nous avons un topic sur ça, et nous le mettrons à jour quand il y aura plus de travail à faire. Bien que le projet ait été annoncé plus tôt que prévu, nous sommes déjà proches d'une première version publique, mais cela ne veut pas dire que nous n'avons pas besoin d'aide ; nous en serons très reconnaissants. Merci d'avance de l'intérêt que vous portez à ce projet et à votre confiance :</p>
     <br />
     <a href="https://www.burgershot.gg/showthread.php?tid=99">
-      <u>"Comment puis-je y contribuer ?" sujet (burgershot.gg)</u>
+      <u>Sujet : « Comment puis-je y contribuer ? » (burgershot.gg)</u>
     </a>
     <hr />
-    <h2>C’est quoi Burgershot.gg?</h2>
-    <p>burgershot.gg est un forum de jeu, rien de plus. Un grand nombre de personnes sont impliquées. Certains développements et mises à jour d'OMP y sont publiés, mais il s'agit de deux projets indépendants. Ce n’est pas le forum officiel d’OMP, et OMP n'est pas une propriété de Burgershot. Une fois que le site d’OMP sera complet est opérationnel, les deux pourront être séparés (un peu comme SA: MP qui fut jadis hébergé par GTAForums avant que son propre site ne soit opérationnel).</p>
+    <h2>Qu'est-ce que Burgershot.gg ?</h2>
+    <p>burgershot.gg est un forum de jeux vidéo, rien de plus. Beaucoup de monde est impliqué dans les deux, et quelques mises à jour de développement d'OMP sont postées sur celui-ci, mais il s'agit de deux projets indépendants. Ce n'est pas le forum officiel d'OMP, et OMP n'est pas une propriété de Burgershot. Une fois que le site d'OMP sera en ligne et opérationnel, les deux pourront être séparés (un peu comme SA:MP était jadis hébergé par GTAForums avant qu'il ait son propre site).</p>
     <hr />
-    <h2>Qu'en est-il de OpenMP?</h2>
-    <p>OpenMP c'est: "Open Multi-Processing project", nous sommes "open.mp". Ce sont deux choses totalement différentes.</p>
+    <h2>Qu'en est-il de OpenMP ?</h2>
+    <p>Le « Open Multi-Processing project » s'appelle OpenMP, nous sommes « open.mp ». Ce sont deux choses totalement différentes.</p>
   </div>
 );
