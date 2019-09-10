@@ -9,6 +9,7 @@ export const LANGUAGES = {
   gb: 'English',
   ee: 'Estonian',
   fr: 'French',
+  ge: 'Georgian',
   de: 'German',
   gr: 'Greek',
   hu: 'Hungarian',
