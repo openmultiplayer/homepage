@@ -13,6 +13,7 @@ export const LANGUAGES = {
   gr: 'Greek',
   hu: 'Hungarian',
   it: 'Italian',
+  id: 'Indonesian',
   jp: 'Japanese',
   lt: 'Lithuanian',
   no: 'Norwegian',
