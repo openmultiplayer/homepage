@@ -20,7 +20,7 @@ const Index = ({
 
   return (
     <div className="container">
-      <HeadContent flags={flags} selected={currentLanguage.name} title="FAQ" />
+      <HeadContent flags={flags} selected={currentLanguage.name} title="Homepage" />
 
       <main>
         <header className="header">
