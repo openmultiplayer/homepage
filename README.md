@@ -38,7 +38,7 @@ update the table below in the pull request as well. Thank you.
 - `[x]` - translated.
 - `[-]` - outdated.
 
-| Question                                                  | Arabic | Croatian | Dutch | English | French | Georgian | German | Greek	| Hungarian | Italian | Lithuanian | Norwegian | Portuguese | Romanian | Russian | Spanish | Polish | Japanese | TraditionalChinese | SimplifiedChinese |
+| Question                                                  | Arabic | Croatian | Dutch | English | French | Georgian | German | Greek | Hungarian | Italian | Lithuanian | Norwegian | Portuguese | Romanian | Russian | Spanish | Polish | Japanese | TraditionalChinese | SimplifiedChinese |
 | --------------------------------------------------------- | ------ | -------- | ----- | ------- | ------ | -------- | ------ | ----- | --------- | ------- | ---------- | --------- | ---------- | -------- | ------- | ------- | ------ | -------- | ------------------ | ----------------- |
 | **Homepage**                                              | [x]    | [x]      | [x]   | [x]     | [x]    | [x]      | [x]    | [x]   | [x]       | [x]     | [x]        | [x]       | [x]        | [x]      | [x]     | [x]     | [x]    | [x]      | [x]                | [x]               |
 | What is open.mp?                                          | [x]    | [x]      | [x]   | [x]     | [x]    | [x]      | [x]    | [x]   | [x]       | [x]     | [x]        | [x]       | [x]        | [x]      | [x]     | [x]     | [x]    | [x]      | [x]                | [x]               |
