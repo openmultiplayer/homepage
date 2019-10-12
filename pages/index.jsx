@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { withRouter } from 'next/router';
 
 import { HeadContent } from '../components/HeadContent';
@@ -27,13 +26,8 @@ const Index = ({
           <Logo width={300} height="100%" />
         </header>
         <section className="content">
-          {currentLanguage.body(({ children }) => (
-            <Link href={`/faq?lang=${currentLanguage.name}`}>
-              <a>{children}</a>
-            </Link>
-          ))}
+          <currentLanguage.body.default />
           <Wordmark width={300} height="100%" />
-
           <hr />
           <p>
             <span className="icon">
