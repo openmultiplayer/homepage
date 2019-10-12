@@ -30,13 +30,9 @@ export const LANGUAGES = {
 };
 
 export const loadLanguages = (initial) => {
-  let currentLanguage = initial;
-  if (initial === undefined) {
-    if (Object.prototype.hasOwnProperty.call(LANGUAGES, initial)) {
-      currentLanguage = initial;
-    } else {
-      currentLanguage = 'gb';
-    }
+  let currentLanguage = 'gb';
+  if (initial !== undefined && Object.prototype.hasOwnProperty.call(LANGUAGES, initial)) {
+    currentLanguage = initial;
   }
 
   // eslint-disable-next-line import/no-dynamic-require
