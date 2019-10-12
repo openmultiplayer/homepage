@@ -21,6 +21,7 @@ module.exports = {
     'react/prop-types': 'off',
     'import/prefer-default-export': 'off',
     'jsx-a11y/anchor-is-valid': 'off', // disabled for next.js <Link> usage
-    'react/jsx-one-expression-per-line': 'off'
+    'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-props-no-spreading': 'off'
   }
 };
