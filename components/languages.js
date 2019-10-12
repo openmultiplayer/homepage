@@ -44,7 +44,7 @@ export const loadLanguages = (initial) => {
 
   return [
     {
-      name,
+      name: currentLanguage,
       fontFamily,
       body: BODY,
       faq: FAQ
