@@ -3,21 +3,21 @@
 // These should be in alphabetical order by English name.
 export const LANGUAGES = {
   sa: ['Arabic'],
-  hr: ['Croatian'],
+  hr: ['Croatian', 'sans-serif'],
   nl: ['Dutch'],
   gb: ['English'],
   ee: ['Estonian'],
   fr: ['French'],
   ge: ['Georgian'],
   de: ['German'],
-  gr: ['Greek'],
+  gr: ['Greek', 'sans-serif'],
   hu: ['Hungarian'],
   it: ['Italian'],
   id: ['Indonesian'],
   jp: ['Japanese'],
-  lt: ['Lithuanian'],
+  lt: ['Lithuanian', 'sans-serif'],
   no: ['Norwegian'],
-  pl: ['Polish'],
+  pl: ['Polish', 'sans-serif'],
   br: ['Portuguese'],
   ro: ['Romanian'],
   ru: ['Russian'],
@@ -25,8 +25,8 @@ export const LANGUAGES = {
   es: ['Spanish'],
   tw: ['TraditionalChinese'],
   tr: ['Turkish'],
-  ua: ['Ukrainian'],
-  vn: ['Vietnamese']
+  ua: ['Ukrainian', 'sans-serif'],
+  vn: ['Vietnamese', 'sans-serif']
 };
 
 export const loadLanguages = (initial) => {
