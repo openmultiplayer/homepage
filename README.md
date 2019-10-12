@@ -30,6 +30,12 @@ Markdown and is pretty straightforward to understand. Use underscores for italic
 double-asterisks for bold. See [here](https://commonmark.org/help/) for more information on
 markdown.
 
+### (Optional) Add Yourself As an "Owner"
+
+If you want to be in charge of maintaining your language, please make a PR to the `CODEOWNERS` file and change `@openmultiplayer/ops` to your GitHub username. This tells GitHub that you have permission to write to this specific directory and notifies other contributors that you're maintaining these files.
+
+### Translation Progress Table
+
 The table below tracks which questions have been translated to which languages. If you see one
 missing `[ ]` (because it is new), or outdated `[-]` (because it was changed) in your language,
 please submit a new pull request adding it, and update the table below in the pull request as well.
