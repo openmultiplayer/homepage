@@ -6,11 +6,7 @@ The official landing page for the open.mp project.
 
 ## Contributing
 
-All open.mp projects have a
-[Contributor License Agreement](https://cla-assistant.io/openmultiplayer/homepage). This basically
-just means you agree to let us use your work, and put it under an open-source license. When you open
-a Pull Request for the first time, the CLA-Assistant bot will post a link where you can sign the
-agreement.
+Read the `CONTRIBUTING.md` document first.
 
 This website is built with [Next.js](https://nextjs.org/) with no special configuration or
 surprises. Simply clone the repo, run `npm install` to grab dependencies and `npm run dev` to start
