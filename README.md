@@ -6,11 +6,7 @@ The official landing page for the open.mp project.
 
 ## Contributing
 
-All open.mp projects have a
-[Contributor License Agreement](https://cla-assistant.io/openmultiplayer/homepage). This basically
-just means you agree to let us use your work, and put it under an open-source license. When you open
-a Pull Request for the first time, the CLA-Assistant bot will post a link where you can sign the
-agreement.
+Read the `CONTRIBUTING.md` document first.
 
 This website is built with [Next.js](https://nextjs.org/) with no special configuration or
 surprises. Simply clone the repo, run `npm install` to grab dependencies and `npm run dev` to start
@@ -21,12 +17,24 @@ ever the logo changes.
 
 ## Translating
 
-To add a translation, fork the repo and create a new branch. Copy `./language/English.jsx` and
-rename it to the English name of the language you are translating to. Finally, add an entry to the
-map in `./components/languages.js`.
+To add a translation:
 
-Now you can translate the English text, remember to maintain all structure (HTML elements) and only
-translate the actual text nodes.
+1. fork the repo
+2. create a new branch, the name doesn't matter
+3. copy the `./language/English/` directory
+4. rename your new directory to the _English_ name of your language
+5. add an entry to the map in `./components/languages.js`.
+
+Now you can translate the English text inside `index.mdx` and `faq.mdx`. This file format is
+Markdown and is pretty straightforward to understand. Use underscores for italics and
+double-asterisks for bold. See [here](https://commonmark.org/help/) for more information on
+markdown.
+
+### (Optional) Add Yourself As an "Owner"
+
+If you want to be in charge of maintaining your language, please make a PR to the `CODEOWNERS` file and change `@openmultiplayer/ops` to your GitHub username. This tells GitHub that you have permission to write to this specific directory and notifies other contributors that you're maintaining these files.
+
+### Translation Progress Table
 
 The table below tracks which questions have been translated to which languages. If you see one
 missing `[ ]` (because it is new), or outdated `[-]` (because it was changed) in your language,

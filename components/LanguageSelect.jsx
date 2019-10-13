@@ -17,7 +17,7 @@ const LanguageSelect = ({ flags, selected }) => {
           className += ' lang-flag-selected';
         }
         return (
-          <Link href={`?lang=${value}`}>
+          <Link key={value} href={`?lang=${value}`}>
             <a key={index} className={className} role="link">
               <span className={`flag-icon flag-icon-${value}`} />
             </a>
