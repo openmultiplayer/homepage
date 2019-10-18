@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { HeadContent } from '../components/HeadContent';
-import { FooterContent } from '../components/FooterContent';
 import { Logo, Wordmark } from '../components/icons/Brand';
 import Discord from '../components/icons/Discord';
 import Forum from '../components/icons/Forum';
@@ -48,8 +47,6 @@ const Index = () => {
           </p>
         </section>
       </main>
-
-      <FooterContent />
     </div>
   );
 };
