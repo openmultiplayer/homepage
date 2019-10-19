@@ -1,4 +1,4 @@
-const graphql = require('@octokit/graphql');
+const { graphql } = require('@octokit/graphql');
 
 const { GITHUB_TOKEN } = process.env;
 
