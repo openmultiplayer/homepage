@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'next/router';
 
 import { HeadContent } from '../components/HeadContent';
 import { FooterContent } from '../components/FooterContent';
@@ -8,14 +7,10 @@ import Discord from '../components/icons/Discord';
 import Forum from '../components/icons/Forum';
 import GitHub from '../components/icons/GitHub';
 
-import { loadLanguages } from '../components/languages';
+import { useLanguages } from '../components/languages';
 
-const Index = ({
-  router: {
-    query: { lang: language }
-  }
-}) => {
-  const [currentLanguage, flags] = loadLanguages(language);
+const Index = () => {
+  const [currentLanguage, flags] = useLanguages();
 
   return (
     <div className="container">
@@ -59,4 +54,4 @@ const Index = ({
   );
 };
 
-export default withRouter(Index);
+export default Index;

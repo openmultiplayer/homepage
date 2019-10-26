@@ -1,18 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import { withRouter } from 'next/router';
 
 import { HeadContent } from '../components/HeadContent';
 import { FooterContent } from '../components/FooterContent';
-import { loadLanguages } from '../components/languages';
 import { Wordmark } from '../components/icons/Brand';
 
-const Faq = ({
-  router: {
-    query: { lang: language }
-  }
-}) => {
-  const [currentLanguage, flags] = loadLanguages(language);
+import { useLanguages } from '../components/languages';
+
+const Faq = () => {
+  const [currentLanguage, flags] = useLanguages();
 
   return (
     <div className="container">
@@ -35,4 +31,4 @@ const Faq = ({
   );
 };
 
-export default withRouter(Faq);
+export default Faq;
