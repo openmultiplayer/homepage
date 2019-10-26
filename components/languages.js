@@ -1,4 +1,5 @@
 /* eslint-disable global-require */
+import { useRouter } from 'next/router';
 
 // These should be in alphabetical order by English name.
 export const LANGUAGES = {
@@ -29,10 +30,14 @@ export const LANGUAGES = {
   vn: ['Vietnamese', 'sans-serif']
 };
 
-export const loadLanguages = (initial) => {
+export const useLanguages = () => {
+  const {
+    query: { lang: languageFromUrl }
+  } = useRouter();
+
   let currentLanguage = 'gb';
-  if (initial !== undefined && Object.prototype.hasOwnProperty.call(LANGUAGES, initial)) {
-    currentLanguage = initial;
+  if (languageFromUrl && Object.prototype.hasOwnProperty.call(LANGUAGES, languageFromUrl)) {
+    currentLanguage = languageFromUrl;
   }
 
   const [name, fontFamily] = LANGUAGES[currentLanguage];

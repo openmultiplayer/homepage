@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { withRouter } from 'next/router';
 import fetch from 'isomorphic-unfetch';
 import moment from 'moment';
 import momentDurationFormatSetup from 'moment-duration-format';
@@ -10,7 +9,7 @@ import { Wordmark } from '../components/icons/Brand';
 import Pull from '../components/icons/Pull';
 import Issue from '../components/icons/Issue';
 
-import { loadLanguages } from '../components/languages';
+import { useLanguages } from '../components/languages';
 
 momentDurationFormatSetup(moment);
 
@@ -119,13 +118,8 @@ const ProgressRowItem = (props) => {
   }
 };
 
-const Progress = ({
-  router: {
-    query: { lang: language }
-  },
-  items
-}) => {
-  const [currentLanguage, flags] = loadLanguages(language);
+const Progress = ({ items }) => {
+  const [currentLanguage, flags] = useLanguages();
 
   return (
     <div className="container">
@@ -203,4 +197,4 @@ Progress.getInitialProps = async () => {
   };
 };
 
-export default withRouter(Progress);
+export default Progress;
