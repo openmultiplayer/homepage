@@ -11,19 +11,25 @@ overview of this module and to show we haven't quit or anything!
 ```c
 // Creates a Turf. A playerid can be passed in order to make it a player turf.
 native Turf:Turf_Create(Float:minx, Float:miny, Float:maxx, Float:maxy, Player:owner = INVALID_PLAYER_ID);
-// Destroys a turf. native Turf_Destroy(Turf:turf);
 
-// Shows a Turf to a player or players. // Will send to all players if playerid = INVALID_PLAYER_ID.
+// Destroys a turf.
+native Turf_Destroy(Turf:turf);
+
+// Shows a Turf to a player or players.
+// Will send to all players if playerid = INVALID_PLAYER_ID.
 native Turf_Show(Turf:turf, colour, Player:playerid = INVALID_PLAYER_ID);
 
-// Hides a Turf from a player or players. // Will send to all players if playerid =
-INVALID_PLAYER_ID. native Turf_Hide(Turf:turf, Player:playerid = INVALID_PLAYER_ID);
+// Hides a Turf from a player or players.
+// Will send to all players if playerid = INVALID_PLAYER_ID.
+native Turf_Hide(Turf:turf, Player:playerid = INVALID_PLAYER_ID);
 
-// Flashes a Turf for a player or players. // Will send to all players if playerid =
-INVALID_PLAYER_ID. native Turf_Flash(Turf:turf, colour, Player:playerid = INVALID_PLAYER_ID);
+// Flashes a Turf for a player or players.
+// Will send to all players if  playerid = INVALID_PLAYER_ID.
+native Turf_Flash(Turf:turf, colour, Player:playerid = INVALID_PLAYER_ID);
 
-// Stops a Turf from flashing for player(s). // Will send to all players if playerid =
-INVALID_PLAYER_ID. native Turf_StopFlashing(Turf:turf, Player:playerid = INVALID_PLAYER_ID);
+// Stops a Turf from flashing for player(s).
+// Will send to all players if playerid = INVALID_PLAYER_ID.
+native Turf_StopFlashing(Turf:turf, Player:playerid = INVALID_PLAYER_ID);
 ```
 
 This is obviously different from the traditional API, but not to worry, there will be wrappers in
