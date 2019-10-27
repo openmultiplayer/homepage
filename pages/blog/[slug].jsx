@@ -10,7 +10,7 @@ const Post = ({ slug }) => {
   return (
     <>
       <main>
-        <article className="content">
+        <article>
           <div className="meta">
             <p>
               Posted {moment(post.meta.date).format('YYYY-MM-DD')} by {post.meta.author}
@@ -20,20 +20,18 @@ const Post = ({ slug }) => {
         </article>
       </main>
 
-      <style jsx>
+      <style jsx global>
         {`
           article {
             padding: 10px;
             max-width: 640px;
             margin: auto;
           }
+          pre {
+            text-align: left;
+          }
         `}
       </style>
-      <style jsx global>{`
-        pre {
-          overflow: scroll;
-        }
-      `}</style>
     </>
   );
 };

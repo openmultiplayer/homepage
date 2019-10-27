@@ -25,6 +25,7 @@
     "next-ga": "^2.3.4",
     "next-images": "github:twopluszero/next-images",
     "nodemon": "^1.19.4",
+    "prism-react-renderer": "^1.0.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "styled-jsx": "^3.2.2",

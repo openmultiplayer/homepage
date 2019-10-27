@@ -7,6 +7,7 @@ import { MDXProvider } from '@mdx-js/react';
 
 import '../components/style.css';
 import { FooterContent } from '../components/FooterContent';
+import CodeBlock from '../components/CodeBlock';
 
 const DESC =
   'Open Multiplayer - An upcoming multiplayer mod for Grand Theft Auto: San Andreas that is a fully backwards compatible substitute for SA:MP.';
@@ -60,7 +61,9 @@ export default withGA(process.env.GA_ID, Router)(
                 <main>
                   <article className="content" {...props} />
                 </main>
-              )
+              ),
+              pre: (props) => <React.Fragment {...props}></React.Fragment>,
+              code: (props) => <CodeBlock {...props} />
             }}
           >
             <Component {...pageProps} />
