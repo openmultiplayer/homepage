@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 
 import React from 'react';
+import moment from 'moment';
 
 const Post = ({ slug }) => {
   // eslint-disable-next-line import/no-dynamic-require
@@ -11,8 +12,9 @@ const Post = ({ slug }) => {
       <main>
         <article className="content">
           <div className="meta">
-            <p>Author: {post.meta.author}</p>
-            <p>Date: {post.meta.date}</p>
+            <p>
+              Posted {moment(post.meta.date).format('YYYY-MM-DD')} by {post.meta.author}
+            </p>
           </div>
           <post.default />
         </article>
@@ -23,9 +25,15 @@ const Post = ({ slug }) => {
           article {
             padding: 10px;
             max-width: 640px;
+            margin: auto;
           }
         `}
       </style>
+      <style jsx global>{`
+        pre {
+          overflow: scroll;
+        }
+      `}</style>
     </>
   );
 };
