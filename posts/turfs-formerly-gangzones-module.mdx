@@ -24,7 +24,6 @@ INVALID_PLAYER_ID. native Turf_Flash(Turf:turf, colour, Player:playerid = INVALI
 
 // Stops a Turf from flashing for player(s). // Will send to all players if playerid =
 INVALID_PLAYER_ID. native Turf_StopFlashing(Turf:turf, Player:playerid = INVALID_PLAYER_ID);
-
 ```
 
 This is obviously different from the traditional API, but not to worry, there will be wrappers in
@@ -34,7 +33,3 @@ without edits.
 Another important fact that you may want to know is that every turf is in the same pool and there's
 a maximum of 4,294,967,295 turfs to be created from the script. However, the client can only handle
 1024 turfs at one time.
-
-```
-
-```
