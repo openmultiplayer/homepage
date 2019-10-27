@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
     "@next/mdx": "^9.1.1",
     "@octokit/graphql": "^4.2.2",
     "@zeit/next-css": "^1.0.1",
@@ -24,8 +25,10 @@
     "next-ga": "^2.3.4",
     "next-images": "github:twopluszero/next-images",
     "nodemon": "^1.19.4",
+    "prism-react-renderer": "^1.0.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "styled-jsx": "^3.2.2",
     "url-loader": "^2.2.0"
   },
   "devDependencies": {
