@@ -25,8 +25,6 @@ const Faq = () => {
           <hr />
         </section>
       </main>
-
-      <FooterContent />
     </div>
   );
 };
