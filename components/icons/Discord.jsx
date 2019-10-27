@@ -1,17 +1,21 @@
-import React from "react";
+/* eslint-disable react/no-danger */
+import React from 'react';
 
-export default function Discord(props) {
-  let fill = "currentColor";
-  if (props.fill !== undefined) {
-    fill = props.fill;
-  }
+const Discord = ({ fill, ...props }) => {
   const style = `
     .st0 {
-      fill: ${fill};
+      fill: ${fill || 'currentColor'};
     }
   `;
   return (
-    <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245 240" width={100} height={100} {...props}>
+    <svg
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 245 240"
+      width={100}
+      height={100}
+      {...props}
+    >
       <style dangerouslySetInnerHTML={{ __html: style }} />
       <path
         className="st0"
@@ -23,4 +27,6 @@ export default function Discord(props) {
       />
     </svg>
   );
-}
+};
+
+export default Discord;
