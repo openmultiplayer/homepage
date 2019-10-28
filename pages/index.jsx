@@ -28,7 +28,7 @@ const Index = () => {
           <currentLanguage.body.default />
           <Wordmark width={300} height="100%" />
           <hr />
-          <p>
+          <p className="center">
             <span className="icon">
               <a href="https://discordapp.com/invite/hURGKHJ">
                 <Discord />
