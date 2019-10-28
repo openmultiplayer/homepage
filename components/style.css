@@ -90,6 +90,10 @@ hr {
   opacity: 0.2;
 }
 
+.center {
+  text-align: center;
+}
+
 .icon {
   padding-left: 20px;
   padding-right: 20px;
