@@ -29,7 +29,8 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "styled-jsx": "^3.2.2",
-    "url-loader": "^2.2.0"
+    "url-loader": "^2.2.0",
+    "z": "^1.0.9"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
@@ -76,7 +77,8 @@
       "import/prefer-default-export": "off",
       "jsx-a11y/anchor-is-valid": "off",
       "react/jsx-one-expression-per-line": "off",
-      "react/jsx-props-no-spreading": "off"
+      "react/jsx-props-no-spreading": "off",
+      "react/jsx-closing-tag-location": "off"
     }
   },
   "prettier": {

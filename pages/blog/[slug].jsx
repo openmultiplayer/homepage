@@ -3,6 +3,8 @@
 import React from 'react';
 import moment from 'moment';
 
+import { Content, Paragraph } from '../../components/Typography';
+
 const Post = ({ slug }) => {
   // eslint-disable-next-line import/no-dynamic-require
   const post = require(`../../posts/${slug}.mdx`);
@@ -11,12 +13,14 @@ const Post = ({ slug }) => {
     <>
       <main>
         <article>
-          <div className="meta">
-            <p>
-              Posted {moment(post.meta.date).format('YYYY-MM-DD')} by {post.meta.author}
-            </p>
-          </div>
-          <post.default />
+          <Content>
+            <aside>
+              <Paragraph>
+                Posted {moment(post.meta.date).format('YYYY-MM-DD')} by {post.meta.author}
+              </Paragraph>
+            </aside>
+            <post.default />
+          </Content>
         </article>
       </main>
 
