@@ -10,7 +10,7 @@ import CodeBlock from '../components/CodeBlock';
 import {
   Content,
   Paragraph,
-  Link,
+  Anchor,
   OrderedList,
   HeadingLarge,
   HeadingMedium
@@ -71,7 +71,7 @@ export default withGA(process.env.GA_ID, Router)(
               ),
               h1: HeadingLarge,
               h2: HeadingMedium,
-              a: Link,
+              a: Anchor,
               p: Paragraph,
               ol: OrderedList,
               pre: (props) => <React.Fragment {...props}></React.Fragment>,
