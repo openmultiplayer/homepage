@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export const Content = ({ children, centred = false, font = 'english-grotesque' }) => (
   <>
@@ -24,7 +25,7 @@ export const HeadingLarge = ({ children }) => {
         h1 {
           margin: 0 0 0.5em 0;
           font-weight: 700;
-          font-size: '3em';
+          font-size: xx-large;
           color: #d1cec8;
         }
       `}</style>
@@ -59,14 +60,6 @@ export const Paragraph = ({ children, centred = false, size = 'medium' }) => {
           margin-bottom: 1em;
           color: #d1cec8;
         }
-
-        a {
-          color: #d1cec8;
-        }
-
-        a:hover {
-          color: hsl(40, 48%, 64%);
-        }
       `}</style>
     </p>
   );
@@ -89,9 +82,11 @@ export const OrderedList = ({ children }) => (
   </>
 );
 
-export const Link = ({ children, ...props }) => (
+export const Anchor = ({ href, children, ...props }) => (
   <>
-    <a {...props}>{children}</a>
+    <Link href={href}>
+      <a {...props}>{children}</a>
+    </Link>
     <style jsx>{`
       a {
         color: inherit;

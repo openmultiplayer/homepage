@@ -6,13 +6,50 @@ const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/
 });
 const fs = require('fs');
+const mdx = require('@mdx-js/mdx');
+const { parse } = require('@babel/parser');
+const generate = require('@babel/generator').default;
+const traverse = require('@babel/traverse').default;
+const visit = require('unist-util-visit');
 
-const getBlogPostPages = () => {
-  return fs
-    .readdirSync('./posts')
-    .filter((v) => v.endsWith('.mdx'))
-    .map((v) => v.substring(0, v.indexOf('.mdx')));
+const POSTS_DIRECTORY = './posts/';
+
+const extractMdxMeta = (content) => {
+  let meta = {};
+  mdx.sync(content, {
+    remarkPlugins: [
+      () => (tree) => {
+        visit(tree, 'export', (node) => {
+          const ast = parse(node.value, {
+            plugins: ['jsx'],
+            sourceType: 'module'
+          });
+          traverse(ast, {
+            VariableDeclarator: (path) => {
+              if (path.node.id.name === 'meta') {
+                // eslint-disable-next-line no-eval
+                meta = eval(`module.exports = ${generate(path.node.init).code}`);
+              }
+            }
+          });
+        });
+      }
+    ]
+  });
+  return meta;
 };
+
+const getBlogPostPages = () =>
+  fs
+    .readdirSync(POSTS_DIRECTORY)
+    .filter((v) => v.endsWith('.mdx'))
+    .map((filename) => {
+      return {
+        filename,
+        slug: filename.substring(0, filename.indexOf('.mdx')),
+        ...extractMdxMeta(fs.readFileSync(POSTS_DIRECTORY + filename, 'utf8'))
+      };
+    });
 
 module.exports = withPlugins([[withMDX], [withCSS], [withImages]], {
   env: {
