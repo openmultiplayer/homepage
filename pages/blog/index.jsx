@@ -15,7 +15,7 @@ import { useLanguages } from '../../components/languages';
 
 const Posts = ({ list }) =>
   list
-    .sort((a, b) => a.date > b.date)
+    .sort((a, b) => a.date < b.date)
     .map((v) => {
       return (
         <section key={v}>
