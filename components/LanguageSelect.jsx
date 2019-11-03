@@ -1,70 +1,74 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import Link from 'next/link';
 import 'flag-icon-css/css/flag-icon.css';
 
-const LanguageSelect = ({ flags, selected }) => (
-  <div className="container">
-    <div className="list">
-      {flags.map((value, index) => {
-        let className = 'flag';
-        if (value === selected) {
-          className += ' flag-selected';
-        }
-        return (
-          <Link key={value} href={`?lang=${value}`}>
-            <a key={index} className={className} role="link">
+const LanguageSelect = ({ children, flags, selected }) => (
+  <>
+    <label htmlFor="dialogControl" className="control">
+      {children}
+    </label>
+
+    <input id="dialogControl" type="checkbox" className="toggle" />
+    <div className="dialog">
+      <div className="container">
+        <div className="list">
+          {flags.map((value, index) => (
+            <a
+              href={`?lang=${value}`}
+              key={index}
+              className={`flag ${value === selected ? 'flag-selected' : ''}`}
+            >
               <span className={`flag-icon flag-icon-${value}`} />
             </a>
-          </Link>
-        );
-      })}
+          ))}
+        </div>
+      </div>
     </div>
 
     <style jsx>{`
+      .toggle {
+        display: none;
+      }
+      .toggle:checked ~ .dialog {
+        display: block;
+      }
+      .dialog {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
       .container {
         display: flex;
-        justify-content: right;
+        justify-content: center;
       }
       .list {
         position: absolute;
+        top: 2em;
+        width: 100%;
+        max-width: 600px;
         display: grid;
-        text-align: center;
-        padding: 20px;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: auto auto auto auto auto auto;
+        background-color: hsl(0, 0%, 24%);
+        border-width: 0px;
         border-radius: 10px;
-        margin: 1em;
-        padding: 1em;
       }
-      .list:hover {
-        background-color: #2d2d2d;
-        border-color: hsla(0deg, 100%, 100%, 50%);
-        border-style: solid;
-        border-width: 1px;
-      }
-      .list:hover .flag,
-      .list .flag-selected {
-        display: block;
-      }
-      .list:hover .flag-selected {
+      .flag-selected {
         background-color: #e0e0e0;
       }
       .flag {
         padding: 10px;
-        display: none;
-        font-size: 35px;
+        display: block;
+        font-size: 20px;
         user-select: none;
         cursor: pointer;
-        border-radius: 10px;
-      }
-      .flag span {
-        position: relative;
+        border-radius: 4px;
       }
       .flag:hover {
         background-color: #ff3200;
       }
     `}</style>
-  </div>
+  </>
 );
 
 export { LanguageSelect };

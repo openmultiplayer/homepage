@@ -12,6 +12,7 @@ import {
 import { HeadContent } from '../../components/HeadContent';
 import { Wordmark } from '../../components/icons/Brand';
 import { useLanguages } from '../../components/languages';
+import Nav from '../../components/Nav';
 
 const Posts = ({ list }) =>
   list
@@ -36,19 +37,9 @@ const NoContent = () => <h3>There are currently no posts.</h3>;
 const Item = ({ list }) => (list ? <Posts list={list} /> : <NoContent />);
 
 const Page = () => {
-  const [currentLanguage, flags] = useLanguages();
-
   return (
     <>
-      <HeadContent flags={flags} selected={currentLanguage.name} title="Blog" />
-
-      <Content centred>
-        <header>
-          <Link href={`/index?lang=${currentLanguage.name}`}>
-            <Wordmark width={300} height="100%" />
-          </Link>
-        </header>
-      </Content>
+      <HeadContent title="Blog" />
 
       <main>
         <Content>

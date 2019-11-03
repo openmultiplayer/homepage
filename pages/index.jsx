@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { HeadContent } from '../components/HeadContent';
-import { Wordmark } from '../components/icons/Brand';
 import { Content } from '../components/Typography';
 import Socials from '../components/Socials';
 import BigLogo from '../components/BigLogo';
@@ -12,17 +11,14 @@ const Index = () => {
   const [currentLanguage, flags] = useLanguages();
 
   return (
-    <div className="container">
+    <div>
       <HeadContent flags={flags} selected={currentLanguage.name} title="Homepage" />
-
-      <BigLogo />
-
       <main>
         <section>
           <currentLanguage.body.default />
 
           <Content centred>
-            <Wordmark width={300} height="100%" />
+            <BigLogo />
             <hr />
           </Content>
 

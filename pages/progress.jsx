@@ -220,10 +220,6 @@ const Progress = ({ items }) => {
     <div className="container">
       <HeadContent flags={flags} selected={currentLanguage.name} title="Homepage" />
 
-      <Content centred>
-        <Wordmark width={300} height="100%" />
-      </Content>
-
       <main>
         <Content>
           <Paragraph>
