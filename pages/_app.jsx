@@ -43,7 +43,7 @@ export default withGA(process.env.GA_ID, Router)(
             <link rel="manifest" href="/static/site.webmanifest" />
             <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#5bbad5" />
             <link rel="shortcut icon" href="/static/favicon.ico" />
-            <link rel="stylesheet" href="https://use.typekit.net/abp2gwt.css" />
+            <link rel="stylesheet" href="/static/fonts.css" />
 
             <meta name="description" content={DESC} />
             <meta property="og:image" content="/static/logo.png" />
