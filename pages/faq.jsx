@@ -1,32 +1,30 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react';
+import Link from 'next/link';
 
-import { HeadContent } from "../components/HeadContent";
-import { LanguageSelect } from "../components/LanguageSelect";
-import Wordmark from "../components/icons/Wordmark";
+import { HeadContent } from '../components/HeadContent';
+import { Wordmark } from '../components/icons/Brand';
+import { Content } from '../components/Typography';
 
-import { loadLanguages } from "../components/languages";
+import { useLanguages } from '../components/languages';
 
-export default ({ url: { query: { lang: initialLang } } }) => {
-  const [ currentLanguage, flags, selected, callback ] = loadLanguages(initialLang, useState("🇽🇽"));
+const Faq = () => {
+  const [currentLanguage, flags] = useLanguages();
 
   return (
     <div className="container">
-      <HeadContent title="FAQ" />
+      <HeadContent flags={flags} selected={currentLanguage.name} title="FAQ" />
+
+      <Content centred>
+        <header>
+          <Link href={`/index?lang=${currentLanguage.name}`}>
+            <Wordmark width={300} height="100%" />
+          </Link>
+        </header>
+      </Content>
 
       <main>
-        <header className="header">
-          <a href={`/index?lang=${selected}`} id="home-link">
-            <Wordmark width={300} height={"100%"} stroke="#d1cec8" background="#161f2b" />
-          </a>
-        </header>
-        <LanguageSelect
-          flags={flags}
-          selected={selected}
-          callback={callback}
-        />
-        <section className="content">
-          {currentLanguage.faq()}
+        <section>
+          <currentLanguage.faq.default />
           <hr />
         </section>
       </main>
@@ -34,3 +32,4 @@ export default ({ url: { query: { lang: initialLang } } }) => {
   );
 };
 
+export default Faq;

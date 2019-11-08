@@ -1,20 +1,105 @@
 {
-  "name": "custom-server-express",
+  "name": "open.mp",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node server.js",
+    "test": "eslint pages/*.jsx pages/**/*.js components/**/*.js",
+    "dev": "next",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server.js",
+    "start": "next start",
     "favicon": "real-favicon generate faviconDescription.json faviconData.json static"
   },
   "dependencies": {
+    "@babel/generator": "^7.6.4",
+    "@babel/parser": "^7.6.4",
+    "@babel/traverse": "^7.6.3",
+    "@mdx-js/loader": "^1.5.1",
+    "@mdx-js/mdx": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
+    "@next/mdx": "^9.1.1",
+    "@octokit/graphql": "^4.2.2",
     "@zeit/next-css": "^1.0.1",
-    "express": "^4.14.0",
-    "next": "8.0.4",
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "dotenv": "^8.2.0",
+    "flag-icon-css": "^3.4.2",
+    "isomorphic-unfetch": "^3.0.0",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2",
+    "next": "^9.1.1",
+    "next-compose-plugins": "^2.2.0",
+    "next-ga": "^2.3.4",
+    "next-images": "github:twopluszero/next-images",
+    "prism-react-renderer": "^1.0.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "styled-jsx": "^3.2.2",
+    "unist-util-visit": "^2.0.0",
+    "url-loader": "^2.2.0",
+    "z": "^1.0.9"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react/prop-types": "off",
+      "import/prefer-default-export": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/jsx-closing-tag-location": "off"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "proseWrap": "always",
+    "arrowParens": "always",
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src}/**/*.{js,jsx}": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ]
   }
 }

@@ -1,48 +1,38 @@
-import React from "react";
-import { useState } from "react";
-import Head from "next/head";
+import React from 'react';
 
-import { HeadContent } from "../components/HeadContent";
-import { LanguageSelect } from "../components/LanguageSelect";
-import Wordmark from "../components/icons/Wordmark";
-import Discord from "../components/icons/Discord";
-import Forum from "../components/icons/Forum";
+import { HeadContent } from '../components/HeadContent';
+import { Wordmark } from '../components/icons/Brand';
+import { Content } from '../components/Typography';
+import Socials from '../components/Socials';
+import BigLogo from '../components/BigLogo';
 
-import { loadLanguages } from "../components/languages";
+import { useLanguages } from '../components/languages';
 
-export default ({ url: { query: { lang: initialLang } } }) => {
-  const [ currentLanguage, flags, selected, callback ] = loadLanguages(initialLang, useState("🇽🇽"));
+const Index = () => {
+  const [currentLanguage, flags] = useLanguages();
 
   return (
     <div className="container">
-      <HeadContent />
+      <HeadContent flags={flags} selected={currentLanguage.name} title="Homepage" />
+
+      <BigLogo />
+
       <main>
-        <header className="header">
-          <Wordmark width={300} height={"100%"} stroke="#d1cec8" background="#161f2b" />
-        </header>
-        <LanguageSelect
-          flags={flags}
-          selected={selected}
-          callback={callback}
-        />
-        <section className="content">
-          {currentLanguage.body(`/faq?lang=${selected}`)}
-          <hr />
-          <p>
-            <span className="icon">
-              <a href="https://discordapp.com/invite/hURGKHJ">
-                <Discord />
-              </a>
-            </span>
-            <span className="icon">
-              <a href="https://www.burgershot.gg">
-                <Forum />
-              </a>
-            </span>
-          </p>
+        <section>
+          <currentLanguage.body.default />
+
+          <Content centred>
+            <Wordmark width={300} height="100%" />
+            <hr />
+          </Content>
+
+          <Content centred>
+            <Socials colour="#d1cec8" />
+          </Content>
         </section>
       </main>
     </div>
   );
 };
 
+export default Index;
