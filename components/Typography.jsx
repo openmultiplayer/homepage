@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const Content = ({ children, centred = false, font = 'english-grotesque' }) => (
   <>
@@ -84,9 +83,9 @@ export const OrderedList = ({ children }) => (
 
 export const Anchor = ({ href, children, ...props }) => (
   <>
-    <Link href={href}>
-      <a {...props}>{children}</a>
-    </Link>
+    <a href={href} {...props}>
+      {children}
+    </a>
     <style jsx>{`
       a {
         color: inherit;
