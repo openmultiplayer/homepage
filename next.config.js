@@ -43,13 +43,13 @@ const getBlogPostPages = () =>
   fs
     .readdirSync(POSTS_DIRECTORY)
     .filter((v) => v.endsWith('.mdx'))
-    .map((filename) => {
-      return {
-        filename,
-        slug: filename.substring(0, filename.indexOf('.mdx')),
-        ...extractMdxMeta(fs.readFileSync(POSTS_DIRECTORY + filename, 'utf8'))
-      };
-    });
+    .map((filename) => ({
+      filename,
+      slug: filename.substring(0, filename.indexOf('.mdx')),
+      ...extractMdxMeta(fs.readFileSync(POSTS_DIRECTORY + filename, 'utf8'))
+    }))
+    .map((post) => ({ ...post, date: new Date(post.date) }))
+    .sort((a, b) => b.date - a.date);
 
 module.exports = withPlugins([[withMDX], [withCSS], [withImages]], {
   env: {
