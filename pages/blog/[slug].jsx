@@ -1,7 +1,8 @@
 /* eslint-disable global-require */
 
 import React from 'react';
-import moment from 'moment';
+import format from 'date-fns/format';
+import parseISO from 'date-fns/parseISO';
 
 import { Content, Paragraph } from '../../components/Typography';
 
@@ -16,7 +17,7 @@ const Post = ({ slug }) => {
           <Content>
             <aside>
               <Paragraph>
-                Posted {moment(post.meta.date).format('YYYY-MM-DD')} by {post.meta.author}
+                Posted {format(parseISO(post.meta.date), 'yyyy-MM-dd')} by {post.meta.author}
               </Paragraph>
             </aside>
             <post.default />

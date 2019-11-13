@@ -1,22 +1,38 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import fetch from 'isomorphic-unfetch';
-import moment from 'moment';
-import momentDurationFormatSetup from 'moment-duration-format';
 import { matches } from 'z';
+import { differenceInMilliseconds } from 'date-fns';
+import parseISO from 'date-fns/fp/parseISO';
+import formatDistance from 'date-fns/fp/formatDistance';
+import subSeconds from 'date-fns/fp/subSeconds';
 
 import { HeadContent } from '../components/HeadContent';
 import { Content, Paragraph } from '../components/Typography';
-import { Wordmark } from '../components/icons/Brand';
 import Pull from '../components/icons/Pull';
 import Issue from '../components/icons/Issue';
 
 import { useLanguages } from '../components/languages';
 
-momentDurationFormatSetup(moment);
-
 const DEV = process.env.NODE_ENV !== 'production';
 const ADDRESS = DEV ? 'http://localhost:3000' : 'https://www.open.mp';
+
+// A function to format a string describing the amount of time since now.
+const formatSinceToday = formatDistance(Date.now());
+
+const reHydrateDate = (d) => (typeof d === 'string' ? parseISO(d) : d);
+
+// reHydrateDates ensures that the date fields in a progress item object are not
+// strings. This can occur when Next.js serialises props from the server and
+// sends them to components on the client after a server-side render. In these
+// cases, date fields are strings instead of Date objects.
+// See: https://github.com/zeit/next.js/issues/9352
+const reHydrateDates = (value) => ({
+  ...value,
+  updatedAt: reHydrateDate(value.updatedAt),
+  earlier: reHydrateDate(value.earlier),
+  later: reHydrateDate(value.later)
+});
 
 const ProgressBox = ({ children }) => (
   <div>
@@ -76,7 +92,7 @@ const Common = ({
     </h2>
 
     <h3>
-      <time dateTime={moment(updatedAt).format()}>Updated {moment(updatedAt).fromNow()}</time>
+      <time dateTime={updatedAt.toISOString()}>{`Updated ${formatSinceToday(updatedAt)} ago`}</time>
     </h3>
     <div className="separator" />
 
@@ -162,11 +178,11 @@ const ProgressRowIssue = ({ title, state, author: { name: author }, updatedAt })
   );
 };
 
-const ProgressRowPeriod = ({ length }) => {
+const ProgressRowPeriod = ({ earlier, later }) => {
   return (
     <div className="period">
       <div className="timeline" />
-      <div className="time">{moment.duration(length, 'milliseconds').format()}</div>
+      <div className="time">{formatDistance(earlier)(later)}</div>
       <div className="timeline" />
 
       <style jsx>{`
@@ -226,9 +242,8 @@ const Progress = ({ items }) => {
             Below is a progress report of the state of recent issues and pull requests.
           </Paragraph>
 
-          {items.map((value, index) => {
-            /* eslint-disable-next-line react/no-array-index-key */
-            return <ProgressRowItem key={index} {...value} />;
+          {items.map(reHydrateDates).map((value, index) => {
+            return <ProgressRowItem key={value.id} {...value} />;
           })}
         </Content>
       </main>
@@ -245,12 +260,12 @@ Progress.getInitialProps = async () => {
   const items = [
     ...issues.map((v) => ({
       ...v,
-      updatedAt: moment(v.updatedAt).toISOString(),
+      updatedAt: parseISO(v.updatedAt),
       type: 'issue'
     })),
     ...pullRequests.map((v) => ({
       ...v,
-      updatedAt: moment(v.updatedAt).toISOString(),
+      updatedAt: parseISO(v.updatedAt),
       type: 'pull'
     }))
   ].sort((a, b) => a.updatedAt < b.updatedAt);
@@ -258,32 +273,34 @@ Progress.getInitialProps = async () => {
 
   const periods = [];
   for (let index = 0; index < length - 1; index += 1) {
-    const earlier = moment(items[index].updatedAt);
-    const later = moment(items[index + 1].updatedAt);
-    const diff = earlier.diff(later);
+    const earlier = items[index].updatedAt;
+    const later = items[index + 1].updatedAt;
+    const diff = differenceInMilliseconds(earlier, later);
 
     // insert a period object when the time between is over a day
     if (diff > 86400000) {
       periods.push({
         type: 'period',
-        updatedAt: later.subtract(10000).toISOString(),
-        length: diff
+        updatedAt: subSeconds(10000)(later),
+        length: diff,
+        earlier,
+        later
       });
     }
   }
 
-  const sorted = [...items, ...periods].sort((a, b) => {
-    if (a.updatedAt < b.updatedAt) {
-      return 1;
-    }
-    if (a.updatedAt > b.updatedAt) {
-      return -1;
-    }
-    return 0;
-  });
-
   return {
-    items: sorted
+    items: [...items, ...periods]
+      .sort((a, b) => {
+        if (a.updatedAt - b.updatedAt < 0) {
+          return 1;
+        }
+        if (a.updatedAt - b.updatedAt > 0) {
+          return -1;
+        }
+        return 0;
+      })
+      .map((v, i) => ({ ...v, id: i }))
   };
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import moment from 'moment';
+import format from 'date-fns/format';
+import parseISO from 'date-fns/parseISO';
 
 import {
   Content,
@@ -18,7 +19,7 @@ const Posts = ({ list }) =>
           <Anchor href={`/blog/${v.slug}`}>{v.title}</Anchor>
           <Paragraph size="small">
             <time>
-              {moment(v.date).format('YYYY-MM-DD')} by {v.author}
+              {format(parseISO(v.date), 'yyyy-MM-dd')} by {v.author}
             </time>
           </Paragraph>
         </HeadingMedium>
