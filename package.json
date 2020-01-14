@@ -23,7 +23,7 @@
     "flag-icon-css": "^3.4.2",
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.15",
-    "next": "^9.1.1",
+    "next": "^9.1.2",
     "next-compose-plugins": "^2.2.0",
     "next-ga": "^2.3.4",
     "next-images": "github:twopluszero/next-images",
