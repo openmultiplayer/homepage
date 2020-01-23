@@ -1,22 +1,20 @@
 import React from 'react';
 
 import { HeadContent } from '../components/HeadContent';
-import { useLanguages } from '../components/languages';
 
-const Faq = () => {
-  const [currentLanguage, flags] = useLanguages();
-  return (
-    <div className="container">
-      <HeadContent flags={flags} selected={currentLanguage.name} title="FAQ" />
+import { withLanguages } from '../components/languages';
 
-      <main>
-        <section>
-          <currentLanguage.faq.default />
-          <hr />
-        </section>
-      </main>
-    </div>
-  );
-};
+const Faq = ({ currentLanguage, flags }) => (
+  <div className="container">
+    <HeadContent flags={flags} currentLanguage={currentLanguage} title="FAQ" />
 
-export default Faq;
+    <main>
+      <section>
+        <currentLanguage.faq.default />
+        <hr />
+      </section>
+    </main>
+  </div>
+);
+
+export default withLanguages(Faq);

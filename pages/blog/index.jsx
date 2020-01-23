@@ -11,6 +11,8 @@ import {
 } from '../../components/Typography';
 import { HeadContent } from '../../components/HeadContent';
 
+import { withLanguages } from '../../components/languages';
+
 const Posts = ({ list }) =>
   list.map((v) => {
     return (
@@ -31,10 +33,10 @@ const NoContent = () => <h3>There are currently no posts.</h3>;
 
 const PostList = ({ list }) => (list ? <Posts list={list} /> : <NoContent />);
 
-const Page = () => {
+const Page = ({ currentLanguage, flags }) => {
   return (
     <>
-      <HeadContent title="Blog" />
+      <HeadContent flags={flags} currentLanguage={currentLanguage} title="Blog" />
 
       <main>
         <Content>
@@ -48,4 +50,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default withLanguages(Page);

@@ -5,30 +5,26 @@ import { Content } from '../components/Typography';
 import Socials from '../components/Socials';
 import BigLogo from '../components/BigLogo';
 
-import { useLanguages } from '../components/languages';
+import { withLanguages } from '../components/languages';
 
-const Index = () => {
-  const [currentLanguage, flags] = useLanguages();
+const Index = ({ currentLanguage, flags }) => (
+  <div>
+    <HeadContent currentLanguage={currentLanguage} flags={flags} title="Homepage" />
+    <main>
+      <section>
+        <currentLanguage.body.default />
 
-  return (
-    <div>
-      <HeadContent flags={flags} selected={currentLanguage.name} title="Homepage" />
-      <main>
-        <section>
-          <currentLanguage.body.default />
+        <Content centred>
+          <BigLogo />
+          <hr />
+        </Content>
 
-          <Content centred>
-            <BigLogo />
-            <hr />
-          </Content>
+        <Content centred>
+          <Socials colour="#d1cec8" />
+        </Content>
+      </section>
+    </main>
+  </div>
+);
 
-          <Content centred>
-            <Socials colour="#d1cec8" />
-          </Content>
-        </section>
-      </main>
-    </div>
-  );
-};
-
-export default Index;
+export default withLanguages(Index);

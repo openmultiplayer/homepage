@@ -1,5 +1,5 @@
-/* eslint-disable global-require */
-import { useRouter } from 'next/router';
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
 
 // These should be in alphabetical order by English name.
 export const LANGUAGES = {
@@ -30,30 +30,35 @@ export const LANGUAGES = {
   vn: ['Vietnamese', 'sans-serif']
 };
 
-export const useLanguages = () => {
-  const {
-    query: { lang: languageFromUrl }
-  } = useRouter();
+export const withLanguages = (Page) => {
+  const WithLanguages = (props) => <Page {...props} />;
 
-  let currentLanguage = 'gb';
-  if (languageFromUrl && Object.prototype.hasOwnProperty.call(LANGUAGES, languageFromUrl)) {
-    currentLanguage = languageFromUrl;
-  }
+  WithLanguages.getInitialProps = async (context) => {
+    const languageFromUrl = context.query.lang;
 
-  const [name, fontFamily] = LANGUAGES[currentLanguage];
+    const currentLanguage =
+      languageFromUrl && Object.prototype.hasOwnProperty.call(LANGUAGES, languageFromUrl)
+        ? languageFromUrl
+        : 'gb';
 
-  // eslint-disable-next-line import/no-dynamic-require
-  const BODY = require(`../language/${name}/index.mdx`);
-  // eslint-disable-next-line import/no-dynamic-require
-  const FAQ = require(`../language/${name}/faq.mdx`);
+    const [name, fontFamily] = LANGUAGES[currentLanguage];
 
-  return [
-    {
-      name: currentLanguage,
-      fontFamily,
-      body: BODY,
-      faq: FAQ
-    },
-    Object.keys(LANGUAGES).sort()
-  ];
+    const BODY = await import(`../language/${name}/index.mdx`);
+    const FAQ = await import(`../language/${name}/faq.mdx`);
+
+    return {
+      ...(Page.getInitialProps ? await Page.getInitialProps(context) : {}),
+      currentLanguage: {
+        name: currentLanguage,
+        fontFamily,
+        body: BODY,
+        faq: FAQ
+      },
+      flags: Object.keys(LANGUAGES).sort()
+    };
+  };
+
+  WithLanguages.displayName = `WithLanguages(${Page.displayName || Page.name || 'Unknown'})`;
+
+  return WithLanguages;
 };
