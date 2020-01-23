@@ -51,6 +51,8 @@
     "prettier": "^1.18.2"
   },
   "eslintConfig": {
+    "root": true,
+    "parser": "babel-eslint",
     "env": {
       "es6": true,
       "node": true
