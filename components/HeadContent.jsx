@@ -8,7 +8,7 @@ import { Content, Anchor } from './Typography';
 import { Wordmark } from './icons/Brand';
 
 export const HeadContent = ({ title }) => {
-  const { currentLanguage, flags } = useContext(LanguageContext);
+  const { currentLanguage } = useContext(LanguageContext);
 
   return (
     <>
@@ -20,7 +20,7 @@ export const HeadContent = ({ title }) => {
           <Anchor href={`/index?lang=${currentLanguage.name}`}>
             <Wordmark width={300} height="100%" />
           </Anchor>
-          <Nav currentLanguage={currentLanguage} flags={flags} />
+          <Nav />
         </header>
       </Content>
     </>
