@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react';
+import React, { useContext } from 'react';
 
 // These should be in alphabetical order by English name.
 export const LANGUAGES = {
@@ -30,7 +30,9 @@ export const LANGUAGES = {
   vn: ['Vietnamese', 'sans-serif']
 };
 
-export const LanguageContext = React.createContext(null);
+const LanguageContext = React.createContext(null);
+
+export const useLanguages = () => useContext(LanguageContext);
 
 export const withLanguages = (Page) => {
   const WithLanguages = ({ currentLanguage, flags, ...props }) => (

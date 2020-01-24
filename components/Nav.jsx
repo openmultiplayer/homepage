@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Anchor } from './Typography';
 import { LanguageSelect } from './LanguageSelect';
-import { LanguageContext } from './languages';
+import { useLanguages } from './languages';
 
 const Nav = () => {
-  const { currentLanguage, flags } = useContext(LanguageContext);
+  const { currentLanguage, flags } = useLanguages();
 
   return (
     <nav>
