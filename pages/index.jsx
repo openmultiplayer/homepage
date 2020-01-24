@@ -7,9 +7,9 @@ import BigLogo from '../components/BigLogo';
 
 import { withLanguages } from '../components/languages';
 
-const Index = ({ currentLanguage, flags }) => (
+const Index = ({ currentLanguage }) => (
   <div>
-    <HeadContent currentLanguage={currentLanguage} flags={flags} title="Homepage" />
+    <HeadContent title="Homepage" />
     <main>
       <section>
         <currentLanguage.body.default />

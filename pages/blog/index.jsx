@@ -33,21 +33,19 @@ const NoContent = () => <h3>There are currently no posts.</h3>;
 
 const PostList = ({ list }) => (list ? <Posts list={list} /> : <NoContent />);
 
-const Page = ({ currentLanguage, flags }) => {
-  return (
-    <>
-      <HeadContent flags={flags} currentLanguage={currentLanguage} title="Blog" />
+const Page = () => (
+  <>
+    <HeadContent title="Blog" />
 
-      <main>
-        <Content>
-          <article>
-            <HeadingLarge>Development Blog</HeadingLarge>
-            <PostList list={process.env.BLOG_POST_LIST} />
-          </article>
-        </Content>
-      </main>
-    </>
-  );
-};
+    <main>
+      <Content>
+        <article>
+          <HeadingLarge>Development Blog</HeadingLarge>
+          <PostList list={process.env.BLOG_POST_LIST} />
+        </article>
+      </Content>
+    </main>
+  </>
+);
 
 export default withLanguages(Page);

@@ -229,9 +229,9 @@ const ProgressRowItem = (props) => {
   }
 };
 
-const Progress = ({ items, currentLanguage, flags }) => (
+const Progress = ({ items }) => (
   <div className="container">
-    <HeadContent flags={flags} currentLanguage={currentLanguage} title="Homepage" />
+    <HeadContent title="Homepage" />
 
     <main>
       <Content>

@@ -4,9 +4,9 @@ import { HeadContent } from '../components/HeadContent';
 
 import { withLanguages } from '../components/languages';
 
-const Faq = ({ currentLanguage, flags }) => (
+const Faq = ({ currentLanguage }) => (
   <div className="container">
-    <HeadContent flags={flags} currentLanguage={currentLanguage} title="FAQ" />
+    <HeadContent title="FAQ" />
 
     <main>
       <section>

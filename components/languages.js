@@ -30,8 +30,14 @@ export const LANGUAGES = {
   vn: ['Vietnamese', 'sans-serif']
 };
 
+export const LanguageContext = React.createContext(null);
+
 export const withLanguages = (Page) => {
-  const WithLanguages = (props) => <Page {...props} />;
+  const WithLanguages = ({ currentLanguage, flags, ...props }) => (
+    <LanguageContext.Provider value={{ currentLanguage, flags }}>
+      <Page currentLanguage={currentLanguage} flags={flags} {...props} />
+    </LanguageContext.Provider>
+  );
 
   WithLanguages.getInitialProps = async (context) => {
     const languageFromUrl = context.query.lang;
