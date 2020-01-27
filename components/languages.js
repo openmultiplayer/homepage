@@ -51,14 +51,11 @@ export const withLanguages = (Page) => {
 
     const [name, fontFamily] = LANGUAGES[currentLanguage];
 
-    const [BODY, FAQ, otherInitialProps] = await Promise.all([
-      import(`../language/${name}/index.mdx`),
-      import(`../language/${name}/faq.mdx`),
-      Page.getInitialProps ? Page.getInitialProps(context) : {}
-    ]);
+    const BODY = await import(`../language/${name}/index.mdx`);
+    const FAQ = await import(`../language/${name}/faq.mdx`);
 
     return {
-      ...otherInitialProps,
+      ...(Page.getInitialProps ? await Page.getInitialProps(context) : {}),
       currentLanguage: {
         name: currentLanguage,
         fontFamily,
