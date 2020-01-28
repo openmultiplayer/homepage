@@ -1,37 +1,38 @@
 import React from 'react';
 import { Anchor } from './Typography';
-import { useLanguages } from './languages';
 import { LanguageSelect } from './LanguageSelect';
+import { useLanguages } from './languages';
 
 const Nav = () => {
-  const [{ name: lang }, flags] = useLanguages();
+  const { currentLanguage, flags } = useLanguages();
+
   return (
     <nav>
       <ul>
         <li>
-          <Anchor href={`/?lang=${lang}`}>
+          <Anchor href={`/?lang=${currentLanguage.name}`}>
             <span className="button">Home</span>
           </Anchor>
         </li>
         <li>
-          <Anchor href={`/faq?lang=${lang}`}>
+          <Anchor href={`/faq?lang=${currentLanguage.name}`}>
             <span className="button">FAQ</span>
           </Anchor>
         </li>
         <li>
-          <Anchor href={`/progress?lang=${lang}`}>
+          <Anchor href={`/progress?lang=${currentLanguage.name}`}>
             <span className="button">Progress</span>
           </Anchor>
         </li>
         <li>
-          <Anchor href={`/blog?lang=${lang}`}>
+          <Anchor href={`/blog?lang=${currentLanguage.name}`}>
             <span className="button">Blog</span>
           </Anchor>
         </li>
         <li>
-          <LanguageSelect selected={lang} flags={flags}>
+          <LanguageSelect selected={currentLanguage.name} flags={flags}>
             <span className="button">
-              <span className={`flag-icon flag-icon-${lang}`} />
+              <span className={`flag-icon flag-icon-${currentLanguage.name}`} />
             </span>
           </LanguageSelect>
         </li>
