@@ -12,7 +12,7 @@ import { Content, Paragraph } from '../components/Typography';
 import Pull from '../components/icons/Pull';
 import Issue from '../components/icons/Issue';
 
-import { useLanguages } from '../components/languages';
+import { withLanguages } from '../components/languages';
 
 const DEV = process.env.NODE_ENV !== 'production';
 const ADDRESS = DEV ? 'http://localhost:3000' : 'https://www.open.mp';
@@ -229,27 +229,24 @@ const ProgressRowItem = (props) => {
   }
 };
 
-const Progress = ({ items }) => {
-  const [currentLanguage, flags] = useLanguages();
+const Progress = ({ items }) => (
+  <div className="container">
+    <HeadContent title="Homepage" />
 
-  return (
-    <div className="container">
-      <HeadContent flags={flags} selected={currentLanguage.name} title="Homepage" />
+    <main>
+      <Content>
+        <Paragraph>
+          Below is a progress report of the state of recent issues and pull requests.
+        </Paragraph>
 
-      <main>
-        <Content>
-          <Paragraph>
-            Below is a progress report of the state of recent issues and pull requests.
-          </Paragraph>
+        {items.map(reHydrateDates).map((value, index) => {
+          return <ProgressRowItem key={value.id} {...value} />;
+        })}
+      </Content>
+    </main>
+  </div>
+);
 
-          {items.map(reHydrateDates).map((value, index) => {
-            return <ProgressRowItem key={value.id} {...value} />;
-          })}
-        </Content>
-      </main>
-    </div>
-  );
-};
 Progress.getInitialProps = async () => {
   const res = await fetch(`${ADDRESS}/api/progress`);
   const data = await res.json();
@@ -304,4 +301,4 @@ Progress.getInitialProps = async () => {
   };
 };
 
-export default Progress;
+export default withLanguages(Progress);
