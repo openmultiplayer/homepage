@@ -1,6 +1,6 @@
 import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import Prism from 'prism-react-renderer';
+import Prism from 'prism-react-renderer/prism';
 
 Prism.languages.pawn = Prism.languages.extend('clike', {
   comment: {
