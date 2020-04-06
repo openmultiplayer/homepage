@@ -84,10 +84,15 @@ TEST__ SetPlayerCheckpoint()
 	ASSERT(MockPacket_Bits(packet) == 4 * 32);
 
 	// Check the various components.
-	ASSERT(MockPacket_ReadFloat(packet, 0) == 0.0);
-	ASSERT(MockPacket_ReadFloat(packet, 1) == 0.0);
-	ASSERT(MockPacket_ReadFloat(packet, 2) == 4.0);
-	ASSERT(MockPacket_ReadFloat(packet, 3) == 5.0);
+	new Float:tmp;
+	ASSERT(MockPacket_ReadFloat(packet, 0, tmp));
+	ASSERT(tmp == 0.0);
+	ASSERT(MockPacket_ReadFloat(packet, 1, tmp));
+	ASSERT(tmp == 0.0);
+	ASSERT(MockPacket_ReadFloat(packet, 2, tmp));
+	ASSERT(tmp == 4.0);
+	ASSERT(MockPacket_ReadFloat(packet, 3, tmp));
+	ASSERT(tmp == 5.0);
 }
 ```
 
@@ -144,10 +149,15 @@ TEST__ SetPlayerCheckpoint()
 	ASSERT(MockPacket_Elements(packet) > 5);
 
 	// Check some of the packet components.
-	ASSERT(MockPacket_ReadInt32(packet, 1) == 1337);
-	ASSERT(MockPacket_ReadFloat(packet, 2) == 100.0);
-	ASSERT(MockPacket_ReadFloat(packet, 3) == 100.0);
-	ASSERT(MockPacket_ReadFloat(packet, 4) == 4.0);
+	new tmp;
+	ASSERT(MockPacket_ReadInt32(packet, 1, tmp));
+	ASSERT(tmp == 1337);
+	ASSERT(MockPacket_ReadFloat(packet, 2, tmp));
+	ASSERT(tmp == 100.0);
+	ASSERT(MockPacket_ReadFloat(packet, 3, tmp));
+	ASSERT(tmp == 100.0);
+	ASSERT(MockPacket_ReadFloat(packet, 4, tmp));
+	ASSERT(tmp == 4.0);
 }
 ```
 
