@@ -80,7 +80,7 @@ TEST__ SetPlayerCheckpoint()
 	if (!packet) return;
 
 	// Check the packet has 4 components, each 32 bits.
-	ASSERT(MockPacket_Elements(packet) == 4);
+	ASSERT(MockPacket_Components(packet) == 4);
 	ASSERT(MockPacket_Bits(packet) == 4 * 32);
 
 	// Check the various components.
@@ -146,12 +146,13 @@ TEST__ SetPlayerCheckpoint()
 	if (!packet) return;
 
 	// Check the packet has 4 components, each 32 bits.
-	ASSERT(MockPacket_Elements(packet) > 5);
+	ASSERT(MockPacket_Components(packet) > 5);
 
 	// Check some of the packet components.
-	new tmp;
-	ASSERT(MockPacket_ReadInt32(packet, 1, tmp));
-	ASSERT(tmp == 1337);
+	new int;
+	new Float:tmp;
+	ASSERT(MockPacket_ReadInt32(packet, 1, int));
+	ASSERT(int == 1337);
 	ASSERT(MockPacket_ReadFloat(packet, 2, tmp));
 	ASSERT(tmp == 100.0);
 	ASSERT(MockPacket_ReadFloat(packet, 3, tmp));
@@ -171,10 +172,4 @@ Later we'll cover some higher-level debugging techniques so you can read and wri
 more easily, instead of one component at a time as in that code, but this introduces the basics on
 which everything else is built.  Hopefully it will make developing and testing code easier for
 everyone (and ensure the server is more stable as well).
-
-
-
-
-
-
 
