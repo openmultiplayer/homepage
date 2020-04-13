@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react';
 import 'flag-icon-css/css/flag-icon.css';
 
+import { HeadContent } from '../components/HeadContent';
 import { FooterContent } from '../components/FooterContent';
 import CodeBlock from '../components/CodeBlock';
 import {
@@ -55,24 +56,30 @@ const App = ({ Component, pageProps }) => (
       <meta name="expected-hostname" content="www.open.mp" />
       <meta name="google-site-verification" content="-1qA4kEDqC2i3_jqGD-UYCCqH7jDWZdgEejT7-4QqkE" />
     </Head>
-    <MDXProvider
-      components={{
-        wrapper: (props) => (
-          <main>
-            <Content {...props} />
-          </main>
-        ),
-        h1: HeadingLarge,
-        h2: HeadingMedium,
-        a: Anchor,
-        p: Paragraph,
-        ol: OrderedList,
-        pre: (props) => <React.Fragment {...props} />,
-        code: (props) => <CodeBlock {...props} />,
-      }}
-    >
-      <Component {...pageProps} />
-    </MDXProvider>
+
+    <HeadContent title="FAQ" />
+
+    <main>
+      <MDXProvider
+        components={{
+          wrapper: (props) => (
+            <main>
+              <Content {...props} />
+            </main>
+          ),
+          h1: HeadingLarge,
+          h2: HeadingMedium,
+          a: Anchor,
+          p: Paragraph,
+          ol: OrderedList,
+          pre: (props) => <React.Fragment {...props} />,
+          code: (props) => <CodeBlock {...props} />,
+        }}
+      >
+        <Component {...pageProps} />
+      </MDXProvider>
+    </main>
+
     <FooterContent />
 
     <style jsx global>{`

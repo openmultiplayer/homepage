@@ -7,9 +7,8 @@ import {
   HeadingLarge,
   HeadingMedium,
   Anchor,
-  Paragraph
+  Paragraph,
 } from '../../components/Typography';
-import { HeadContent } from '../../components/HeadContent';
 
 const Posts = ({ list }) =>
   list.map((v) => {
@@ -31,21 +30,13 @@ const NoContent = () => <h3>There are currently no posts.</h3>;
 
 const PostList = ({ list }) => (list ? <Posts list={list} /> : <NoContent />);
 
-const Page = () => {
-  return (
-    <>
-      <HeadContent title="Blog" />
-
-      <main>
-        <Content>
-          <article>
-            <HeadingLarge>Development Blog</HeadingLarge>
-            <PostList list={process.env.BLOG_POST_LIST} />
-          </article>
-        </Content>
-      </main>
-    </>
-  );
-};
+const Page = () => (
+  <Content>
+    <article>
+      <HeadingLarge>Development Blog</HeadingLarge>
+      <PostList list={process.env.BLOG_POST_LIST} />
+    </article>
+  </Content>
+);
 
 export default Page;
