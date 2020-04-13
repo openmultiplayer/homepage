@@ -11,7 +11,7 @@ const generate = require('@babel/generator').default;
 const traverse = require('@babel/traverse').default;
 const visit = require('unist-util-visit');
 
-const POSTS_DIRECTORY = './posts/';
+const POSTS_DIRECTORY = './pages/blog/';
 
 const extractMdxMeta = (filename) => {
   const content = fs.readFileSync(POSTS_DIRECTORY + filename, 'utf8');
