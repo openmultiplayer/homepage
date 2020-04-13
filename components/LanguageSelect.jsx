@@ -1,6 +1,5 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import 'flag-icon-css/css/flag-icon.css';
 
 const LanguageSelect = ({ children, flags, selected }) => (
   <>

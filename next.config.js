@@ -1,6 +1,5 @@
 const { parsed: localEnv } = require('dotenv').config();
 const withPlugins = require('next-compose-plugins');
-const withCSS = require('@zeit/next-css');
 const withImages = require('next-images');
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/
@@ -51,7 +50,7 @@ const getBlogPostPages = () =>
     .map((post) => ({ ...post, date: new Date(post.date) }))
     .sort((a, b) => b.date - a.date);
 
-module.exports = withPlugins([[withMDX], [withCSS], [withImages]], {
+module.exports = withPlugins([[withMDX], [withImages]], {
   env: {
     GA_ID: 'UA-78828365-7',
     BLOG_POST_LIST: getBlogPostPages(),

@@ -4,6 +4,7 @@ import withGA from 'next-ga';
 import Head from 'next/head';
 import App from 'next/app';
 import { MDXProvider } from '@mdx-js/react';
+import 'flag-icon-css/css/flag-icon.css';
 
 import { FooterContent } from '../components/FooterContent';
 import CodeBlock from '../components/CodeBlock';
@@ -13,13 +14,16 @@ import {
   Anchor,
   OrderedList,
   HeadingLarge,
-  HeadingMedium
+  HeadingMedium,
 } from '../components/Typography';
 
 const DESC =
   'Open Multiplayer - An upcoming multiplayer mod for Grand Theft Auto: San Andreas that is a fully backwards compatible substitute for SA:MP.';
 
-export default withGA(process.env.GA_ID, Router)(
+export default withGA(
+  process.env.GA_ID,
+  Router
+)(
   class extends App {
     render() {
       const { Component, pageProps } = this.props;
@@ -75,7 +79,7 @@ export default withGA(process.env.GA_ID, Router)(
               p: Paragraph,
               ol: OrderedList,
               pre: (props) => <React.Fragment {...props}></React.Fragment>,
-              code: (props) => <CodeBlock {...props} />
+              code: (props) => <CodeBlock {...props} />,
             }}
           >
             <Component {...pageProps} />
