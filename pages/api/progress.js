@@ -42,11 +42,18 @@ const QUERY = `{
 }`;
 
 export default async function handle(req, res) {
-  res.json(
-    await graphql(QUERY, {
-      headers: {
-        authorization: ['token', GITHUB_TOKEN].join(' ')
-      }
-    })
-  );
+  try {
+    res.json(
+      await graphql(QUERY, {
+        headers: {
+          authorization: ['token', GITHUB_TOKEN].join(' '),
+        },
+      })
+    );
+  } catch (e) {
+    console.error(e);
+    res.json({
+      error: e,
+    });
+  }
 }

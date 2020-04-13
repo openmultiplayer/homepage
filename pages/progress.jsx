@@ -31,7 +31,7 @@ const reHydrateDates = (value) => ({
   ...value,
   updatedAt: reHydrateDate(value.updatedAt),
   earlier: reHydrateDate(value.earlier),
-  later: reHydrateDate(value.later)
+  later: reHydrateDate(value.later),
 });
 
 const ProgressBox = ({ children }) => (
@@ -84,7 +84,7 @@ const Common = ({
   updatedAt,
   icon,
   children,
-  detail: { state = '', mergedBy = '' } = {}
+  detail: { state = '', mergedBy = '' } = {},
 }) => (
   <section>
     <h2>
@@ -136,7 +136,7 @@ const ProgressRowPull = ({
   reviews: { users },
   author: { name: author },
   mergedBy,
-  updatedAt
+  updatedAt,
 }) => {
   return (
     <Common
@@ -229,45 +229,49 @@ const ProgressRowItem = (props) => {
   }
 };
 
-const Progress = ({ items }) => {
-  const [currentLanguage, flags] = useLanguages();
+const ProgressItems = ({ items }) => (
+  <>
+    <Paragraph>
+      Below is a progress report of the state of recent issues and pull requests.
+    </Paragraph>
 
-  return (
-    <div className="container">
-      <HeadContent flags={flags} selected={currentLanguage.name} title="Homepage" />
+    {items.map(reHydrateDates).map((value) => {
+      return <ProgressRowItem key={value.id} {...value} />;
+    })}
+  </>
+);
 
-      <main>
-        <Content>
-          <Paragraph>
-            Below is a progress report of the state of recent issues and pull requests.
-          </Paragraph>
+const ProgressError = () => (
+  <Paragraph>
+    An internal server error occurred while trying to fetch information from GitHub. Please let us
+    know about this issue so we can fix it.
+  </Paragraph>
+);
+const Progress = ({ items, error }) => (
+  <Content>{error ? <ProgressError /> : <ProgressItems items={items} />}</Content>
+);
 
-          {items.map(reHydrateDates).map((value, index) => {
-            return <ProgressRowItem key={value.id} {...value} />;
-          })}
-        </Content>
-      </main>
-    </div>
-  );
-};
 Progress.getInitialProps = async () => {
   const res = await fetch(`${ADDRESS}/api/progress`);
   const data = await res.json();
+  if (data.error !== undefined) {
+    return { error: true };
+  }
   const {
     issues: { nodes: issues },
-    pullRequests: { nodes: pullRequests }
+    pullRequests: { nodes: pullRequests },
   } = data.repository.labels.nodes[0];
   const items = [
     ...issues.map((v) => ({
       ...v,
       updatedAt: parseISO(v.updatedAt),
-      type: 'issue'
+      type: 'issue',
     })),
     ...pullRequests.map((v) => ({
       ...v,
       updatedAt: parseISO(v.updatedAt),
-      type: 'pull'
-    }))
+      type: 'pull',
+    })),
   ].sort((a, b) => a.updatedAt < b.updatedAt);
   const { length } = items;
 
@@ -284,7 +288,7 @@ Progress.getInitialProps = async () => {
         updatedAt: subSeconds(10000)(later),
         length: diff,
         earlier,
-        later
+        later,
       });
     }
   }
@@ -300,7 +304,7 @@ Progress.getInitialProps = async () => {
         }
         return 0;
       })
-      .map((v, i) => ({ ...v, id: i }))
+      .map((v, i) => ({ ...v, id: i })),
   };
 };
 

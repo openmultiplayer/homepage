@@ -32,7 +32,10 @@ markdown.
 
 ### (Optional) Add Yourself As an "Owner"
 
-If you want to be in charge of maintaining your language, please make a PR to the `CODEOWNERS` file and change `@openmultiplayer/ops` to your GitHub username. This tells GitHub that you have permission to write to this specific directory and notifies other contributors that you're maintaining these files.
+If you want to be in charge of maintaining your language, please make a PR to the `CODEOWNERS` file
+and change `@openmultiplayer/ops` to your GitHub username. This tells GitHub that you have
+permission to write to this specific directory and notifies other contributors that you're
+maintaining these files.
 
 ### Translation Progress Table
 
@@ -58,3 +61,18 @@ Thank you.
 | How can I help?                                           | [x]    | [x]      | [x]   | [x]     | [x]    | [x]      | [x]    | [x]   | [x]       | [x]     | [x]        | [x]        | [x]       | [x]        | [x]      | [x]     | [x]     | [x]    | [x]      | [x]                | [x]               |
 | What is burgershot.gg?                                    | [x]    | [x]      | [x]   | [x]     | [x]    | [x]      | [x]    | [x]   | [x]       | [x]     | [x]        | [x]        | [x]       | [x]        | [x]      | [x]     | [x]     | [x]    | [x]      | [x]                | [x]               |
 | What about OpenMP?                                        | [x]    | [x]      | [x]   | [x]     | [x]    | [x]      | [x]    | [x]   | [x]       | [x]     | [x]        | [x]        | [x]       | [x]        | [x]      | [x]     | [x]     | [x]    | [x]      | [x]                | [x]               |
+
+## Blog
+
+(For team members)
+
+To write a new blog post, simply create a `.mdx` file in `pages/blog/` and write Markdown. You
+_must_ include a metadata object at the top:
+
+```js
+export const meta = {
+  title: 'An open.mp Blog Post',
+  date: '2020-04-06T23:47:00',
+  author: 'Southclaws',
+};
+```

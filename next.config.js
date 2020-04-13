@@ -1,9 +1,8 @@
 const { parsed: localEnv } = require('dotenv').config();
 const withPlugins = require('next-compose-plugins');
-const withCSS = require('@zeit/next-css');
 const withImages = require('next-images');
 const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/
+  extension: /\.mdx?$/,
 });
 const fs = require('fs');
 const mdx = require('@mdx-js/mdx');
@@ -12,9 +11,10 @@ const generate = require('@babel/generator').default;
 const traverse = require('@babel/traverse').default;
 const visit = require('unist-util-visit');
 
-const POSTS_DIRECTORY = './posts/';
+const POSTS_DIRECTORY = './pages/blog/';
 
-const extractMdxMeta = (content) => {
+const extractMdxMeta = (filename) => {
+  const content = fs.readFileSync(POSTS_DIRECTORY + filename, 'utf8');
   let meta = {};
   mdx.sync(content, {
     remarkPlugins: [
@@ -22,7 +22,7 @@ const extractMdxMeta = (content) => {
         visit(tree, 'export', (node) => {
           const ast = parse(node.value, {
             plugins: ['jsx'],
-            sourceType: 'module'
+            sourceType: 'module',
           });
           traverse(ast, {
             VariableDeclarator: (path) => {
@@ -30,12 +30,21 @@ const extractMdxMeta = (content) => {
                 // eslint-disable-next-line no-eval
                 meta = eval(`module.exports = ${generate(path.node.init).code}`);
               }
-            }
+            },
           });
         });
-      }
-    ]
+      },
+    ],
   });
+  if (meta.title === undefined) {
+    throw new Error("property 'title' not found in meta for post " + filename);
+  }
+  if (meta.author === undefined) {
+    throw new Error("property 'author' not found in meta for post " + filename);
+  }
+  if (meta.date === undefined) {
+    throw new Error("property 'date' not found in meta for post " + filename);
+  }
   return meta;
 };
 
@@ -46,16 +55,16 @@ const getBlogPostPages = () =>
     .map((filename) => ({
       filename,
       slug: filename.substring(0, filename.indexOf('.mdx')),
-      ...extractMdxMeta(fs.readFileSync(POSTS_DIRECTORY + filename, 'utf8'))
+      ...extractMdxMeta(filename),
     }))
     .map((post) => ({ ...post, date: new Date(post.date) }))
     .sort((a, b) => b.date - a.date);
 
-module.exports = withPlugins([[withMDX], [withCSS], [withImages]], {
+module.exports = withPlugins([[withMDX], [withImages]], {
   env: {
     GA_ID: 'UA-78828365-7',
     BLOG_POST_LIST: getBlogPostPages(),
-    ...localEnv
+    ...localEnv,
   },
-  pageExtensions: ['js', 'jsx', 'mdx']
+  pageExtensions: ['js', 'jsx', 'mdx'],
 });
