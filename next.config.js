@@ -14,7 +14,7 @@ const visit = require('unist-util-visit');
 const POSTS_DIRECTORY = './posts/';
 
 const extractMdxMeta = (filename) => {
-  let content = fs.readFileSync(POSTS_DIRECTORY + filename, 'utf8');
+  const content = fs.readFileSync(POSTS_DIRECTORY + filename, 'utf8');
   let meta = {};
   mdx.sync(content, {
     remarkPlugins: [
@@ -32,13 +32,13 @@ const extractMdxMeta = (filename) => {
               }
             },
           });
-          });
+        });
       },
     ],
-        });
+  });
   if (meta.title === undefined) {
     throw new Error("property 'title' not found in meta for post " + filename);
-      }
+  }
   if (meta.author === undefined) {
     throw new Error("property 'author' not found in meta for post " + filename);
   }
