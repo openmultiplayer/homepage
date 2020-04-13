@@ -4,6 +4,7 @@ import withGA from 'next-ga';
 import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react';
 import 'flag-icon-css/css/flag-icon.css';
+import './prism-theme.css';
 
 import { HeadContent } from '../components/HeadContent';
 import { FooterContent } from '../components/FooterContent';

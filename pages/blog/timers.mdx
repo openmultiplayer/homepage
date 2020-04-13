@@ -6,7 +6,7 @@ export const meta = {
 
 This is a sneak-peek at one of the improved modules we've done, for timers in open.mp:
 
-```c
+```pawn
 native SetTimer(const func[], msInterval, bool:repeat) = SetTimerEx;
 native SetTimerEx(const func[], msInterval, bool:repeat, const params[], GLOBAL_TAG_TYPES:...);
 native KillTimer(timer) = Timer_Kill;
@@ -35,7 +35,7 @@ native bool:Timer_Restart(Timer:timer);
 
 The first two are just for backwards-compatibility, the rest are the improved API:
 
-```c
+```pawn
 native Timer:Timer_Create(const func[], usDelay, usInterval, repeatCount, const params[] = "", GLOBAL_TAG_TYPES:...);
 ```
 
