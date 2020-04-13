@@ -143,7 +143,7 @@ TEST__ SetPlayerCheckpoint()
 	// Fake the mock player's position updating to the server, near the object.
 	Mock_SetPlayerPos(playerid, 105.0, 105.0, 4.0);
 
-	// Now FAKE pass some time, so the sreamer can run (50ms should do).
+	// Now FAKE pass some time, so the streamer can run (50ms should do).
 	Mock_Tick(50000);
 
 	// Check a "CreateObject" packet was seen.
