@@ -5,16 +5,16 @@ import Prism from 'prism-react-renderer/prism';
 Prism.languages.pawn = Prism.languages.extend('clike', {
   comment: {
     pattern: /\/\/(?:[^\r\n\\]|\\(?:\r\n?|\n|(?![\r\n])))*|\/\*[\s\S]*?(?:\*\/|$)/,
-    greedy: true
+    greedy: true,
   },
   'class-name': {
     pattern: /(\b(?:enum)\s+(?:__attribute__\s*\(\([\s\S]*?\)\)\s*)?)\w+/,
-    lookbehind: true
+    lookbehind: true,
   },
   keyword: /\b(?:inline|break|case|char|const|continue|default|using|do|else|enum|for|goto|if|return|sizeof|static|switch|while|stock|public|forward|hook|foreach|@|@emit|remotefunc|timerfunc|global|foreign|final|TEST__|HOOK__|FINAL__|GLOBAL__|FOREIGN__|REMOTE_FUNC__|TIMER_FUNC__|INLINE__|yield|YIELD__|tagof|__nameof|__emit|native|state|assert|exit|sleep|new|operator)\b/,
   function: /[a-z_]\w*(?=\s*\()/i,
   operator: />>=?|>>>=?|<<=?|([-+&|])\1|[?:~]|[-+*/%&|^!=<>]=?/,
-  number: /(?:\b0x(?:[\da-f]+\.?[\da-f]*|\.[\da-f]+)(?:p[+-]?\d+)?|(?:\b0b[01]+)|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?)*/i
+  number: /(?:\b0x(?:[\da-f]+\.?[\da-f]*|\.[\da-f]+)(?:p[+-]?\d+)?|(?:\b0b[01]+)|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?)*/i,
 });
 
 Prism.languages.insertBefore('pawn', 'string', {
@@ -27,18 +27,18 @@ Prism.languages.insertBefore('pawn', 'string', {
       // highlight the path of the include statement as a string
       string: {
         pattern: /(#include\s*)(?:<.+?>|("|')(?:\\?.)+?\2)/,
-        lookbehind: true
+        lookbehind: true,
       },
       // highlight macro directives as keywords
       directive: {
         pattern: /(#)\b(?:define|defined|else|emit|endif|error|warning|if|include|line|pragma|undef|file|assert|endinput|endscript|elseif|section|tryinclude)\b/,
         lookbehind: true,
-        alias: 'keyword'
-      }
-    }
+        alias: 'keyword',
+      },
+    },
   },
   // highlight predefined macros as constants
-  constant: /\b(?:__Pawn|__PawnBuild|cellmin|callmax|cellbits|cellbytes|__line|__file|__date|__time|__compat|charbits|charmax|debug|ucharmax)\b/
+  constant: /\b(?:__Pawn|__PawnBuild|cellmin|callmax|cellbits|cellbytes|__line|__file|__date|__time|__compat|charbits|charmax|debug|ucharmax)\b/,
 });
 
 export default ({ children, className }) => {
