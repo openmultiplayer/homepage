@@ -41,25 +41,24 @@ Prism.languages.insertBefore('pawn', 'string', {
   constant: /\b(?:__Pawn|__PawnBuild|cellmin|callmax|cellbits|cellbytes|__line|__file|__date|__time|__compat|charbits|charmax|debug|ucharmax)\b/,
 });
 
-export default ({ children, className }) => {
-  return (
-    <Highlight
-      {...defaultProps}
-      Prism={Prism}
-      code={children}
-      language={className.replace(/language-/, '')}
-    >
-      {({ style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style, padding: '20px', overflowX: 'scroll' }}>
-          {tokens.map((line, i) => (
-            <div key={line} {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span key={token} {...getTokenProps({ token, key })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  );
-};
+export default ({ children, className }) => (
+  <Highlight
+    {...defaultProps}
+    Prism={Prism}
+    code={children}
+    language={className.replace(/language-/, '')}
+    theme={undefined}
+  >
+    {({ style, tokens, getLineProps, getTokenProps }) => (
+      <pre className={className} style={{ ...style, padding: '20px', overflowX: 'scroll' }}>
+        {tokens.map((line, i) => (
+          <div key={line} {...getLineProps({ line, key: i })}>
+            {line.map((token, key) => (
+              <span key={token} {...getTokenProps({ token, key })} />
+            ))}
+          </div>
+        ))}
+      </pre>
+    )}
+  </Highlight>
+);
