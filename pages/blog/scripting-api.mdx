@@ -262,3 +262,12 @@ main() {}
 functions have changed parameters because the old ones evolved and didn't fully expose the
 capabilities of open.mp.  There's no simple way to convert every function yet, but you can leave the
 warnings on while slowly converting code - the old functions will continue to work perfectly well.
+
+There are three stages to conversion:
+
+### `#define OPENMP_QUIET`
+
+Using this define allows your mode to compile with no new warnings from deprecated functions.  But
+you shouldn't stick to this define, and the implicit conversions will only work for pawn code.  You
+can convert code in this mode, as the new API will also work, but you can't use the compiler to see
+where problems remain.
