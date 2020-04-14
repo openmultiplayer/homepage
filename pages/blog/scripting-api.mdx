@@ -4,33 +4,29 @@ export const meta = {
   author: 'Y_Less'
 };
 
-### Eample
+### Conversion
 
-Let's look at an insanely simple SA:MP mode to begin with.
+To build this for open.mp, we need to change just the first include and add one define.
+
+This:
 
 ```pawn
 #include <a_samp>
 
 main() {}
-
-public OnGameModeInit()
-{
-	SetGameModeText("Example Script");
-	AddPlayerClass(0, 0.0, 0.0, 4.0, 0.0, 0, 0, 0, 0, 0, 0);
-	return 1;
-}
-
-public OnPlayerSpawn(playerid)
-{
-	SetPlayerCheckpoint(playerid, 20.0, 20.0, 4.0, 2.0);
-	return 1;
-}
-
-public OnPlayerEnterCheckpoint(playerid)
-{
-	SendClientMessage(playerid, 0xFF0000AA, "You won!");
-	return 1;
-}
 ```
 
-You spawn.  You go to the checkpoint.  You win.
+Becomes:
+
+```pawn
+#define OPENMP_COMPAT
+#include <openmp\openmp>
+
+main() {}
+```
+
+The first error you might get is:
+
+```
+open.mp scripts require the community compiler from: git.io/pawn-compiler
+```
