@@ -244,3 +244,16 @@ If you don't get any warnings using the new compiler with the new version of *a_
 see a load of new warnings along the lines of:
 
 `warning 234: function is deprecated (symbol "AddPlayerClass") Use "Class_Add" instead.`
+
+You have three options - and they're all supported:
+
+1. **Ignore the warnings:**  The code will still work.
+
+2. **Suppress the warnings:**  Change `OPENMP_COMPAT` to `OPENMP_QUIET`:
+
+```pawn
+#define OPENMP_QUIET
+#include <openmp\openmp>
+
+main() {}
+```
