@@ -247,9 +247,9 @@ see a load of new warnings along the lines of:
 
 You have three options - and they're all supported:
 
-1. **Ignore the warnings:**  The code will still work.
+* **Ignore the warnings:**  The code will still work.
 
-2. **Suppress the warnings:**  Change `OPENMP_COMPAT` to `OPENMP_QUIET`:
+* **Suppress the warnings:**  Change `OPENMP_COMPAT` to `OPENMP_QUIET`:
 
 ```pawn
 #define OPENMP_QUIET
@@ -258,7 +258,7 @@ You have three options - and they're all supported:
 main() {}
 ```
 
-Some functions have changed names for consistency with each other; some
+* **Fix the warnings:**  Some functions have changed names for consistency with each other; some
 functions have changed parameters because the old ones evolved and didn't fully expose the
 capabilities of open.mp.  There's no simple way to convert every function yet, but you can leave the
 warnings on while slowly converting code - the old functions will continue to work perfectly well.
