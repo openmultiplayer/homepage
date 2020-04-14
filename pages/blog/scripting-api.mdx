@@ -225,3 +225,186 @@ The first error you might get is:
 ```
 open.mp scripts require the community compiler from: git.io/pawn-compiler
 ```
+
+If you get this, go to https://git.io/pawn-compiler and download compiler version 3.10.10 or later.
+For the release we would like a pawno-equivalent tool with this compiler integrated already, but
+haven't done that yet.  I STRONGLY suggest trying to compile your mode with this compiler first as
+it re-enabled const correctness warnings so you're likely to have a load of new warnings straight
+away (this is NOT a problem with the compiler, these are problems in your code that always existed,
+but were previously ignored).  You will also probably want to replace your includes with these ones:
+
+https://github.com/pawn-lang/pawn-stdlib
+https://github.com/pawn-lang/samp-stdlib
+
+That's a good thing to do even if you don't use open.mp, as they fix a load of tag and const issues
+in the original includes.
+
+### Warnings
+
+If you don't get any warnings using the new compiler with the new version of *a_samp*, you will now
+see a load of new warnings along the lines of:
+
+```
+warning 234: function is deprecated (symbol "AddPlayerClass") Use `Class_Add` instead.
+```
+
+You have three options - and they're all supported:
+
+1. **Ignore the warnings:**  The code will still work.
+
+2. **Suppress the warnings:**  Change `OPENMP_COMPAT` to `OPENMP_QUIET`:
+
+```pawn
+#define OPENMP_QUIET
+#include <openmp\openmp>
+
+main() {}
+```
+
+3. **Fix the warnings:**  Some functions have changed names for consistency with each other; some
+functions have changed parameters because the old ones evolved and didn't fully expose the
+capabilities of open.mp.  There's no simple way to convert every function yet, but you can leave the
+warnings on while slowly converting code - the old functions will continue to work perfectly well.
+
+There are three stages to conversion:
+
+### `#define OPENMP_QUIET`
+
+Using this define allows your mode to compile with no new warnings from deprecated functions.  But
+you shouldn't stick to this define, and the implicit conversions will only work for pawn code.  You
+can convert code in this mode, as the new API will also work, but you can't use the compiler to see
+where problems remain.
+
+### `#define OPENMP_COMPAT`
+
+This is the second stage.  Once you want to start taking advantage of all the improved features of
+open.mp like fine-grained per-player entity controls and removed limits you need to start using the
+new versions of the functions.  The new functions are always available, but you might not know
+everywhere that needs converting.  This will give warnings for the old functions, but they will
+still work, allowing you to convert parts of your mode one at a time.
+
+### No define
+
+Once you think you've finished converting your code, you remove the defines:
+
+```pawn
+#include <openmp\openmp>
+
+main() {}
+```
+
+Now you get errors instead of warnings for any old code still in use.
+
+## New API
+
+So now we've seen what the problems were with the old API, and how to find where you need to apply
+the new API, we should actually look at said new API in terms of the previously identified issues:
+
+### Tags
+
+Functions now use tags almost everywhere.  We have tried to find a balance between too many tag
+warnings and not enough useful information, but warnings are there for a reason and can help find
+problems you may have missed.  For example passing a vehicle as a parameter to an object function,
+or giving someone a weapon that doesn't exist:
+
+```pawn
+// No warnings for this code, despite it being clearly wrong.
+new object = CreateObject(various, parameters, here);
+PutPlayerInVehicle(playerid, object);
+
+// Same here - there's no weapon 20, despite it being amongst valid weapon IDs.
+GivePlayerWeapon(playerid, 20, 200);
+```
+
+It would be much better if all pieces of clearly wrong code could give warnings.  This is the power
+of a type-safe language, and while pawn isn't fully type-safe, we can get close with tags.  Those
+examples become:
+
+```pawn
+// warning 213: tag mismatch: expected tag "Vehicle", but found "Object"
+new Object:object = Object@Create(various, parameters, here);
+Player_PutInVehicle(playerid, object);
+
+// warning 213: tag mismatch: expected tag "WeaponType", but found but found none ("_")
+GivePlayerWeapon(playerid, 20, 200);
+
+// This doesn't give a warning:
+GivePlayerWeapon(playerid, WEAPON_COLT45, 200);
+```
+
+### Naming
+
+Most new functions use a refinement of the naming scheme already adopted by many libraries and
+plugins - `Module_VerbNoun`.  Some don't, when they are a one-off that doesn't fit in to any larger
+module, but for the most part you can possibly guess the name of a function you need.  No more
+wondering if it was "Rot" or "Rotation" for this type of element, there's no abbreviations unless
+the function name is otherwise too long (32+ characters, the compiler won't accept them).  Want to
+change the model of an object?  `Object_SetModel`.  Want to show text to a player?  `Text_Show`.
+
+There are a limited set of verbs - `Get`, `Set`, `Create`, `Destroy`, `Add`, `Remove`, `Show`,
+`Hide`, `Run`, `Move`, `Stop`, and `Count`.  More may be added and may show up in special
+situations, but generally if one of these fits, it's probably that one.  By far the most common are
+`Get` and `Set`, which unlike in SA:MP now always come in pairs - if you can set any parameter you
+can get it as well later.  They are also the verbs that most commonly come with a noun - you need to
+specify what to get or set - `Health`, `Position`, `Model`, `Width`, etc.
+
+Some examples:
+
+```pawn
+native bool:Menu_SetDisabled(Menu:menuid, bool:disabled);
+native bool:Menu_GetDisabled(Menu:menuid);
+
+native bool:Text_SetAlignment(Text:text, alignment);
+native Text_GetAlignment(Text:text);
+
+native bool:Object_Move(Object:objectid, Float:posX, Float:posY, Float:posZ, Float:speed, Float:rotX = FLOAT_NAN, Float:rotY = FLOAT_NAN, Float:rotZ = FLOAT_NAN);
+
+native DBResult_CountRows(DBResult:dbresult);
+
+native Player_Spawn(Player:playerid);
+```
+
+Note that the module and tag names always match - `Vehicle`, `DB`, `Player` etc.  [There are reasons
+besides consistency for this](https://github.com/pawn-lang/compiler/issues/234) - it gives a more OO
+-like interface, and is easier to remember.  However, you might have noticed in an earlier example
+the function `Object@Create`, not `Object_Create`.  The reason for this is what is in the first
+parameter.
+
+In all seven of the examples immediately above the first parameter is the entity (object, vehicle,
+player, etc) being operated on.  You want to get the position of a specific entity.  You want to
+move a specific entity.  You want to get the remaining time of a specific entity.  This again maps
+to the OO-like API - `Player_Spawn(playerid)` can be thought of as `player.Spawn()`.  PAWN can't do
+that, but that doesn't mean other languages plugging in to this API can't.  In C++ terms - `_` is
+`.` or `->` and always needs a valid ID given as the first parameter.  However, the function
+`Dialog_IsValid(Dialog:id)` by definition may not have a valid ID as the first parameter (or what's
+the point of it*?), and `Icon_Create(image, Float:x, Float:y, Float:z)` doesn't even take an ID at
+all.  These thus become `@` instead - `::` in C++ syntax.  They might not take an ID at all, and
+absolutely don't need a valid one (`@Destroy` also comes under this group of functions, as
+destroying an entity is an operation logically external to an entity, not an operation on the
+entity).
+
+### Constants
+
+To start with, instead of `#define` for everything we use `const` and `enum` as much as possible,
+except where we expect things to be overridden (`MAX_PLAYERS`):
+
+```pawn
+// Defining this first didn't previously work, now it does.
+#define MAX_PLAYERS 100
+#include <openmp\openmp>
+
+// The override method still works as well.
+#undef MAX_PLAYERS
+#define MAX_PLAYERS 200
+```
+
+Using enums means that constants have tags for compile-time checking:
+
+```pawn
+enum ObjectMaterialTextAlignment
+{
+	MATERIAL_TEXT_ALIGN_LEFT,
+	MATERIAL_TEXT_ALIGN_CENTRE,
+	MATERIAL_TEXT_ALIGN_RIGHT,
+};
+```
