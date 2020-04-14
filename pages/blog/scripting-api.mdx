@@ -150,3 +150,86 @@ mean exactly?  Any code that is:
 2. Uses the original SA:MP API without plugins.
 3. Is recompiled with our includes.
 4. Already uses the community compiler.
+
+Will work.
+
+However:
+
+* If you use a plugin to write in a language other than pawn, that plugin will probably need to be
+ported first.  So your code won't work immediately.
+
+* If you use other plugins such as the streamer, YSF, audio, etc; they may already work, may need
+porting, or may be entirely superfluous because their functionality has been integrated in to the
+core server.  So your code may work.
+
+* If you only have the .AMX of your mode not the original source, why?  Anyway, while all SA:MP
+functions exist, some have been redone or replaced by pawn code or macros and you MUST recompile.
+So if you can't, your code won't work at all.
+
+## Building
+
+### Eample
+
+Let's look at an insanely simple SA:MP mode to begin with.
+
+```pawn
+#include <a_samp>
+
+main() {}
+
+public OnGameModeInit()
+{
+	SetGameModeText("Example Script");
+	AddPlayerClass(0, 0.0, 0.0, 4.0, 0.0, 0, 0, 0, 0, 0, 0);
+	return 1;
+}
+
+public OnPlayerSpawn(playerid)
+{
+	SetPlayerCheckpoint(playerid, 20.0, 20.0, 4.0, 2.0);
+	return 1;
+}
+
+public OnPlayerEnterCheckpoint(playerid)
+{
+	SendClientMessage(playerid, 0xFF0000AA, "You won!");
+	return 1;
+}
+```
+
+You spawn.  You go to the checkpoint.  You win.
+
+### Conversion
+
+To build this for open.mp, we need to change just the first include and add one define.
+
+This:
+
+```pawn
+#include <a_samp>
+
+main() {}
+```
+
+Becomes:
+
+```pawn
+#define OPENMP_COMPAT
+#include <openmp\openmp>
+
+main() {}
+```
+
+The first error you might get is:
+
+`open.mp scripts require the community compiler from: git.io/pawn-compiler`
+
+If you get this, go to https://git.io/pawn-compiler and download compiler version 3.10.10 or later.
+For the release we would like a pawno-equivalent tool with this compiler integrated already, but
+haven't done that yet.  I STRONGLY suggest trying to compile your mode with this compiler first as
+it re-enabled const correctness warnings so you're likely to have a load of new warnings straight
+away (this is NOT a problem with the compiler, these are problems in your code that always existed,
+but were previously ignored).  You will also probably want to replace your includes with these ones:
+
+https://github.com/pawn-lang/pawn-stdlib
+https://github.com/pawn-lang/samp-stdlib
