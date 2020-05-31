@@ -27,6 +27,7 @@ export const LANGUAGES = {
   tw: ['TraditionalChinese'],
   tr: ['Turkish'],
   ua: ['Ukrainian', 'sans-serif'],
+  ur: ['Urdu'],
   vn: ['Vietnamese', 'sans-serif']
 };
 
