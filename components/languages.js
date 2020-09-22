@@ -28,7 +28,7 @@ export const LANGUAGES = {
   tr: ['Turkish'],
   ua: ['Ukrainian', 'sans-serif'],
   vn: ['Vietnamese', 'sans-serif'],
-  sr: ['Serbian']
+  rs: ['Serbian']
 };
 
 export const useLanguages = () => {
