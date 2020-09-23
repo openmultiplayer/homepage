@@ -27,7 +27,8 @@ export const LANGUAGES = {
   tw: ['TraditionalChinese'],
   tr: ['Turkish'],
   ua: ['Ukrainian', 'sans-serif'],
-  vn: ['Vietnamese', 'sans-serif']
+  vn: ['Vietnamese', 'sans-serif'],
+  rs: ['Serbian']
 };
 
 export const useLanguages = () => {
