@@ -1,6 +1,6 @@
 import React from 'react';
 import { Anchor } from './Typography';
-import { useLanguages } from './languages.js';
+import { useLanguages } from './languages';
 import { LanguageSelect } from './LanguageSelect';
 
 const Nav = () => {
