@@ -97,9 +97,9 @@ export const Anchor = ({ href, children, ...props }) => (
   </>
 );
 
-export const Image = (props) => (
+export const Image = ({ src, alt, ...rest }) => (
   <>
-    <img {...props} />
+    <img src={src} alt={alt} {...rest} />
 
     <style jsx>{`
       img {
@@ -107,4 +107,4 @@ export const Image = (props) => (
       }
     `}</style>
   </>
-)
+);
