@@ -59,7 +59,7 @@ const App = ({ Component, pageProps }) => (
       <meta name="google-site-verification" content="-1qA4kEDqC2i3_jqGD-UYCCqH7jDWZdgEejT7-4QqkE" />
     </Head>
 
-    <HeadContent title="FAQ" />
+    <HeadContent />
 
     <main>
       <MDXProvider
