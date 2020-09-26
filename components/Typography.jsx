@@ -67,8 +67,8 @@ export const Paragraph = ({ children, centred = false, size = 'medium' }) => {
 export const OrderedList = ({ children }) => (
   <>
     <ol>
-      {children.map((v) => (
-        <>{v}</>
+      {children.map((v, i) => (
+        <li key={i.toString()}>{v}</li>
       ))}
     </ol>
     <style jsx global>{`
@@ -92,6 +92,18 @@ export const Anchor = ({ href, children, ...props }) => (
       }
       a:hover {
         color: orange;
+      }
+    `}</style>
+  </>
+);
+
+export const Image = ({ src, alt, ...rest }) => (
+  <>
+    <img src={src} alt={alt} {...rest} />
+
+    <style jsx>{`
+      img {
+        max-width: 100%;
       }
     `}</style>
   </>

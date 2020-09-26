@@ -41,7 +41,7 @@ Prism.languages.insertBefore('pawn', 'string', {
   constant: /\b(?:__Pawn|__PawnBuild|cellmin|callmax|cellbits|cellbytes|__line|__file|__date|__time|__compat|charbits|charmax|debug|ucharmax)\b/,
 });
 
-export default ({ children, className }) => (
+const CodeBlock = ({ children, className }) => (
   <Highlight
     {...defaultProps}
     Prism={Prism}
@@ -62,3 +62,5 @@ export default ({ children, className }) => (
     )}
   </Highlight>
 );
+
+export default CodeBlock;

@@ -2,6 +2,7 @@ import React from 'react';
 import Router from 'next/router';
 import withGA from 'next-ga';
 import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import { MDXProvider } from '@mdx-js/react';
 import 'flag-icon-css/css/flag-icon.css';
 import './prism-theme.css';
@@ -16,13 +17,23 @@ import {
   OrderedList,
   HeadingLarge,
   HeadingMedium,
+  Image,
 } from '../components/Typography';
-
-const DESC =
-  'Open Multiplayer - An upcoming multiplayer mod for Grand Theft Auto: San Andreas that is a fully backwards compatible substitute for SA:MP.';
 
 const App = ({ Component, pageProps }) => (
   <>
+    <NextSeo
+      title="Open Multiplayer"
+      canonical="https://www.open.mp"
+      images={['/static/logo.png']}
+      type="website"
+      twitter={{
+        card: 'summary',
+        site: '@Southclaws',
+        creator: '@Southclaws',
+      }}
+    />
+
     <Head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -43,31 +54,25 @@ const App = ({ Component, pageProps }) => (
       <link rel="shortcut icon" href="/static/favicon.ico" />
       <link rel="stylesheet" href="/static/fonts.css" />
 
-      <meta name="description" content={DESC} />
-      <meta property="og:image" content="/static/logo.png" />
-      <meta property="og:site_name" content="Open Multiplayer" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="open.mp" />
-      <meta property="og:url" content="https://www.open.mp" />
-      <meta property="og:description" content={DESC} />
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@Southclaws" />
-      <meta name="twitter:creator" content="@Southclaws" />
       <meta name="hostname" content="www.open.mp" />
       <meta name="expected-hostname" content="www.open.mp" />
       <meta name="google-site-verification" content="-1qA4kEDqC2i3_jqGD-UYCCqH7jDWZdgEejT7-4QqkE" />
     </Head>
 
-    <HeadContent title="FAQ" />
+    <HeadContent />
 
     <main>
       <MDXProvider
         components={{
-          wrapper: (props) => (
+          wrapper: ({ meta, ...rest }) => (
             <main>
-              <Content {...props} />
+              {meta !== undefined ? (
+                <NextSeo title={meta.title} description={meta.description} />
+              ) : null}
+              <Content {...rest} />
             </main>
           ),
+
           h1: HeadingLarge,
           h2: HeadingMedium,
           a: Anchor,
@@ -75,6 +80,7 @@ const App = ({ Component, pageProps }) => (
           ol: OrderedList,
           pre: (props) => <React.Fragment {...props} />,
           code: (props) => <CodeBlock {...props} />,
+          img: Image,
         }}
       >
         <Component {...pageProps} />

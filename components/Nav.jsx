@@ -1,10 +1,10 @@
 import React from 'react';
 import { Anchor } from './Typography';
-import { useLanguages } from './languages';
+import { useLanguages } from './languages.js';
 import { LanguageSelect } from './LanguageSelect';
 
 const Nav = () => {
-  const [{ name: lang }, flags] = useLanguages();
+  const [{ name: lang }, languages] = useLanguages();
   return (
     <nav>
       <ul>
@@ -29,7 +29,7 @@ const Nav = () => {
           </Anchor>
         </li>
         <li>
-          <LanguageSelect selected={lang} flags={flags}>
+          <LanguageSelect selected={lang} languages={languages}>
             <span className="button">
               <span className={`flag-icon flag-icon-${lang}`} />
             </span>

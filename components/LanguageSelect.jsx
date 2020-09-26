@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 
-const LanguageSelect = ({ children, flags, selected }) => (
+const LanguageSelect = ({ children, languages, selected }) => (
   <>
     <label htmlFor="dialogControl" className="control">
       {children}
@@ -11,13 +11,13 @@ const LanguageSelect = ({ children, flags, selected }) => (
     <div className="dialog">
       <div className="container">
         <div className="list">
-          {flags.map((value, index) => (
+          {languages.map((value, index) => (
             <a
-              href={`?lang=${value}`}
+              href={`?lang=${value.id}`}
               key={index}
-              className={`flag ${value === selected ? 'flag-selected' : ''}`}
+              className={`flag ${value.id === selected ? 'flag-selected' : ''}`}
             >
-              <span className={`flag-icon flag-icon-${value}`} />
+              {value.id && <span className={`flag-icon flag-icon-${value.id}`} />} {value.name}
             </a>
           ))}
         </div>
@@ -47,7 +47,7 @@ const LanguageSelect = ({ children, flags, selected }) => (
         width: 100%;
         max-width: 600px;
         display: grid;
-        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-columns: auto auto;
         background-color: hsl(0, 0%, 24%);
         border-width: 0px;
         border-radius: 10px;
@@ -65,6 +65,10 @@ const LanguageSelect = ({ children, flags, selected }) => (
       }
       .flag:hover {
         background-color: #ff3200;
+      }
+      a {
+        text-decoration: none;
+        color: white;
       }
     `}</style>
   </>
