@@ -32,6 +32,7 @@ export const LANGUAGES = [
   { id: 'ua', name: 'Ukrainian', fontFamily: 'sans-serif' },
   { id: 'vn', name: 'Vietnamese', fontFamily: 'sans-serif' },
   { id: 'rs', name: 'Serbian' },
+  { id: 'ur', name: 'Urdu' },
 ];
 
 const findByID = (id) => find((i) => i.id === id);
