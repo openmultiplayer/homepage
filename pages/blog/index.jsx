@@ -11,20 +11,18 @@ import {
 } from '../../components/Typography';
 
 const Posts = ({ list }) =>
-  list.map((v) => {
-    return (
-      <section key={v.slug}>
-        <HeadingMedium>
-          <Anchor href={`/blog/${v.slug}`}>{v.title}</Anchor>
-          <Paragraph size="small">
-            <time>
-              {format(parseISO(v.date), 'yyyy-MM-dd')} by {v.author}
-            </time>
-          </Paragraph>
-        </HeadingMedium>
-      </section>
-    );
-  });
+  list.map((v) => (
+    <section key={v.slug}>
+      <HeadingMedium>
+        <Anchor href={`/blog/${v.slug}`}>{v.title}</Anchor>
+        <Paragraph size="small">
+          <time>
+            {format(parseISO(v.date), 'yyyy-MM-dd')} by {v.author}
+          </time>
+        </Paragraph>
+      </HeadingMedium>
+    </section>
+  ));
 
 const NoContent = () => <h3>There are currently no posts.</h3>;
 
