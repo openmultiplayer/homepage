@@ -96,3 +96,15 @@ export const Anchor = ({ href, children, ...props }) => (
     `}</style>
   </>
 );
+
+export const Image = (props) => (
+  <>
+    <img {...props} />
+
+    <style jsx>{`
+      img {
+        max-width: 100%;
+      }
+    `}</style>
+  </>
+)

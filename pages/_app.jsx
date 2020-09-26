@@ -16,6 +16,7 @@ import {
   OrderedList,
   HeadingLarge,
   HeadingMedium,
+  Image,
 } from '../components/Typography';
 
 const DESC =
@@ -75,6 +76,7 @@ const App = ({ Component, pageProps }) => (
           ol: OrderedList,
           pre: (props) => <React.Fragment {...props} />,
           code: (props) => <CodeBlock {...props} />,
+          img: Image,
         }}
       >
         <Component {...pageProps} />
