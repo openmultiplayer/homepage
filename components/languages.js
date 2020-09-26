@@ -1,60 +1,62 @@
+import find from 'lodash/fp/find';
+
+import { useMemo } from 'react';
 /* eslint-disable global-require */
 import { useRouter } from 'next/router';
 
 // These should be in alphabetical order by English name.
-export const LANGUAGES = {
-  sa: ['Arabic'],
-  hr: ['Croatian', 'sans-serif'],
-  nl: ['Dutch'],
-  gb: ['English'],
-  ee: ['Estonian'],
-  fr: ['French'],
-  ge: ['Georgian'],
-  de: ['German'],
-  gr: ['Greek', 'sans-serif'],
-  hu: ['Hungarian'],
-  id: ['Indonesian'],
-  it: ['Italian'],
-  jp: ['Japanese'],
-  lt: ['Lithuanian', 'sans-serif'],
-  no: ['Norwegian'],
-  pl: ['Polish', 'sans-serif'],
-  br: ['Portuguese'],
-  ro: ['Romanian'],
-  ru: ['Russian'],
-  cn: ['SimplifiedChinese'],
-  es: ['Spanish'],
-  tw: ['TraditionalChinese'],
-  tr: ['Turkish'],
-  ua: ['Ukrainian', 'sans-serif'],
-  vn: ['Vietnamese', 'sans-serif'],
-  rs: ['Serbian']
-};
+export const LANGUAGES = [
+  { id: 'sa', name: 'Arabic' },
+  { id: 'hr', name: 'Croatian', fontFamily: 'sans-serif' },
+  { id: 'nl', name: 'Dutch' },
+  { id: 'gb', name: 'English' },
+  { id: 'ee', name: 'Estonian' },
+  { id: 'fr', name: 'French' },
+  { id: 'ge', name: 'Georgian' },
+  { id: 'de', name: 'German' },
+  { id: 'gr', name: 'Greek', fontFamily: 'sans-serif' },
+  { id: 'hu', name: 'Hungarian' },
+  { id: 'id', name: 'Indonesian' },
+  { id: 'it', name: 'Italian' },
+  { id: 'jp', name: 'Japanese' },
+  { id: 'lt', name: 'Lithuanian', fontFamily: 'sans-serif' },
+  { id: 'no', name: 'Norwegian' },
+  { id: 'pl', name: 'Polish', fontFamily: 'sans-serif' },
+  { id: 'br', name: 'Portuguese' },
+  { id: 'ro', name: 'Romanian' },
+  { id: 'ru', name: 'Russian' },
+  { id: 'cn', name: 'SimplifiedChinese' },
+  { id: 'es', name: 'Spanish' },
+  { id: 'tw', name: 'TraditionalChinese' },
+  { id: 'tr', name: 'Turkish' },
+  { id: 'ua', name: 'Ukrainian', fontFamily: 'sans-serif' },
+  { id: 'vn', name: 'Vietnamese', fontFamily: 'sans-serif' },
+  { id: 'rs', name: 'Serbian' },
+];
+
+const findByID = (id) => find((i) => i.id === id);
 
 export const useLanguages = () => {
   const {
-    query: { lang: languageFromUrl }
+    query: { lang: languageFromUrl },
   } = useRouter();
 
-  let currentLanguage = 'gb';
-  if (languageFromUrl && Object.prototype.hasOwnProperty.call(LANGUAGES, languageFromUrl)) {
-    currentLanguage = languageFromUrl;
-  }
+  const language = findByID(languageFromUrl)(LANGUAGES) || { id: 'gb', name: 'English' };
 
-  const [name, fontFamily] = LANGUAGES[currentLanguage];
+  const { name, fontFamily } = language;
 
   // eslint-disable-next-line import/no-dynamic-require
-  const BODY = require(`../language/${name}/index.mdx`);
+  const BODY = useMemo(() => require(`../language/${name}/index.mdx`), [name]);
   // eslint-disable-next-line import/no-dynamic-require
-  const FAQ = require(`../language/${name}/faq.mdx`);
+  const FAQ = useMemo(() => require(`../language/${name}/faq.mdx`), [name]);
 
   return [
     {
-      name: currentLanguage,
+      name: language.id,
       fontFamily,
       body: BODY,
-      faq: FAQ
+      faq: FAQ,
     },
-    Object.keys(LANGUAGES).sort()
+    LANGUAGES,
   ];
 };
