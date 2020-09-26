@@ -40,6 +40,7 @@ const LanguageSelect = ({ children, languages, selected }) => (
       .container {
         display: flex;
         justify-content: center;
+        padding: 10px;
       }
       .list {
         position: absolute;
@@ -51,6 +52,12 @@ const LanguageSelect = ({ children, languages, selected }) => (
         background-color: hsl(0, 0%, 24%);
         border-width: 0px;
         border-radius: 10px;
+        text-align: left;
+      }
+      @media (max-width: 420px) {
+        .list {
+          grid-template-columns: auto;
+        }
       }
       .flag-selected {
         background-color: #e0e0e0;
@@ -69,6 +76,7 @@ const LanguageSelect = ({ children, languages, selected }) => (
       a {
         text-decoration: none;
         color: white;
+        display: flex;
       }
     `}</style>
   </>
