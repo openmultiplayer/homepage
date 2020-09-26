@@ -67,8 +67,8 @@ export const Paragraph = ({ children, centred = false, size = 'medium' }) => {
 export const OrderedList = ({ children }) => (
   <>
     <ol>
-      {children.map((v) => (
-        <>{v}</>
+      {children.map((v, i) => (
+        <li key={i.toString()}>{v}</li>
       ))}
     </ol>
     <style jsx global>{`
