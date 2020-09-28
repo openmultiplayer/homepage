@@ -4,8 +4,8 @@
     },
     "rewrites": [
         {
-            "source": "/wiki/:match*",
-            "destination": "https://wiki.open.mp/:match*"
+            "source": "/docs/:match*",
+            "destination": "https://wiki.open.mp/docs/:match*"
         }
     ]
 }
