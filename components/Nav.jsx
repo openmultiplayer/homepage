@@ -19,7 +19,7 @@ const Nav = () => {
           </Anchor>
         </li>
         <li>
-          <Anchor href="https://wiki.open.mp/">
+          <Anchor href="/wiki">
             <span className="button">Wiki</span>
           </Anchor>
         </li>

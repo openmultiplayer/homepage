@@ -67,4 +67,13 @@ module.exports = withPlugins([[withMDX], [withImages]], {
     ...localEnv,
   },
   pageExtensions: ['js', 'jsx', 'mdx'],
+  async redirects() {
+    return [
+      {
+        source: '/:match*',
+        destination: 'https://wiki.openmultiplayer.now.sh/:match*',
+        permanent: true,
+      },
+    ];
+  },
 });
