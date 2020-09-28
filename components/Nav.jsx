@@ -19,6 +19,11 @@ const Nav = () => {
           </Anchor>
         </li>
         <li>
+          <Anchor href="/wiki">
+            <span className="button">Wiki</span>
+          </Anchor>
+        </li>
+        <li>
           <Anchor href={`/progress?lang=${lang}`}>
             <span className="button">Progress</span>
           </Anchor>
