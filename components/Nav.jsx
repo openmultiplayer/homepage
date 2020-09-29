@@ -24,6 +24,11 @@ const Nav = () => {
           </Anchor>
         </li>
         <li>
+          <Anchor href="/missing-sites">
+            <span className="button">SA-MP Down?</span>
+          </Anchor>
+        </li>
+        <li>
           <Anchor href={`/progress?lang=${lang}`}>
             <span className="button">Progress</span>
           </Anchor>
