@@ -74,6 +74,11 @@ module.exports = withPlugins([[withMDX], [withImages]], {
         destination: 'https://wiki.openmultiplayer.now.sh/:match*',
         permanent: true,
       },
+      {
+        source: '/wiki*',
+        destination: '/docs',
+        permanent: true,
+      },
     ];
   },
 });
