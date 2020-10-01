@@ -75,7 +75,7 @@ module.exports = withPlugins([[withMDX], [withImages]], {
         permanent: true,
       },
       {
-        source: '/wiki*',
+        source: '/wiki',
         destination: '/docs',
         permanent: true,
       },
