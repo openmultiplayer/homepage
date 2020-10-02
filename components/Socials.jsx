@@ -9,7 +9,7 @@ const Socials = ({ colour = '#d1cec8' }) => {
   return (
     <div>
       <span>
-        <Anchor href="https://discordapp.com/invite/hURGKHJ">
+        <Anchor href="https://discord.gg/samp">
           <Discord fill={colour} />
         </Anchor>
       </span>
