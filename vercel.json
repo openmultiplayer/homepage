@@ -7,5 +7,11 @@
             "source": "/docs/:match*",
             "destination": "https://wiki.openmultiplayer.now.sh/docs/:match*"
         }
+    ],
+    "redirects": [
+        {
+            "source": "/l/:match*",
+            "destination": "https://:match*"
+        }
     ]
 }
