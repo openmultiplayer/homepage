@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 // These should be in alphabetical order by English name.
 export const LANGUAGES = [
   { id: 'sa', name: 'Arabic' },
+  { id: 'bn', name: 'Bengali' },
   { id: 'hr', name: 'Croatian', fontFamily: 'sans-serif' },
   { id: 'nl', name: 'Dutch' },
   { id: 'gb', name: 'English' },
