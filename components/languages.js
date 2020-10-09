@@ -27,6 +27,7 @@ export const LANGUAGES = [
   { id: 'ru', name: 'Russian' },
   { id: 'cn', name: 'SimplifiedChinese' },
   { id: 'es', name: 'Spanish' },
+  { id: 'th', name: 'Thai' },
   { id: 'tw', name: 'TraditionalChinese' },
   { id: 'tr', name: 'Turkish' },
   { id: 'ua', name: 'Ukrainian', fontFamily: 'sans-serif' },
