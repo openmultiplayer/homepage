@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 export const LANGUAGES = [
   { id: 'sa', name: 'Arabic' },
   { id: 'bn', name: 'Bengali' },
+  { id: 'ba', name: 'Bosnian' },
   { id: 'hr', name: 'Croatian', fontFamily: 'sans-serif' },
   { id: 'nl', name: 'Dutch' },
   { id: 'gb', name: 'English' },
