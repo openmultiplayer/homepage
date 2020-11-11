@@ -1,11 +1,5 @@
 {
     "env": {
         "GITHUB_TOKEN": "@github_token"
-    },
-    "rewrites": [
-        {
-            "source": "/docs/:match*",
-            "destination": "https://wiki.openmultiplayer.now.sh/docs/:match*"
-        }
-    ]
+    }
 }

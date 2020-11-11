@@ -70,11 +70,6 @@ module.exports = withPlugins([[withMDX], [withImages]], {
   async redirects() {
     return [
       {
-        source: '/:match*',
-        destination: 'https://wiki.openmultiplayer.now.sh/:match*',
-        permanent: true,
-      },
-      {
         source: '/wiki',
         destination: '/docs',
         permanent: true,
