@@ -1,5 +1,16 @@
 {
-    "env": {
-        "GITHUB_TOKEN": "@github_token"
+  "env": {
+    "GITHUB_TOKEN": "@github_token"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "all"
+        }
+      ]
     }
+  ]
 }
